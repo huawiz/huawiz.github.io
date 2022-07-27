@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>常用的管理VM組合 - huawiz&#39;s blog</title>
+<title>標籤: powershell - huawiz&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -117,12 +117,20 @@
     </div>
 </nav>
 
-    <section class="section">
+    <section class="section section-heading">
     <div class="container">
-    <article class="article content gallery" itemscope itemprop="blogPost">
+        <div class="content">
+            <h5>#powershell</h5>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            常用的管理VM組合
+            <a href="/2022/control-VM-with-pwsh/" itemprop="url">常用的管理VM組合</a>
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
@@ -141,56 +149,21 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <html><head></head><body><p>最近工作上，常使用Hyper-V來測試環境，而每次都要按圖形介面實在有點麻煩，所以才產生這篇，來整理一下指令。</p>
-<span id="more"></span>
-
-
-<h1 id="常用組合"><a href="#常用組合" class="headerlink" title="常用組合"></a>常用組合</h1><ol>
-<li>自動對已經建立的主機清單，建立新的差異硬碟到指定路徑，並且設定VMList的硬碟後開啟VM</li>
-</ol>
-<figure class="highlight powershell hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-variable">$VMPath</span> = <span class="hljs-string">'E:\lab\test'</span> </span><br><span class="line">mkdir <span class="hljs-variable">$VMPath</span></span><br><span class="line"><span class="hljs-variable">$VMParent</span> = <span class="hljs-string">'E:\VM\WinServer2019\base.vhdx'</span></span><br><span class="line"><span class="hljs-variable">$VMList</span> = <span class="hljs-string">"AD"</span>,<span class="hljs-string">"Server1"</span>,<span class="hljs-string">"Server2"</span>,<span class="hljs-string">"Server3"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">Foreach</span> (<span class="hljs-variable">$VMName</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$VMList</span>){</span><br><span class="line">  <span class="hljs-variable">$VHDPath</span> = <span class="hljs-string">"<span class="hljs-variable">$</span>{VMPath}\<span class="hljs-variable">$</span>{VMName}.vhdx"</span></span><br><span class="line">  <span class="hljs-built_in">new-vhd</span> <span class="hljs-literal">-path</span> <span class="hljs-variable">$VHDPath</span> <span class="hljs-literal">-ParentPath</span> <span class="hljs-variable">$VMParent</span> <span class="hljs-literal">-diff</span></span><br><span class="line">  <span class="hljs-built_in">Set-VMHardDiskDrive</span> <span class="hljs-literal">-VMName</span> <span class="hljs-variable">$VMName</span> <span class="hljs-literal">-path</span> <span class="hljs-variable">$VHDPath</span></span><br><span class="line">  <span class="hljs-built_in">start-vm</span> <span class="hljs-literal">-name</span> <span class="hljs-variable">$VMName</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>
+        <html><head></head><body><p>最近工作上，常使用Hyper-V來測試環境，而每次都要按圖形介面實在有點麻煩，所以才產生這篇，來整理一下指令。</p></body></html>
+        <p class="article-more-link">
+            <a href="/2022/control-VM-with-pwsh/#more">閱讀更多</a>
+        </p>
     
     </div>
     
-    <div class="columns is-variable is-1 is-multiline is-mobile">
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/powershell/">#powershell</a></span>
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/%E6%87%B6%E4%BA%BA/">#懶人</a></span>
-    
-    </div>
-    
-    
-    <div class="columns is-mobile is-multiline article-nav">
-        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
-            
-        </span>
-        <span class="column is-12-mobile is-half-desktop  article-nav-next">
-            
-            <a href="/2022/CS50-W2/">[CS50]W2作業筆記</a>
-            
-        </span>
-    </div>
     
 </article>
 
 
 
 
-<div class="comments">
-    <h3 class="title is-4">評論</h3>
     
-<div id="comment-container"></div>
-<script src="https://utteranc.es/client.js"
-        repo="huawiz/huawiz.github.io"
-        issue-term="pathname"
-        theme="boxy-light"
-        crossorigin="anonymous"
-        async>
-</script>
-
-</div>
-
+    
     </div>
 </section>
     <footer class="footer">
