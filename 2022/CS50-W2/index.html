@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>[CS50]W2作業筆記 - huawiz&#39;s blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="huawiz's blog" type="application/atom+xml">
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    huawiz&#39;s blog
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/archives">文章列表</a>
+            
+            <a class="navbar-item "
+               href="/categories">分類</a>
+            
+            <a class="navbar-item "
+               href="/about">關於我</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="搜尋" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" target="_blank" rel="noopener" href="https://github.com/huawiz">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            <a class="navbar-item" title="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/huawiz/">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+               
+            <a class="navbar-item" title="RSS" href="https://huawiz.github.io/atom.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            [CS50]W2作業筆記
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <span>2022年6月18日</span>
+            
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/%E4%B8%8A%E8%AA%B2%E7%AD%86%E8%A8%98/">上課筆記</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p>詳細筆記，我沒有寫，官方的筆記<a target="_blank" rel="noopener" href="https://cs50.harvard.edu/x/2022/notes/2/" title="在這">在這</a></p>
+<span id="more"></span>
+
+<hr>
+<h1 id="W2-大綱"><a href="#W2-大綱" class="headerlink" title="W2 大綱"></a>W2 大綱</h1><ul>
+<li>Compiling -&gt; 講解程式碼是如何被電腦編譯機器語言的</li>
+<li>Dubug -&gt; 教你使用VSCODE的Debug工具</li>
+<li>Memory/Data type -&gt; C語言如何存資料<ul>
+<li>為何要分這麼多種?<ul>
+<li>因為以前的記憶體成本很高，為了有效率的分配資源，所以C語言的資料類別設計十分嚴謹，為的就是能用最少記憶體存取最多的資料。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>arrays -&gt; 可以用一個參數儲存多筆資料</li>
+<li>字元Characters與字串String -&gt; 講解C語言如何存取一串字</li>
+<li>Command-line arguments -&gt; 如何在CLI用指令+參數去run你的程式碼</li>
+</ul>
+<hr>
+<p><img src="https://i.imgur.com/tZ7jmSt.png" alt="file"></p>
+<h2 id="作業-pset2"><a href="#作業-pset2" class="headerlink" title="作業 : pset2"></a>作業 : pset2</h2><p>建議自己寫完後再看以下內容</p>
+<p>參考答案連結 : <a target="_blank" rel="noopener" href="https://github.com/huawiz/CS-note/tree/master/CS50x/pset2">Link</a> </p>
+<p>這禮拜的作業，大致上在練習使用command-line arguments以及陣列的使用。第一題(readability)還蠻簡單的，只要照著作業指示就能輕鬆完成。第二題(Caesar)很有趣，用到了<a target="_blank" rel="noopener" href="https://www.asciitable.com/" title="ASCII">ASCII表</a>，抓到作業指示的公式與思考大寫與小寫的判別之後，就能Rotate的函數並且完成這題。而第三題(Substitution)則是這題的衍伸題，不是字元號碼的轉換，而是要請使用者自行輸入加密字元，為了能和<a target="_blank" rel="noopener" href="https://sandbox.cs50.io/e6e69576-1719-4c83-a292-24d54690a699">課程範例</a>相同，要寫很多的條件句，如果沒想清楚的話就會花很久的時間。</p>
+<h3 id="caesar與rotate分開寫"><a href="#caesar與rotate分開寫" class="headerlink" title="caesar與rotate分開寫"></a>caesar與rotate分開寫</h3><p>我的做法是按照作業指示，把加密與rotate函數分開寫，後來也成功用幾乎完全一致的函數完成了第二和三題，差別只在第二題有使用<a target="_blank" rel="noopener" href="https://manual.cs50.io/3/atoi"><code>atoi()</code></a>來把字串轉成數字。為什麼是字串呢？因為command-line arguments是把值存成字串形式，所以還需要再使用這個函數，才能把string轉換成int。</p>
+<hr>
+<h3 id="caesar函數"><a href="#caesar函數" class="headerlink" title="caesar函數"></a>caesar函數</h3><p>簡單來說就是把每個輸入進來的字元用迴圈跑過，並且用自己寫的rotate函數，把它轉換成加密後的密碼，最後再printf到CLI上。</p>
+<figure class="highlight cpp hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">caesar</span><span class="hljs-params">(string key)</span></span></span><br><span class="line"><span class="hljs-function"></span>{</span><br><span class="line">    string text = <span class="hljs-built_in">get_string</span>(<span class="hljs-string">"plaintext: "</span>);</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">strlen</span>(text); i++)</span><br><span class="line">    {</span><br><span class="line">        text[i] = <span class="hljs-built_in">rotate</span>(text[i], key);</span><br><span class="line">    }</span><br><span class="line">    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"ciphertext: %s\n"</span>, text);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h3 id="rotate函數"><a href="#rotate函數" class="headerlink" title="rotate函數"></a>rotate函數</h3><p>caesar 與 substitution 的差異，只在於加密的key不同，所以一個是字串，一個是int。其他判斷大小寫、回傳非字母字元的條件句一模一樣。</p>
+<p>caesar：考慮到加超過Z的狀況，因此原本想要用條件硬幹的我打消了念頭，轉而專注回題目的意思，最後得到一個漂亮的回傳式。大致上的做法是：先幫A-Z標號，先找到字母的號碼，然後往後數數字，走到尾巴再從字母A的號碼開始走，直到走完指定數字，即是加密後的字母。<br><img src="https://i.imgur.com/GFyRE8m.png" alt="file"></p>
+<p>例如A開始往後數到G，那就是移動了6、32或是58步。<br><img src="https://i.imgur.com/WlWeFqv.png" alt="file"></p>
+<p>substitution：這個比Caesar簡單，就是直接把A-Z與你的加密字母做1-1對應，因此只要直接回傳加密字母串的位置就行了，位置號碼就是A-Z的標號。</p>
+<p><img src="https://i.imgur.com/PiVRuZO.png" alt="file"></p>
+<p>65-90是大寫字母的ASCII號碼，所以要減掉A的字碼，這樣就能對到0-25(26個字母)，如此一來就能拿來對應加密字串。</p>
+<figure class="highlight cpp hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-type">char</span> <span class="hljs-title">rotate</span><span class="hljs-params">(<span class="hljs-type">char</span> letter, string key)</span> <span class="hljs-comment">// caesar是int key</span></span></span><br><span class="line"><span class="hljs-function"></span>{</span><br><span class="line">    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">isupper</span>(letter))</span><br><span class="line">    {</span><br><span class="line">		<span class="hljs-comment">//return (((int)letter - 64) + key) % 26 + 64; caesar的</span></span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-built_in">toupper</span>(key[((<span class="hljs-type">int</span>)letter) - <span class="hljs-number">65</span>]);</span><br><span class="line">    }</span><br><span class="line">    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-built_in">islower</span>(letter))</span><br><span class="line">    {</span><br><span class="line">	－<span class="hljs-comment">//return (((int)letter - 97) + key) % 26 + 97; caesar的</span></span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-built_in">tolower</span>(key[((<span class="hljs-type">int</span>)letter) - <span class="hljs-number">97</span>]);</span><br><span class="line">    }</span><br><span class="line">    <span class="hljs-keyword">else</span></span><br><span class="line">    {</span><br><span class="line">        <span class="hljs-keyword">return</span> letter;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+<h2 id="其他收穫"><a href="#其他收穫" class="headerlink" title="其他收穫"></a>其他收穫</h2><p>在寫作業的時候試字串，一直不知道為啥輸入’!’後的指令會被截斷。<br><img src="https://i.imgur.com/oCqOQRT.png"></p>
+<p>後來去CS50x群組問，得到了解答：bash會被!打斷</p>
+<p><img src="https://i.imgur.com/CS57kYm.png"></p>
+</body></html>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/CS50x/">#CS50x</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2022/control-VM-with-pwsh/">常用的管理VM組合</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2022/CS50-W1/">[CS50]W1作業筆記</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
+<div class="comments">
+    <h3 class="title is-4">評論</h3>
+    
+<div id="comment-container"></div>
+<script src="https://utteranc.es/client.js"
+        repo="huawiz/huawiz.github.io"
+        issue-term="pathname"
+        theme="boxy-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2022 huawiz&nbsp;
+                powered_by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" target="_blank" rel="noopener" href="https://github.com/huawiz">
+                    
+                    <i class="fab fa-github"></i>
+                    
+                </a>
+                
+                    
+                <a class="column is-narrow has-text-black" title="Facebook" target="_blank" rel="noopener" href="https://www.facebook.com/huawiz/">
+                    
+                    <i class="fab fa-facebook"></i>
+                    
+                </a>
+                
+                    
+                <a class="column is-narrow has-text-black" title="RSS" href="https://huawiz.github.io/atom.xml">
+                    
+                    <i class="fas fa-rss"></i>
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("zh-CN");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery > p > .gallery-item').unwrap();
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+    
+
+    
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="站內搜尋" />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '頁面',
+                CATEGORIES: '分類',
+                TAGS: '標籤',
+                UNTITLED: '(無標題)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+    
+</body>
+</html>
