@@ -18,8 +18,8 @@
   
   <entry>
     <title>Powershell基礎教學</title>
-    <link href="http://huawiz.github.com/2022/08/31/from-get-help-to-use-powershell/"/>
-    <id>http://huawiz.github.com/2022/08/31/from-get-help-to-use-powershell/</id>
+    <link href="http://huawiz.github.com/2022/08/31/Powershell/from-get-help-to-use-powershell/"/>
+    <id>http://huawiz.github.com/2022/08/31/Powershell/from-get-help-to-use-powershell/</id>
     <published>2022-08-30T16:00:00.000Z</published>
     <updated>2022-11-02T10:03:06.000Z</updated>
     
@@ -39,8 +39,8 @@
   
   <entry>
     <title>使用Powershell控制Word文件</title>
-    <link href="http://huawiz.github.com/2022/08/16/control-word-with-pwsh/"/>
-    <id>http://huawiz.github.com/2022/08/16/control-word-with-pwsh/</id>
+    <link href="http://huawiz.github.com/2022/08/16/Powershell/control-word-with-pwsh/"/>
+    <id>http://huawiz.github.com/2022/08/16/Powershell/control-word-with-pwsh/</id>
     <published>2022-08-15T16:00:00.000Z</published>
     <updated>2022-12-14T07:30:18.509Z</updated>
     
@@ -62,8 +62,8 @@
   
   <entry>
     <title>用Powershell快速建立Hyper-V的差異硬碟</title>
-    <link href="http://huawiz.github.com/2022/07/27/control-VM-with-pwsh/"/>
-    <id>http://huawiz.github.com/2022/07/27/control-VM-with-pwsh/</id>
+    <link href="http://huawiz.github.com/2022/07/27/Powershell/control-VM-with-pwsh/"/>
+    <id>http://huawiz.github.com/2022/07/27/Powershell/control-VM-with-pwsh/</id>
     <published>2022-07-26T16:00:00.000Z</published>
     <updated>2022-12-14T07:30:14.561Z</updated>
     
