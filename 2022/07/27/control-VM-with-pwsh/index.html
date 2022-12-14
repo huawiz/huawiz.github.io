@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="description" content="用Powershell快速建立Hyper-V的差異硬碟"/><meta name="keywords" content="powershell, 懶人, Huawiz's DB" /><link rel="alternate" href="/atom.xml" title="Huawiz's DB" type="application/atom+xml"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.1" />
+<link rel="canonical" href="http://huawiz.github.com/2022/07/27/control-VM-with-pwsh/"/>
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.1" />
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":"","latex":true};
+</script>
+
+    <title>用Powershell快速建立Hyper-V的差異硬碟 - Huawiz's DB</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Huawiz's DB</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/">
+        <li class="mobile-menu-item">Home
+          </li>
+      </a><a href="/archives/">
+        <li class="mobile-menu-item">Archives
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Huawiz's DB</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/">
+            Home
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            Archives
+            </a>
+        </li>
+      </ul></nav>
+</header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">用Powershell快速建立Hyper-V的差異硬碟
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2022-07-27
+        </span><span class="post-category">
+            <a href="/categories/Powershell/">Powershell</a>
+            </span>
+        </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4"><span class="toc-text">指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AA%AA%E6%98%8E"><span class="toc-text">說明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A6%81%E5%85%88%E5%BB%BA%E5%A5%BD%E6%A9%9F%E5%99%A8"><span class="toc-text">要先建好機器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E4%BB%A4-1"><span class="toc-text">指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">使用方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A8%AD%E5%AE%9A%E9%96%8B%E5%95%9Fpwsh%E8%BC%89%E5%85%A5%E5%87%BD%E6%95%B8"><span class="toc-text">設定開啟pwsh載入函數</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%95%88%E6%9E%9C"><span class="toc-text">使用效果</span></a></li></ol></li></ol>
+    </div>
+  </div><div class="post-content"><p>最近工作上，常使用Hyper-V來練習架設環境，而每次想要再次練習就還要再按一次圖形化介面，一台按一次，n台就要按n次，麻煩！所以才會誕生這篇，研究了一下如何用簡單的powershell，來自動化「創建n次差異硬碟，並且掛載到虛擬機器上」這個動作。</p>
+<span id="more"></span>
+<!-- toc -->
+<h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#build-VHD -Path &#x27;E:\lab\test&#x27; -Parent &#x27;E:\VM\WinServer2019\base.vhdx&#x27; -List &quot;AD&quot;,&quot;Server1&quot;,&quot;Server2&quot;,&quot;Server3&quot;</span></span><br><span class="line"><span class="comment">#使用方式:build-VHD -Path &lt;你要建立的位置&gt; -Parent &lt;父系磁碟位置&gt; -List &lt;主機列表&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">build-VHD</span></span> &#123;</span><br><span class="line">  <span class="keyword">Param</span> (</span><br><span class="line">    [<span class="type">parameter</span>(<span class="type">position</span> = <span class="number">0</span>, <span class="type">mandatory</span> = <span class="variable">$true</span>)][<span class="built_in">string</span>]<span class="variable">$Path</span>, </span><br><span class="line">    [<span class="type">parameter</span>(<span class="type">position</span> = <span class="number">1</span>, <span class="type">mandatory</span> = <span class="variable">$true</span>)][<span class="built_in">string</span>]<span class="variable">$Parent</span>, </span><br><span class="line">    [<span class="type">parameter</span>(<span class="type">ValueFromPipeline</span> = <span class="variable">$true</span>)][<span class="built_in">string</span>[]]<span class="variable">$List</span>,</span><br><span class="line">    [<span class="type">parameter</span>(<span class="type">position</span> = <span class="number">2</span>, <span class="type">mandatory</span> = <span class="variable">$false</span>)][<span class="type">Alias</span>(<span class="string">&quot;open&quot;</span>, <span class="string">&quot;run&quot;</span>)][<span class="type">switch</span>]<span class="variable">$openVM</span></span><br><span class="line">  )</span><br><span class="line">  <span class="keyword">begin</span> &#123;</span><br><span class="line">    <span class="built_in">write-host</span> <span class="string">&quot;Begin.&quot;</span></span><br><span class="line">    <span class="comment"># 如果指定父系磁碟不存在即離開</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="operator">-not</span>(<span class="built_in">Test-Path</span> <span class="variable">$Parent</span>)) &#123;</span><br><span class="line">      <span class="built_in">write-host</span> <span class="string">&quot;The parent is not defined.&quot;</span></span><br><span class="line">      <span class="keyword">exit</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># 如果指定目錄不存在，就建立目錄</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="operator">-not</span>(<span class="built_in">Test-Path</span> <span class="variable">$Path</span>)) &#123;</span><br><span class="line">      <span class="built_in">Write-Host</span> <span class="string">&quot;Build <span class="variable">$</span>&#123;Path&#125;&quot;</span></span><br><span class="line">      [<span class="built_in">void</span>](mkdir <span class="variable">$Path</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">write-host</span> <span class="string">&quot;<span class="variable">$</span>&#123;Path&#125; exists.&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">process</span> &#123;</span><br><span class="line">    <span class="keyword">Foreach</span> (<span class="variable">$VMName</span> <span class="keyword">in</span> <span class="variable">$List</span>) &#123;</span><br><span class="line">      <span class="variable">$VHDPath</span> = <span class="string">&quot;<span class="variable">$</span>&#123;Path&#125;\<span class="variable">$</span>&#123;VMName&#125;.vhdx&quot;</span></span><br><span class="line">      <span class="keyword">if</span> (<span class="operator">-not</span>(<span class="built_in">Test-Path</span> <span class="variable">$VHDPath</span>)) &#123;</span><br><span class="line">        <span class="comment"># 狀態表示</span></span><br><span class="line">        <span class="built_in">Write-Progress</span> <span class="literal">-Activity</span> <span class="string">&quot;Building VHD...&quot;</span> <span class="literal">-Status</span> <span class="string">&quot;Building <span class="variable">$</span>&#123;VMName&#125;...&quot;</span> <span class="literal">-PercentComplete</span> (((<span class="variable">$List</span>.indexof(<span class="variable">$VMName</span>) + <span class="number">1</span>) / <span class="variable">$List</span>.count) * <span class="number">100</span>)</span><br><span class="line">        <span class="comment"># 建立差異硬碟</span></span><br><span class="line">        [<span class="built_in">void</span>](<span class="built_in">new-vhd</span> <span class="literal">-path</span> <span class="variable">$VHDPath</span> <span class="literal">-ParentPath</span> <span class="variable">$Parent</span> <span class="literal">-diff</span>)</span><br><span class="line">        <span class="built_in">Write-Host</span> <span class="string">&quot;<span class="variable">$</span>&#123;VHDPath&#125; is finished.&quot;</span></span><br><span class="line">        <span class="comment"># 設定同名的硬碟到同名的主機</span></span><br><span class="line">        <span class="built_in">Set-VMHardDiskDrive</span> <span class="literal">-VMName</span> <span class="variable">$VMName</span> <span class="literal">-path</span> <span class="variable">$VHDPath</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">Write-Host</span> <span class="string">&quot;<span class="variable">$</span>&#123;VMName&#125; exists.&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment"># 順便開啟VM</span></span><br><span class="line">      <span class="keyword">if</span> (<span class="variable">$openVM</span>) &#123;</span><br><span class="line">        <span class="keyword">Foreach</span> (<span class="variable">$VMName</span> <span class="keyword">in</span> <span class="variable">$List</span>) &#123;</span><br><span class="line">          <span class="built_in">start-vm</span> <span class="literal">-name</span> <span class="variable">$VMName</span></span><br><span class="line">          <span class="built_in">write-host</span> <span class="string">&quot;Running <span class="variable">$</span>&#123;VMName&#125;&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">end</span> &#123;</span><br><span class="line">    <span class="built_in">write-host</span> <span class="string">&quot;End.&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="說明"><a href="#說明" class="headerlink" title="說明"></a>說明</h1><h2 id="要先建好機器"><a href="#要先建好機器" class="headerlink" title="要先建好機器"></a>要先建好機器</h2><p>此指令要先建立好機器才能使用<br><img src="https://i.imgur.com/TKKynjB.png" alt="file"></p>
+<h2 id="指令-1"><a href="#指令-1" class="headerlink" title="指令"></a>指令</h2><p><code>build-VHD -Path &#39;E:\lab\test&#39; -Parent &#39;E:\VM\WinServer2019\base.vhdx&#39; -List &quot;AD&quot;,&quot;Server1&quot;,&quot;Server2&quot;,&quot;Server3&quot;</code></p>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p><code>build-VHD -Path &lt;你要建立的位置&gt; -Parent &lt;父系磁碟位置&gt; -List &lt;主機列表&gt;</code></p>
+<h2 id="設定開啟pwsh載入函數"><a href="#設定開啟pwsh載入函數" class="headerlink" title="設定開啟pwsh載入函數"></a>設定開啟pwsh載入函數</h2><p>只需要使用notepad把上面的函數加進去後存成一個ps1檔案，開啟powershell輸入$profile，在裏頭加入<code>Import-module &lt;這個ps1檔案&gt;</code>，就可以在每次開啟的時候載入這個function。</p>
+<p>註:<code>$profile</code> Powershell會在執行服務時，執行這檔案裡面的動作。</p>
+<h2 id="使用效果"><a href="#使用效果" class="headerlink" title="使用效果"></a>使用效果</h2><p><img src="https://i.imgur.com/5DmzeDx.png" alt="file"></p>
+
+      </div>
+      <div class="post-copyright">
+    <p class="copyright-item">
+      <span>Author: </span>
+      <a href="http://huawiz.github.com">Justin Wu</a>
+    </p>
+    <p class="copyright-item">
+      <span>Link: </span>
+      <a href="http://huawiz.github.com/2022/07/27/control-VM-with-pwsh/">http://huawiz.github.com/2022/07/27/control-VM-with-pwsh/</a>
+    </p>
+    <p class="copyright-item">
+      <span>License: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+      <footer class="post-footer">
+        <div class="post-tags">
+            <a href="/tags/powershell/">powershell</a>
+            <a href="/tags/%E6%87%B6%E4%BA%BA/">懶人</a>
+            </div>
+        
+        <nav class="post-nav"><a class="prev" href="/2022/08/16/control-word-with-pwsh/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">使用Powershell控制Word文件</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    </nav></footer>
+    </article></div><div class="comments" id="comments"><div id="utterances-container"></div>
+    </div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:huawiz@outlook.com" class="iconfont icon-email" title="email"></a>
+        <a target="_blank" rel="noopener" href="https://github.com/huawiz" class="iconfont icon-github" title="github"></a>
+        <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    </div><div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">&copy;2015 - 2022<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Justin Wu</span>
+  </span>
+</div>
+</footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script>
+    var container = document.getElementById('utterances-container')
+    var script = document.createElement('script')
+    script.src = 'https://utteranc.es/client.js'
+    script.setAttribute('repo', 'owner/repo')
+    script.setAttribute('issue-term', 'title')
+    script.setAttribute('theme', 'github-light')
+    script.setAttribute('label', 'utterances')
+    script.crossorigin = 'anonymous'
+    script.async = true
+
+    container.appendChild(script)
+  </script><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/src/even.js?v=2.11.1"></script>
+</body>
+</html>

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="description" content="Powershell基礎教學"/><meta name="keywords" content="Powershell, Huawiz's DB" /><link rel="alternate" href="/atom.xml" title="Huawiz's DB" type="application/atom+xml"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.1" />
+<link rel="canonical" href="http://huawiz.github.com/2022/08/31/from-get-help-to-use-powershell/"/>
+
+<link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" /><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.1" />
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":"","latex":true};
+</script>
+
+    <title>Powershell基礎教學 - Huawiz's DB</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Huawiz's DB</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/">
+        <li class="mobile-menu-item">Home
+          </li>
+      </a><a href="/archives/">
+        <li class="mobile-menu-item">Archives
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Huawiz's DB</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/">
+            Home
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            Archives
+            </a>
+        </li>
+      </ul></nav>
+</header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">Powershell基礎教學
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2022-08-31
+        </span><span class="post-category">
+            <a href="/categories/Powershell/">Powershell</a>
+            </span>
+        </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B0%A1%E5%96%AE%E4%BB%8B%E7%B4%B9"><span class="toc-text">簡單介紹</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%8D%B5"><span class="toc-text">常用快捷鍵</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#get-help-by-yourself-%E6%95%91%E4%BD%A0%E8%87%AA%E5%B7%B1%EF%BC%81"><span class="toc-text">get-help by yourself(救你自己！)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8CLI%E6%8C%87%E4%BB%A4"><span class="toc-text">常用CLI指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E7%AC%A6%E8%99%9F"><span class="toc-text">特殊符號</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AF%94%E8%BC%83%E5%8F%83%E6%95%B8"><span class="toc-text">比較參數</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%8B%95%E8%AE%8A%E6%95%B8"><span class="toc-text">自動變數</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B"><span class="toc-text">資料結構</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Array"><span class="toc-text">Array</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E6%B3%95"><span class="toc-text">加法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%98%E6%B3%95"><span class="toc-text">乘法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hashtable"><span class="toc-text">Hashtable</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Exercises"><span class="toc-text">Exercises</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E9%A1%8C"><span class="toc-text">查找題</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%AA%94%E6%A1%88%E6%93%8D%E4%BD%9C-%E8%A8%88%E7%AE%97-%E8%BC%B8%E5%87%BA%E7%B5%90%E6%9E%9C%E9%A1%8C"><span class="toc-text">基本檔案操作+計算+輸出結果題</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8D%E7%94%9F%E9%A1%8C"><span class="toc-text">衍生題</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%83%85%E5%A2%83%E9%A1%8C"><span class="toc-text">情境題</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+    </div>
+  </div><div class="post-content"><p>這篇文章想分享下，最近準備挑戰向新人介紹的Powershell基礎使用，也順便透過整理資料來加深自己這方面的基礎，裡面也有給一些練習題，如果你剛好路過也可以做做看。</p>
+<span id="more"></span>
+
+<p>注：原始文件寫在OneNote上，在轉換成Markdown的過程已盡量修改成部落格版本的寫法。</p>
+<br>
+<!-- toc -->
+<br>
+
+<h1 id="簡單介紹"><a href="#簡單介紹" class="headerlink" title="簡單介紹"></a>簡單介紹</h1><p>Powershell是微軟推出的CLI，擁有以下特性:</p>
+<ol>
+<li>一致性的指令命名規則</li>
+</ol>
+<blockquote>
+<p>所有”官方”指令都遵守 <code>​Verb-Noun</code>​ ，例如<code> ​get-help​ </code></p>
+</blockquote>
+<ol start="2">
+<li>內建強大的Cmdlet(command-let)</li>
+<li>具有Scripts的功能</li>
+</ol>
+<blockquote>
+<p>可以透過編寫Code，把指令像是樂高一樣組成我們想要的樣子。</p>
+</blockquote>
+<p>每個指令都是以動詞+名詞(通常是單數)的方式組成，而使用每個指令時，以<code>-parameters</code>表示參數。</p>
+<p>例如: <code>get-command -verb write -none host</code></p>
+<p>get-command 指令</p>
+<p>-verb,-none 參數</p>
+<p>write 是 -verb的參數內容；host是-none的參數內容</p>
+<hr>
+<h1 id="常用快捷鍵"><a href="#常用快捷鍵" class="headerlink" title="常用快捷鍵"></a>常用快捷鍵</h1><table>
+<thead>
+<tr>
+<th>快捷鍵</th>
+<th>Memo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Tab</code></td>
+<td>最常用的快捷鍵，可以自動完成指令、參數名稱。</td>
+</tr>
+<tr>
+<td><code>Ctrl+C</code></td>
+<td>停止目前指令</td>
+</tr>
+<tr>
+<td><code>Ctrl+L</code></td>
+<td>清除畫面</td>
+</tr>
+<tr>
+<td><code>(Ctrl+Shift+)Pageup</code></td>
+<td>切到上一面</td>
+</tr>
+<tr>
+<td><code>(Ctrl+Shift+)Pagedown</code></td>
+<td>切到下一面</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="get-help-by-yourself-救你自己！"><a href="#get-help-by-yourself-救你自己！" class="headerlink" title="get-help by yourself(救你自己！)"></a>get-help by yourself(救你自己！)</h1><p>一般我們在編寫Powershell指令時，由於Powershell的功能實在太強大，有太多的指令我們無法全部記住，所以我們必須學會使用內建的手冊，來查找我們要使用的指令。</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>說明</th>
+<th>範例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>update-help​</code></td>
+<td>更新Powershell的說明文件</td>
+<td></td>
+</tr>
+<tr>
+<td><code>get-help &lt;功能&gt;</code></td>
+<td>用來查看說明文件</td>
+<td>取得<code>hyper-v</code>有關的指令或說明檔<br><code>​get-help *hyper-v*</code></td>
+</tr>
+<tr>
+<td><code>get-command &lt;功能&gt;</code></td>
+<td>用來查找相關指令</td>
+<td>查找和Hyper-V有關的指令<br>​​<code>get-command -Module hyper-v</code></td>
+</tr>
+<tr>
+<td><code>get-member &lt;物件&gt;</code></td>
+<td>查詢或指令相關的Properties</td>
+<td>看<code>$x</code>物件的屬性<br>​<code>get-member -InputObject $x</code><br>or<br><code>$x|get-member</code></td>
+</tr>
+</tbody></table>
+<p><strong>注意</strong></p>
+<p><code>get-help</code> <code>*hyper-v*</code> 直接執行可能會顯示不出結果，但是寫在<code>get-command -Module hyper-v</code>之後卻可以，所以或許兩個指令有對應關係，在查找指令時最好先用<code>get-command</code>找到未知的指令後，再使用<code>get-help</code>來查使用方式。</p>
+<hr>
+<h1 id="常用CLI指令"><a href="#常用CLI指令" class="headerlink" title="常用CLI指令"></a>常用CLI指令</h1><p>因為不確定是否每個人都有使用CLI的經驗，所以特別列一些時常用來檔案管理的幾個指令（最常用的）。</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>說明</th>
+<th>範例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>cd</code></td>
+<td>到指定目錄</td>
+<td><code>cd C:\\</code></td>
+</tr>
+<tr>
+<td><code>mkdir</code></td>
+<td>建立資料夾</td>
+<td><code>mkdir newfolder</code></td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td>刪除檔案</td>
+<td><code>rm test.txt</code></td>
+</tr>
+<tr>
+<td><code>cls</code></td>
+<td>清空畫面</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pwd</code></td>
+<td>查看現在目錄</td>
+<td></td>
+</tr>
+<tr>
+<td><code>echo</code></td>
+<td>寫資料</td>
+<td><code>echo &quot;Hello&quot; &gt; World.txt</code></td>
+</tr>
+<tr>
+<td><code>Notepad</code></td>
+<td>打開記事本</td>
+<td><code>Notepad &lt;路徑&gt;</code></td>
+</tr>
+<tr>
+<td><code>code</code></td>
+<td>有裝VSCODE的話，可以直接用這個指令打開文件編輯程式碼</td>
+<td><code>code &lt;路徑&gt;</code></td>
+</tr>
+</tbody></table>
+<p>其他縮寫可以透過<code>get-alias | select name,definition</code>來查看縮寫與原始指令。</p>
+<hr>
+<h1 id="特殊符號"><a href="#特殊符號" class="headerlink" title="特殊符號"></a>特殊符號</h1><p>特殊符號： <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/powershell/exchange/exchange-cmdlet-syntax">Exchange Cmdlet 語法 | Microsoft</a></p>
+<table>
+<thead>
+<tr>
+<th><strong>符號</strong></th>
+<th><strong>說明</strong></th>
+<th><strong>範例</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>$</code></td>
+<td>代表參數</td>
+<td><code>$h = get-help</code></td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td>Pipeline，串接指令用的水管符號</td>
+<td><code>get-alias|select name</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>把指令產生結果輸出成某檔案<br>(會覆寫)</td>
+<td><code>get-process &gt; Process.txt</code></td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>把指令產生結果輸出成某檔案<br>(檔案存在的話會在後面加入)</td>
+<td><code>get-process &gt;&gt; Process.txt</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>1.比對字串<br>2.乘法運算<br>3.重複字串</td>
+<td>1.<code>get-help *keyword*</code><br>2.<code>$a * $b</code><br>3.”test”*3 –&gt; testtesttest</td>
+</tr>
+<tr>
+<td><code>[]</code></td>
+<td>拿來指定索引(index)、資料型態</td>
+<td>指定索引:<code>$array[3]</code><br>指定資料型態:<code>$b = [string]$a</code> <br><img src="https://i.imgur.com/gE5R4FC.png" alt="file"></td>
+</tr>
+<tr>
+<td><code>&#123;&#125;</code></td>
+<td>用來包指令間的運算式的符號</td>
+<td>見<code>@</code>的範例</td>
+</tr>
+<tr>
+<td><code>..</code></td>
+<td>表示之間，例如$array[2..5]，會回傳array中第二個到第五個間的值</td>
+<td>見<code>@</code>的範例</td>
+</tr>
+<tr>
+<td><code>$_</code></td>
+<td>表示”每一個”物件，只有在執行指令的範圍有效，例如：<br><code>$x[0..5].foreach(&#123;$_*$_&#125;)</code><br>表示0~5每個數字的平方數</td>
+<td>見<code>@</code>的範例</td>
+</tr>
+<tr>
+<td><code>@</code></td>
+<td>作為關聯陣列的符號</td>
+<td><img src="https://i.imgur.com/gmEIatG.png" alt="Image"></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>1.在運算式裡面作為”取餘數”的符號<br>2.在<code>|</code>後面作為foreach的速記符號</td>
+<td><img src="https://i.imgur.com/U9YC4p4.png" alt="Image"></td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>where的速記符號</td>
+<td><img src="https://i.imgur.com/KrG3r6O.png" alt="Image"></td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="比較參數"><a href="#比較參數" class="headerlink" title="比較參數"></a>比較參數</h1><p>另外在Powershell的運算式(在{}裡面，見上面範例)中，是使用預留的參數作為比較用途，而非使用符號<code>=</code>,<code>&gt;</code>,<code>&lt;</code>，原因在於Powershell除了可以比較數值大小，也可以比較字串，為了應付不同的比較方式，採用更多種預留參數作為比較運算子。<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.2">about_Comparison_Operators</a></p>
+<p><img src="https://i.imgur.com/eqHp7NZ.png" alt="Image"></p>
+<p>查看差異:</p>
+<p><img src="https://i.imgur.com/DEGrggs.png" alt="file"></p>
+<p>由此可知，<code>=</code>用來定義參數，而<code>-eq</code>用來判斷,回傳<code>$true</code> or <code>$false</code></p>
+<hr>
+<h1 id="自動變數"><a href="#自動變數" class="headerlink" title="自動變數"></a>自動變數</h1><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-7.2">關於自動變數 - PowerShell | Microsoft Docs</a></p>
+<table>
+<thead>
+<tr>
+<th>參數</th>
+<th>Memo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>$Profile</code></td>
+<td>一個預設拿來存Powershell設定檔的內建參數，可以在此設定每次打開Powershell要載入的函數、模組。<br><strong>也可以在這定義平常會用到的參數作為自動變數</strong></td>
+</tr>
+<tr>
+<td><code>$Error</code></td>
+<td>顯示近期發生的錯誤訊息。</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="資料結構"><a href="#資料結構" class="headerlink" title="資料結構"></a>資料結構</h1><h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/powershell/scripting/learn/deep-dives/everything-about-arrays?view=powershell-7.2">您想知道有關於陣列的一切 - PowerShell | Microsoft Docs</a></p>
+<p>算矩陣(供參考)</p>
+<p>對​​​​​$\begin{bmatrix}1&amp;2&amp;3 \\ 4&amp;5&amp;6 \\ 7&amp;8&amp;9\end{bmatrix}$​​​​​做運算</p>
+<p>(橫的為Row列，直的為Col欄，索引從0開始)</p>
+<table>
+<thead>
+<tr>
+<th>Operate</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Matrix</td>
+<td><code>$matrix = @(@(1,2,3),@(4,5,6),@(7,8,9))</code></td>
+</tr>
+<tr>
+<td>row</td>
+<td><code>$row = $matrix[0]</code></td>
+</tr>
+<tr>
+<td>col</td>
+<td><code>$col = $matrix | %&#123;$_[0]&#125;</code></td>
+</tr>
+</tbody></table>
+<h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Memo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>列加法</td>
+<td>第0列+第1列<br>  <code>for($i=0;$i -le $matrix.Length;$i++)&#123;$matrix[0][$i]+$matrix[1][$i]&#125;</code></td>
+</tr>
+</tbody></table>
+<p><img src="https://i.imgur.com/xVyb9GL.png" alt="file"></p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Memo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>欄加法</td>
+<td>第0行+第1行<br>  <code>$matrix | %&#123;$_[0]+$_[1]&#125;</code></td>
+</tr>
+</tbody></table>
+<p><img src="https://i.imgur.com/9kDHUJe.png" alt="file"></p>
+<h3 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h3><table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Memo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>欄乘列</td>
+<td>欄乘列<br>$\begin{bmatrix} 1 \\ 4 \\ 7 \end{bmatrix}$ * $\begin{bmatrix}1&amp;2&amp;3\end{bmatrix}&#x3D;\begin{bmatrix}1∗1&amp;1∗2&amp;1∗3 \\ 4∗1&amp;4∗2&amp;4∗3 \\ 7∗1&amp;7∗2&amp;7∗3\end{bmatrix}&#x3D;\begin{bmatrix}1&amp;2&amp;3 \\ 4&amp;8&amp;12 \\ 7&amp;14&amp;21\end{bmatrix}$<br><br><code>for($j=0;$j-lt$col.length;$j++)&#123;$elements[$j]=for($i=0;$i -lt $row.length;$i++)&#123;$col[$j]*$row[$i]&#125;&#125;</code><br></td>
+</tr>
+</tbody></table>
+<p><img src="https://i.imgur.com/I0fcrQk.png" alt="file"></p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Memo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>列乘欄</td>
+<td>列乘欄<br> $\begin{bmatrix}1&amp;2&amp;3\end{bmatrix}$*$\begin{bmatrix} 1 \\ 4 \\ 7 \end{bmatrix}$ = 1*1+2*4+3*7&#x3D;30  <br>  <code>$elements = for($i=0;$i-lt$row.Length;$i++)&#123;$row[$i] * $col[$i]&#125;</code> <br> <code>$sum = ($elements | Measure-Object -sum).sum</code></td>
+</tr>
+</tbody></table>
+<p><img src="https://i.imgur.com/btbjhNB.png" alt="file"></p>
+<h2 id="Hashtable"><a href="#Hashtable" class="headerlink" title="Hashtable"></a>Hashtable</h2><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/powershell/scripting/learn/deep-dives/everything-about-hashtable?view=powershell-7.2">您想知道有關雜湊表的一切 - PowerShell | Microsoft Docs</a></p>
+<p>可以用來對群組資料做分類，例如今天有個表格資料</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Domain</th>
+<th>IP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AD</td>
+<td>ad.company.ad</td>
+<td>192.168.0.3</td>
+</tr>
+<tr>
+<td>Server1</td>
+<td>server1.company.ad</td>
+<td>192.168.0.4</td>
+</tr>
+<tr>
+<td>Server2</td>
+<td>server2.company.ad</td>
+<td>192.168.0.5</td>
+</tr>
+</tbody></table>
+<p>可以使用hashtable來存資料</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$group</span> = <span class="selector-tag">@</span>&#123;</span><br><span class="line">ADDC = <span class="selector-tag">@</span>&#123;Domain = <span class="string">&quot;addc.company.ad&quot;</span>;IP=<span class="string">&quot;192.168.0.3&quot;</span>&#125;</span><br><span class="line">Server1 = <span class="selector-tag">@</span>&#123;Domain = <span class="string">&quot;server1.company.ad&quot;</span>;IP=<span class="string">&quot;192.168.0.4&quot;</span>&#125;</span><br><span class="line">Server2 = <span class="selector-tag">@</span>&#123;Domain = <span class="string">&quot;server2.company.ad&quot;</span>;IP=<span class="string">&quot;192.168.0.5&quot;</span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如此一來，就能使用Properties來查這個表格內的相關資料<br><img src="https://i.imgur.com/UsaOXp9.png" alt="file"></p>
+<hr>
+<h1 id="Exercises"><a href="#Exercises" class="headerlink" title="Exercises"></a>Exercises</h1><h2 id="查找題"><a href="#查找題" class="headerlink" title="查找題"></a>查找題</h2><ol>
+<li>執行<code>update-help</code></li>
+<li>使用<code>get-help get-content </code>來學習如何使用此指令<br>  a. 使用<code>get-help get-content -example</code> 來查看範例<br>  b. 使用<code>get-help get-content -onlinn</code> 連去微軟網站看此指令的說明</li>
+</ol>
+<h2 id="基本檔案操作-計算-輸出結果題"><a href="#基本檔案操作-計算-輸出結果題" class="headerlink" title="基本檔案操作+計算+輸出結果題"></a>基本檔案操作+計算+輸出結果題</h2><ol>
+<li>在C槽建立一個名為 ​pwsh​ 的資料夾，並且到此目錄底下</li>
+<li>建立一個名為 ​ ​ ​<code>Cube.txt</code>​ ​ ​ 的文字檔案</li>
+<li>對0~20取立方，輸出結果至<code>Cube.txt</code></li>
+<li>使用指令在CLI介面查看 ​ ​<code>Cube.txt​</code> ​ 的內容</li>
+</ol>
+<p>如圖</p>
+<p><img src="https://i.imgur.com/CmMTmeJ.png" alt="Image"></p>
+<hr>
+<h2 id="衍生題"><a href="#衍生題" class="headerlink" title="衍生題"></a>衍生題</h2><ol>
+<li>請對上面<code>Cube.txt</code>的檔案裡的每個數字，標示出是奇數(odd)或偶數(even)</li>
+</ol>
+<p>如圖</p>
+<p><img src="https://i.imgur.com/Gf2aXrE.png" alt="file"></p>
+<p>hint: <code>$x.tostring</code></p>
+<ol start="2">
+<li>把上面那題改用雜湊表(hashtable)表示</li>
+</ol>
+<p><img src="https://i.imgur.com/5ZLXvqJ.png" alt="file"></p>
+<hr>
+<h2 id="情境題"><a href="#情境題" class="headerlink" title="情境題"></a>情境題</h2><p>(請自行創空白的txt練習)</p>
+<blockquote>
+<p>今天有個檔案夾內的檔案，裡面的檔案名稱因為不明原因全部都有相同的錯誤，請用Powershell來快速修正檔案名稱。</p>
+</blockquote>
+<p>範例: Error_NAME_file01.txt –&gt; Correct_Name_file01.txt</p>
+<p>hint: Rename-Item,get-childItem</p>
+<hr>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>get-help<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/powershell/scripting/learn/ps101/02-help-system?view=powershell-7.2">說明系統 - PowerShell | Microsoft Docs</a></p>
+<p>特殊符號<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/powershell/exchange/exchange-cmdlet-syntax">Exchange Cmdlet 語法 | Microsoft</a></p>
+<p>比較參數</p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-7.2">about_Comparison_Operators</a></p>
+<p>資料結構<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/powershell/scripting/learn/deep-dives/everything-about-arrays?view=powershell-7.2">您想知道有關於陣列的一切 - PowerShell | Microsoft Docs</a><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/powershell/scripting/learn/deep-dives/everything-about-hashtable?view=powershell-7.2">您想知道有關雜湊表的一切 - PowerShell | Microsoft Docs</a></p>
+<p>快捷鍵</p>
+<p><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10027481">Windows PowerShell 基本操作 - 熱鍵 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天 (ithome.com.tw)</a>|</p>
+
+      </div>
+      <div class="post-copyright">
+    <p class="copyright-item">
+      <span>Author: </span>
+      <a href="http://huawiz.github.com">Justin Wu</a>
+    </p>
+    <p class="copyright-item">
+      <span>Link: </span>
+      <a href="http://huawiz.github.com/2022/08/31/from-get-help-to-use-powershell/">http://huawiz.github.com/2022/08/31/from-get-help-to-use-powershell/</a>
+    </p>
+    <p class="copyright-item">
+      <span>License: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+      <footer class="post-footer">
+        <div class="post-tags">
+            <a href="/tags/Powershell/">Powershell</a>
+            </div>
+        
+        <nav class="post-nav"><a class="next" href="/2022/08/16/control-word-with-pwsh/">
+        <span class="next-text nav-default">使用Powershell控制Word文件</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    </nav></footer>
+    </article></div><div class="comments" id="comments"><div id="utterances-container"></div>
+    </div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:huawiz@outlook.com" class="iconfont icon-email" title="email"></a>
+        <a target="_blank" rel="noopener" href="https://github.com/huawiz" class="iconfont icon-github" title="github"></a>
+        <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    </div><div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">&copy;2015 - 2022<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Justin Wu</span>
+  </span>
+</div>
+</footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script>
+    var container = document.getElementById('utterances-container')
+    var script = document.createElement('script')
+    script.src = 'https://utteranc.es/client.js'
+    script.setAttribute('repo', 'owner/repo')
+    script.setAttribute('issue-term', 'title')
+    script.setAttribute('theme', 'github-light')
+    script.setAttribute('label', 'utterances')
+    script.crossorigin = 'anonymous'
+    script.async = true
+
+    container.appendChild(script)
+  </script><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/src/even.js?v=2.11.1"></script>
+</body>
+</html>
