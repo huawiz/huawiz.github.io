@@ -6,7 +6,7 @@
   <link href="http://huawiz.github.io/atom.xml" rel="self"/>
   
   <link href="http://huawiz.github.io/"/>
-  <updated>2022-12-26T05:29:15.683Z</updated>
+  <updated>2022-12-26T05:39:18.558Z</updated>
   <id>http://huawiz.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>隨時隨刻都在裸奔的時代</title>
+    <link href="http://huawiz.github.io/Diary/%E9%9A%A8%E6%99%82%E9%9A%A8%E5%88%BB%E9%83%BD%E5%9C%A8%E8%A3%B8%E5%A5%94%E7%9A%84%E6%99%82%E4%BB%A3/"/>
+    <id>http://huawiz.github.io/Diary/%E9%9A%A8%E6%99%82%E9%9A%A8%E5%88%BB%E9%83%BD%E5%9C%A8%E8%A3%B8%E5%A5%94%E7%9A%84%E6%99%82%E4%BB%A3/</id>
+    <published>2022-09-17T21:49:23.000Z</published>
+    <updated>2022-12-26T05:39:18.558Z</updated>
+    
+    <content type="html"><![CDATA[<p>從小時候學習第一次上舞台的時候，我就確定，即使我可能天生適合做幕後、當綠葉的人，也擁有一種表演慾望，總是有那麼一點：歐～多希望有人能看見我、注意到我。</p><span id="more"></span><p>對我這樣身處在社群媒體從無至今發展的人來說，臉書、ig等等的平台，某方面來說已經成為了我們的一種類似名片的工具，當我們試圖認識一個人的時候，可能比起直接當面聊天，還要試圖去問一些問題去認識，還不如更直接地去看這個人過往到底PO過什麼東西，講過什麼話等等的。我想也因為這樣的模式發展，漸漸的也讓我們這輩的人，淺移默化的帶有一種「經營」的視角來看待這個工具，時常談論自己是如何「使用」自己的ig的，也會很在意他人怎麼透過這種東西來看待我。</p><p>最近有時候會看到例如YT在嘲笑抖音的影片有多白癡，然後說他們拍這種無腦的內容卻能在短時間內獲得大量收看次數，這些話背後或許可能也帶著不滿。</p><p>身為一個以前經營過部落格的人，我想對於一個文字部落客而言，YT也是曾是種類似的存在。差別可能是隨著科技的進步，我們越來越容易一夕爆紅，尤其是透過社群媒體所使用的演算法。</p><p>然而，透過演算法爆紅後呢？ 我們真的是想要被很大量的人關注嗎？ 我真的有這麼多的東西可以向人展示嗎？</p><p>隨便一個路人，有可能因為在自己的社群平台上PO東西而被另外一個人丟到某個地方公審而爆紅。</p><p>在我們自以為自己只是在自己的space分享資訊時，其實更像是在裸奔。</p><hr><p>又看了幾部在談論多少人為了追求流量過得多麽喪心病狂的影片後，</p><p>相較像是我這種SEO做得很差、沒有特定主題，而且根本不是為了營利為目的而產的個人部落格，才因此沒成為古蹟，因為我們根本也不需要什麼流量，只需要有個地方能默默地寫，就像經營咖啡車，規模不用大，只要能滿足路過、願意試個兩杯的人就好了。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;從小時候學習第一次上舞台的時候，我就確定，即使我可能天生適合做幕後、當綠葉的人，也擁有一種表演慾望，總是有那麼一點：歐～多希望有人能看見我、注意到我。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Powershell入門筆記</title>
@@ -61,6 +80,74 @@
   </entry>
   
   <entry>
+    <title>使用Powershell快速建立Hyper-V的差異硬碟</title>
+    <link href="http://huawiz.github.io/Powershell/build-vhdx-diff-quick-pwsh/"/>
+    <id>http://huawiz.github.io/Powershell/build-vhdx-diff-quick-pwsh/</id>
+    <published>2022-07-29T18:02:16.000Z</published>
+    <updated>2022-12-26T05:39:18.553Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近工作上，常使用Hyper-V來練習架設環境，而每次想要再次練習就還要再按一次圖形化介面，一台按一次，n台就要按n次，麻煩！所以才會誕生這篇，研究了一下如何用簡單的powershell，來自動化「創建n次差異硬碟，並且掛載到虛擬機器上」這個動作。</p><span id="more"></span><h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#build-VHD -Path &amp;#039;E:labtest&amp;#039; -Parent &amp;#039;E:VMWinServer2019base.vhdx&amp;#039; -List &quot;AD&quot;,&quot;Server1&quot;,&quot;Server2&quot;,&quot;Server3&quot;</span></span><br><span class="line"><span class="comment">#使用方式:build-VHD -Path &lt;你要建立的位置&gt; -Parent &lt;父系磁碟位置&gt; -List &lt;主機列表&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">build-VHD</span></span> &#123;</span><br><span class="line">  <span class="keyword">Param</span> (</span><br><span class="line">    [<span class="type">parameter</span>(<span class="type">position</span> = <span class="number">0</span>, <span class="type">mandatory</span> = <span class="variable">$true</span>)][<span class="built_in">string</span>]<span class="variable">$Path</span>, </span><br><span class="line">    [<span class="type">parameter</span>(<span class="type">position</span> = <span class="number">1</span>, <span class="type">mandatory</span> = <span class="variable">$true</span>)][<span class="built_in">string</span>]<span class="variable">$Parent</span>, </span><br><span class="line">    [<span class="type">parameter</span>(<span class="type">ValueFromPipeline</span> = <span class="variable">$true</span>)][<span class="built_in">string</span>[]]<span class="variable">$List</span>,</span><br><span class="line">    [<span class="type">parameter</span>(<span class="type">position</span> = <span class="number">2</span>, <span class="type">mandatory</span> = <span class="variable">$false</span>)][<span class="type">Alias</span>(<span class="string">&quot;open&quot;</span>, <span class="string">&quot;run&quot;</span>)][<span class="type">switch</span>]<span class="variable">$openVM</span></span><br><span class="line">  )</span><br><span class="line">  <span class="keyword">begin</span> &#123;</span><br><span class="line">    <span class="built_in">write-host</span> <span class="string">&quot;Begin.&quot;</span></span><br><span class="line">    <span class="comment"># 如果指定父系磁碟不存在即離開</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="operator">-not</span>(<span class="built_in">Test-Path</span> <span class="variable">$Parent</span>)) &#123;</span><br><span class="line">      <span class="built_in">write-host</span> <span class="string">&quot;The parent is not defined.&quot;</span></span><br><span class="line">      <span class="keyword">exit</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># 如果指定目錄不存在，就建立目錄</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="operator">-not</span>(<span class="built_in">Test-Path</span> <span class="variable">$Path</span>)) &#123;</span><br><span class="line">      <span class="built_in">Write-Host</span> <span class="string">&quot;Build <span class="variable">$</span>&#123;Path&#125;&quot;</span></span><br><span class="line">      [<span class="built_in">void</span>](mkdir <span class="variable">$Path</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">write-host</span> <span class="string">&quot;<span class="variable">$</span>&#123;Path&#125; exists.&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">process</span> &#123;</span><br><span class="line">    <span class="keyword">Foreach</span> (<span class="variable">$VMName</span> <span class="keyword">in</span> <span class="variable">$List</span>) &#123;</span><br><span class="line">      <span class="variable">$VHDPath</span> = <span class="string">&quot;<span class="variable">$</span>&#123;Path&#125;<span class="variable">$</span>&#123;VMName&#125;.vhdx&quot;</span></span><br><span class="line">      <span class="keyword">if</span> (<span class="operator">-not</span>(<span class="built_in">Test-Path</span> <span class="variable">$VHDPath</span>)) &#123;</span><br><span class="line">        <span class="comment"># 狀態表示</span></span><br><span class="line">        <span class="built_in">Write-Progress</span> <span class="literal">-Activity</span> <span class="string">&quot;Building VHD...&quot;</span> <span class="literal">-Status</span> <span class="string">&quot;Building <span class="variable">$</span>&#123;VMName&#125;...&quot;</span> <span class="literal">-PercentComplete</span> (((<span class="variable">$List</span>.indexof(<span class="variable">$VMName</span>) + <span class="number">1</span>) / <span class="variable">$List</span>.count) * <span class="number">100</span>)</span><br><span class="line">        <span class="comment"># 建立差異硬碟</span></span><br><span class="line">        [<span class="built_in">void</span>](<span class="built_in">new-vhd</span> <span class="literal">-path</span> <span class="variable">$VHDPath</span> <span class="literal">-ParentPath</span> <span class="variable">$Parent</span> <span class="literal">-diff</span>)</span><br><span class="line">        <span class="built_in">Write-Host</span> <span class="string">&quot;<span class="variable">$</span>&#123;VHDPath&#125; is finished.&quot;</span></span><br><span class="line">        <span class="comment"># 設定同名的硬碟到同名的主機</span></span><br><span class="line">        <span class="built_in">Set-VMHardDiskDrive</span> <span class="literal">-VMName</span> <span class="variable">$VMName</span> <span class="literal">-path</span> <span class="variable">$VHDPath</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">Write-Host</span> <span class="string">&quot;<span class="variable">$</span>&#123;VMName&#125; exists.&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment"># 順便開啟VM</span></span><br><span class="line">      <span class="keyword">if</span> (<span class="variable">$openVM</span>) &#123;</span><br><span class="line">        <span class="keyword">Foreach</span> (<span class="variable">$VMName</span> <span class="keyword">in</span> <span class="variable">$List</span>) &#123;</span><br><span class="line">          <span class="built_in">start-vm</span> <span class="literal">-name</span> <span class="variable">$VMName</span></span><br><span class="line">          <span class="built_in">write-host</span> <span class="string">&quot;Running <span class="variable">$</span>&#123;VMName&#125;&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">end</span> &#123;</span><br><span class="line">    <span class="built_in">write-host</span> <span class="string">&quot;End.&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="說明"><a href="#說明" class="headerlink" title="說明"></a>說明</h1><h2 id="要先建好機器"><a href="#要先建好機器" class="headerlink" title="要先建好機器"></a>要先建好機器</h2><p>此指令要先建立好機器才能使用 <img src="https://i.imgur.com/TKKynjB.png" alt="file"></p><h2 id="指令-1"><a href="#指令-1" class="headerlink" title="指令"></a>指令</h2><p><code>build-VHD -Path &#39;E:labtest&#39; -Parent &#39;E:VMWinServer2019base.vhdx&#39; -List &quot;AD&quot;,&quot;Server1&quot;,&quot;Server2&quot;,&quot;Server3&quot;</code></p><h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p><code>build-VHD -Path &lt;你要建立的位置&gt; -Parent &lt;父系磁碟位置&gt; -List &lt;主機列表&gt;</code></p><h2 id="設定開啟pwsh載入函數"><a href="#設定開啟pwsh載入函數" class="headerlink" title="設定開啟pwsh載入函數"></a>設定開啟pwsh載入函數</h2><p>只需要使用notepad把上面的函數加進去後存成一個ps1檔案，開啟powershell輸入$profile，在裏頭加入<code>Import-module &lt;這個ps1檔案&gt;</code>，就可以在每次開啟的時候載入這個function。</p><p>註:<code>$profile</code> Powershell會在執行服務時，執行這檔案裡面的動作。</p><h2 id="使用效果"><a href="#使用效果" class="headerlink" title="使用效果"></a>使用效果</h2><p><img src="https://i.imgur.com/5DmzeDx.png" alt="file"></p><h1 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h1><p>其實這麼簡單的東西，對於任何會寫Hello world的人而言，大概都是塊蛋糕，不過之前完全不會powershell時，用「快速建立差異硬碟」等等關鍵字丟google，其實也找不到什麼相關的文章，所以想說來寫一篇騙騙流量XD。</p><p>之後有時間的話，再來研究一下如何把這個指令包成一個function，使用單行指令和arguments來執行這個動作，到時候再更新回來。</p><p><code>22/8/1</code> 已經更新ㄌ</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近工作上，常使用Hyper-V來練習架設環境，而每次想要再次練習就還要再按一次圖形化介面，一台按一次，n台就要按n次，麻煩！所以才會誕生這篇，研究了一下如何用簡單的powershell，來自動化「創建n次差異硬碟，並且掛載到虛擬機器上」這個動作。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Powershell" scheme="http://huawiz.github.io/categories/Powershell/"/>
+    
+    
+    <category term="Powershell" scheme="http://huawiz.github.io/tags/Powershell/"/>
+    
+    <category term="小工具" scheme="http://huawiz.github.io/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="懶人" scheme="http://huawiz.github.io/tags/%E6%87%B6%E4%BA%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>怎樣才算有實力的人呢？</title>
+    <link href="http://huawiz.github.io/Diary/how-to-define-strength-20220729/"/>
+    <id>http://huawiz.github.io/Diary/how-to-define-strength-20220729/</id>
+    <published>2022-07-28T17:00:21.000Z</published>
+    <updated>2022-12-26T05:39:18.552Z</updated>
+    
+    <content type="html"><![CDATA[<p>每當自己舉棋不定，不知道下一步棋步怎麼下的時候，這時總會希望類似棋靈王佐為這樣的高手能突然出現一下，偷偷打個PASS，教我怎麼下棋。</p><span id="more"></span><p>但是如果出現的不是佐為，而是隨便一個長得很雞掰的路人，和你說「這步不對，那步不好」，將你一切決定都否定掉。此時你應該會恨不得他閉嘴。</p><p>而這樣憑空想像的例子也可以類比到很常聽到的一句話：「ＸＸＸ不重要，用實力說話啦！」</p><p>這句話聽起還很熱血，就像少年漫畫的主角，在戰鬥中突然爆氣逆轉戰局，憑藉著嘴遁與輸出全靠吼的氣勢贏下勝利。</p><p>然而這是不是終究只是嘴遁而已呢？</p><p>沒有比例尺，該怎麼定義你的實力如何？</p><p>沒有一個類比的基準，又該如何用空洞的口頭承諾來保證你的實力呢？</p><p>難怪常常有些王道作品最終還是回歸到主角其實都有不俗的血統，因為實力的驗貨基準是血統證明書，終究還是要看爸爸是誰，才能客觀說明決定你的強度。</p><hr><p>會莫名寫這篇，其實是因為前陣子買了書，在考慮考張證照，但是看看ptt之類的資訊，總會告訴我「這個沒用，還是實力重要」、「有了這張，你如果面試被考倒還是沒用」、「這不是很簡單的嗎？」等等的資訊，而我又很白痴的總是會被這些話給困住，好像最終只能怪自己投胎投得不好。</p><p>不過想想，這些似乎也不是多重要，但也不是說不重要。</p><p>倒是勇敢下個目標投入，也會比原地踏步來得踏實許多。</p><p>就是做身體健康的。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;每當自己舉棋不定，不知道下一步棋步怎麼下的時候，這時總會希望類似棋靈王佐為這樣的高手能突然出現一下，偷偷打個PASS，教我怎麼下棋。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    
+    
+    <category term="廢文" scheme="http://huawiz.github.io/tags/%E5%BB%A2%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>於是我的問題，就是被我的狗吃掉了。</title>
+    <link href="http://huawiz.github.io/Diary/dog220728/"/>
+    <id>http://huawiz.github.io/Diary/dog220728/</id>
+    <published>2022-07-28T16:40:38.000Z</published>
+    <updated>2022-12-26T05:39:18.551Z</updated>
+    
+    <content type="html"><![CDATA[<p>「我的問題，就是…」</p><p>當我把心中的句子忍不住講出一半的時候，前面的路人投以好奇又帶點尷尬的眼神朝我瞄過來，於是我很即時的把這句話又吃了回去。</p><span id="more"></span><p>越是在心裡深處，說服自己對問題避而不談，越是使這問題在我心中的層級提高。</p><p>房間的大象裡，大到把我擠出了房間。</p><p>就這樣隨波逐流著，</p><p>我害怕發力，也感到乏力。</p><p>即使不說話，我們也會默默的把想法表現出來，就像我們能從作者給的hint，猜到作者的彩蛋般，這種表現是出自本能的自然。</p><p>￼ <img src="https://i.imgur.com/W9Qje06.png" alt="file"> 定期的提醒自己，我又騙過了我自己</p><p>旁人開始用越來越極端的例子來勸我改邪歸正，提醒我正在逆行。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;「我的問題，就是…」&lt;/p&gt;
+&lt;p&gt;當我把心中的句子忍不住講出一半的時候，前面的路人投以好奇又帶點尷尬的眼神朝我瞄過來，於是我很即時的把這句話又吃了回去。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    
+    
+    <category term="廢文" scheme="http://huawiz.github.io/tags/%E5%BB%A2%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
     <title>用Powershell快速建立Hyper-V的差異硬碟</title>
     <link href="http://huawiz.github.io/Powershell/control-VM-with-pwsh/"/>
     <id>http://huawiz.github.io/Powershell/control-VM-with-pwsh/</id>
@@ -80,6 +167,296 @@
     <category term="Powershell" scheme="http://huawiz.github.io/tags/Powershell/"/>
     
     <category term="懶人" scheme="http://huawiz.github.io/tags/%E6%87%B6%E4%BA%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>激鬥峽谷S5打野宗師心得</title>
+    <link href="http://huawiz.github.io/Diary/wr-grandmaster-202205/"/>
+    <id>http://huawiz.github.io/Diary/wr-grandmaster-202205/</id>
+    <published>2022-05-30T11:27:23.000Z</published>
+    <updated>2022-12-26T05:39:18.549Z</updated>
+    
+    <content type="html"><![CDATA[<p>剛剛騎車到一半突然有靈感想發個廢文，所以來更新一下這兩個月的近況。</p><span id="more"></span><h2 id="閉關在峽谷裡的我，成為了宗師"><a href="#閉關在峽谷裡的我，成為了宗師" class="headerlink" title="閉關在峽谷裡的我，成為了宗師"></a>閉關在峽谷裡的我，成為了宗師</h2><p>一週坐在辦公室，一週在家當廢人假裝上班的生活不知不覺過了快一個月，最近因為打LOLM在牌位上有巨大突破，而開始了日夜顛倒的生活，每當排位打的場數越多，我越深深的感受到，我把我的青春給了你：積分對戰。</p><p>為什麼要永無止境的打積分呢？為了贏？為了牌位？為了放鬆？</p><p>但隨著遊戲時間一久，這些都越來越不是理由了，就只是漫無目的的打，一直打，就像被詛咒的薛西佛斯，結束了就再開啟，開啟後又結束，分數也像石頭一樣上上下下的。</p><p>不過要說這些時間都是在浪費生命，對，浪費生命。</p><p>但做什麼事不是浪費生命呢？而且要能活到幾歲，沈迷遊戲才不算浪費生命呢？</p><p>我覺得這問題就像是「<a href="https://game.ettoday.net/article/2236457.htm" title="一袋米要扛幾樓，才能讓世界感受到痛苦？">一袋米要扛幾樓，才能讓世界感受到痛苦？</a>」一樣，答案是乾世界屁事。</p><p>焦頭爛額一陣後，今天又因為打遊戲只睡4小時就去上班的我，想通了。</p><h2 id="嘿，我成為了宗師"><a href="#嘿，我成為了宗師" class="headerlink" title="嘿，我成為了宗師"></a>嘿，我成為了宗師</h2><p><img src="https://i.imgur.com/lSZoiC6.jpg" alt="file"> <img src="https://i.imgur.com/8g6OPYZ.png" alt="file"></p><p>成為宗師很屌嗎？ 如果以社會人士的角度就是：蛤？</p><p>如果以從小打LOL長大，電腦卡金牌沒上過白金，打LOLM打一年都卡在當鑽石守門員的我而言，真的是：重，大，突，破。</p><p>我才不想管什麼這季宗師等於上季三小的。即使在追求這牌位的過程中，我放下了手邊正在學習的CS50x，我也不在乎。</p><p>對我而言，追求現實與遊戲的成就一樣重要，他們都是我的一部分。</p><p>我在LOLM宗師，就等同於好像我有大學畢業一樣。</p><h2 id="建立一個Milestone，朝向下一個Milestone"><a href="#建立一個Milestone，朝向下一個Milestone" class="headerlink" title="建立一個Milestone，朝向下一個Milestone"></a>建立一個Milestone，朝向下一個Milestone</h2><p>其實會想發文章，就是想建立一個Milestone，紀錄一下自己這段時光。如果你不是第一次來這裡(其實只有我在看自己)，應該有發現我偷偷在這裡更新了archive頁面，從前年2020開始在M網上寫一些東西，到現在也默默湊了32篇文章。雖然有需多Part是讀書心得，有許多Part是在抱怨人生，又有許多篇只是三分鐘熱度的學習筆記。</p><h2 id="該教一下怎麼打上來的吧？"><a href="#該教一下怎麼打上來的吧？" class="headerlink" title="該教一下怎麼打上來的吧？"></a>該教一下怎麼打上來的吧？</h2><p>心態要正確，打得不好的部分要檢討，Follow一下別人怎麼玩遊戲的，學習一下。就醬。</p><p>其實一個月前我就有稍微整理重點，如果你是被搜尋引擎騙進來的，那你來這裡看吧。</p><p><a href="https://hackmd.io/dH0dbLPFTJiDyD8qzYpziw">傳送門</a></p><p>我心裡自認自己玩遊戲其實沒啥天份，也不會靠這賺錢，玩再多也只是沈迷罷了。</p><hr><h2 id="後記：從遊戲學習成長心態"><a href="#後記：從遊戲學習成長心態" class="headerlink" title="後記：從遊戲學習成長心態"></a>後記：從遊戲學習成長心態</h2><p>雖然說這是帶有魯魯味道的炫耀文，但是想想這遊戲變化這麼快，我為了跟上版本也是得時時做功課與實戰練習。</p><p>這或許證明了我其實是有不錯的學習能力的。</p><p>前面有提到CS50x半途而廢，但其實我也完成了8&#x2F;11了，在被抓去當兵前慢慢完成吧。</p><p>並不是失敗，只是拖延的老毛病又犯了。</p><p>還有4月的時候我完成了人生第一次腳踏車環島，心得文到現在也還沒寫…</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;剛剛騎車到一半突然有靈感想發個廢文，所以來更新一下這兩個月的近況。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    
+    
+    <category term="日記" scheme="http://huawiz.github.io/tags/%E6%97%A5%E8%A8%98/"/>
+    
+    <category term="激鬥峽谷" scheme="http://huawiz.github.io/tags/%E6%BF%80%E9%AC%A5%E5%B3%BD%E8%B0%B7/"/>
+    
+    <category term="遊戲" scheme="http://huawiz.github.io/tags/%E9%81%8A%E6%88%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS50x W2作業</title>
+    <link href="http://huawiz.github.io/Note/cs50x-w2-note-2022/"/>
+    <id>http://huawiz.github.io/Note/cs50x-w2-note-2022/</id>
+    <published>2022-03-28T13:49:15.000Z</published>
+    <updated>2022-12-26T05:39:18.548Z</updated>
+    
+    <content type="html"><![CDATA[<p>這篇紀錄一下Ｗ2的作業思路。</p><span id="more"></span><h1 id="W2-筆記"><a href="#W2-筆記" class="headerlink" title="W2 筆記"></a>W2 筆記</h1><p><a href="https://cs50.harvard.edu/x/2022/notes/2/">官方的筆記傳送門</a></p><hr><h1 id="W2-大綱"><a href="#W2-大綱" class="headerlink" title="W2 大綱"></a>W2 大綱</h1><ul><li>Compiling -&gt; 講解程式碼是如何被電腦編譯機器語言的</li><li>Dubug -&gt; 教你使用VSCODE的Debug工具</li><li>Memory&#x2F;Data type -&gt; C語言如何存資料<ul><li>為何要分這麼多種?<ul><li>因為以前的記憶體成本很高，為了有效率的分配資源，所以C語言的資料類別設計十分嚴謹，為的就是能用最少記憶體存取最多的資料。</li></ul></li></ul></li><li>arrays -&gt; 可以用一個參數儲存多筆資料</li><li>字元Characters與字串String -&gt; 講解C語言如何存取一串字</li><li>Command-line arguments -&gt; 如何在CLI用指令+參數去run你的程式碼</li></ul><hr><p><img src="https://i.imgur.com/tZ7jmSt.png" alt="file"></p><h1 id="作業-pset2"><a href="#作業-pset2" class="headerlink" title="作業 : pset2"></a>作業 : pset2</h1><p>建議自己寫完後再看以下內容</p><p>參考答案連結 : <a href="https://github.com/huawiz/CS-note/tree/master/CS50x/pset2">Link</a></p><p>這禮拜的作業，大致上在練習使用command-line arguments以及陣列的使用。第一題(readability)還蠻簡單的，只要照著作業指示就能輕鬆完成。第二題(Caesar)很有趣，用到了<a href="https://www.asciitable.com/" title="ASCII">ASCII表</a>，抓到作業指示的公式與思考大寫與小寫的判別之後，就能Rotate的函數並且完成這題。而第三題(Substitution)則是這題的衍伸題，不是字元號碼的轉換，而是要請使用者自行輸入加密字元，為了能和<a href="https://sandbox.cs50.io/e6e69576-1719-4c83-a292-24d54690a699">課程範例</a>相同，要寫很多的條件句，如果沒想清楚的話就會花很久的時間。</p><h3 id="caesar與rotate分開寫"><a href="#caesar與rotate分開寫" class="headerlink" title="caesar與rotate分開寫"></a>caesar與rotate分開寫</h3><p>我的做法是按照作業指示，把加密與rotate函數分開寫，後來也成功用幾乎完全一致的函數完成了第二和三題，差別只在第二題有使用<a href="https://manual.cs50.io/3/atoi"><code>atoi()</code></a>來把字串轉成數字。為什麼是字串呢？因為command-line arguments是把值存成字串形式，所以還需要再使用這個函數，才能把string轉換成int。</p><hr><h3 id="caesar函數"><a href="#caesar函數" class="headerlink" title="caesar函數"></a>caesar函數</h3><p>簡單來說就是把每個輸入進來的字元用迴圈跑過，並且用自己寫的rotate函數，把它轉換成加密後的密碼，最後再printf到CLI上。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">caesar</span><span class="params">(string key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string text = <span class="built_in">get_string</span>(<span class="string">&quot;plaintext: &quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">strlen</span>(text); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        text[i] = <span class="built_in">rotate</span>(text[i], key);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ciphertext: %s\n&quot;</span>, text);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h3 id="rotate函數"><a href="#rotate函數" class="headerlink" title="rotate函數"></a>rotate函數</h3><p>caesar 與 substitution 的差異，只在於加密的key不同，所以一個是字串，一個是int。其他判斷大小寫、回傳非字母字元的條件句一模一樣。</p><p>caesar：考慮到加超過Z的狀況，因此原本想要用條件硬幹的我打消了念頭，轉而專注回題目的意思，最後得到一個漂亮的回傳式。大致上的做法是：先幫A-Z標號，先找到字母的號碼，然後往後數數字，走到尾巴再從字母A的號碼開始走，直到走完指定數字，即是加密後的字母。 <img src="https://i.imgur.com/GFyRE8m.png" alt="file"></p><p>例如A開始往後數到G，那就是移動了6、32或是58步。 <img src="https://i.imgur.com/WlWeFqv.png" alt="file"></p><p>substitution：這個比Caesar簡單，就是直接把A-Z與你的加密字母做1-1對應，因此只要直接回傳加密字母串的位置就行了，位置號碼就是A-Z的標號。</p><p><img src="https://i.imgur.com/PiVRuZO.png" alt="file"></p><p>65-90是大寫字母的ASCII號碼，所以要減掉A的字碼，這樣就能對到0-25(26個字母)，如此一來就能拿來對應加密字串。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">char</span> <span class="title">rotate</span><span class="params">(<span class="type">char</span> letter, string key)</span> <span class="comment">// caesar是int key</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">isupper</span>(letter))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//return (((int)letter - 64) + key) % 26 + 64; caesar的</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">toupper</span>(key[((<span class="type">int</span>)letter) - <span class="number">65</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">islower</span>(letter))</span><br><span class="line">    &#123;</span><br><span class="line">    －<span class="comment">//return (((int)letter - 97) + key) % 26 + 97; caesar的</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">tolower</span>(key[((<span class="type">int</span>)letter) - <span class="number">97</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> letter;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="其他收穫"><a href="#其他收穫" class="headerlink" title="其他收穫"></a>其他收穫</h2><p>在寫作業的時候試字串，一直不知道為啥輸入’!’後的指令會被截斷。 <img src="https://i.imgur.com/oCqOQRT.png"></p><p>後來去CS50x群組問，得到了解答：bash會被!打斷</p><p><img src="https://i.imgur.com/CS57kYm.png"></p><h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>這週寫得比上週輕鬆，不過也是因為以前學過，之後Sort的部分對我來說則是完全新的東西，希望能好好學習，繼續週更筆記。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;這篇紀錄一下Ｗ2的作業思路。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="電腦科學" scheme="http://huawiz.github.io/categories/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/"/>
+    
+    
+    <category term="CS50x" scheme="http://huawiz.github.io/tags/CS50x/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>走不出莊園的史蒂文斯</title>
+    <link href="http://huawiz.github.io/Diary/220322diary/"/>
+    <id>http://huawiz.github.io/Diary/220322diary/</id>
+    <published>2022-03-22T14:22:49.000Z</published>
+    <updated>2022-12-26T05:39:18.529Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近因為匆匆的退學，步入職場，而在職場上又因為遇到新的挫折，這讓我三不五時想著回學校的畫面。這樣的場景，讓我想到了一年前讀的<a href="https://hey-series.com/the-remains-of-the-day/" title="長日將盡">長日將盡</a>裡的史蒂文斯。</p><span id="more"></span><hr><p>說來也怪，史蒂文斯是個克己的工作狂，我怎麼會覺得自己與他相似呢？史蒂文斯是身處在總管家族的管家，為了追求當一名頂尖管家，不惜粉身碎骨，不刻意選擇愛情與麵包，反正就是要當一名頂尖總管就對了。</p><p>然而，這股近乎迷信的堅持，讓他無法面對自己真實的感官，無法與人相處，無法誠實的面對自己。就連故事的結尾，去找初戀情人也是要給自己藉口騙自己，他的心理已經踏不出莊園，無法再認同不是總管的自己了。</p><p>而我想我也是如此。</p><p>最近的我，總在思量著要考轉學考，要去國立大學的數學系，要工作一年，然後考進數學系，要讀微積分線代，然後考進數學系。然後又三心二意地想著要來先學一點密碼學、資料科學，來增加自己考試的動機。</p><p>即使最近的我因為舉辦CS讀書會而感到快樂，但我還是得回去數學系。</p><p>即使曾經的我考過轉學考而且還順利的落榜，但我還是得回去數學系。</p><p>即使前陣子的我因為成績爆掉而崩潰地退學，但我還是得回去數學系。</p><p>我想，我大概是被灌了迷湯，走不出數學系了。但是真正喜歡數學的人，會在意他是什麼身份嗎？會在意他是什麼系的嗎？會在意以後的出路嗎？最直接的，會浪費時間在意有無天份嗎？</p><hr><p>前幾天在ptt上看到舊文，在討論數學公式究竟要背還是理解，而大多數人都說，理解需要天份，只有少數人能真的完全理解一堆抽象符號背後的想法。但是有一個推文的內容讓我印象深刻：</p><p>「天份？拜託，一堆天才嘔心瀝血，花了可能大半輩子研究才得出的算式，你想要用『天份』在短時間內就完全理解？」</p><p>這句話其實我在淡江的微積分教授，上課就有講過類似的話，我想也不是在瞧不起我們，而只是想告訴我們，追求學問的過程最大的禁忌就是急。這看似是一個很睿智的想法，但是這有極大的風險。</p><p>會不會這樣的我，其實就只是在和終其一生都在追求頂尖總管的史帝文斯一樣，是在抹除自己呢？我會為了這而後悔嗎？有這樣的疑問，就說明我做不到，我無法近乎迷信的相信，我只是在迷惘，蹉跎光陰。</p><hr><p>剛剛在臉書翻到某人的部落格，並且翻到某篇文章，內容大致上是在說他如何放棄科學夢，走向資訊工程。而其中有談到自己不如人，少了好的引導人。我或多或少也有相同的感覺，總覺得自己就是少了一個能引導我走向喜歡的路的富爸爸，甚至內心感到不平衡:為什麼我以前成績好的時候，都沒人能提醒我學問不止如此?為何我考這麼多次理科榜首，卻沒有人告訴我可以嘗試科展、考科學班?為什麼我總是在失去選擇後才看到選擇呢?還是，其實我是視而不見?</p><p>守門員的焦慮講的是一名守門員如何從失守球門到失守人生，描述時下德國年輕人對於可能造成一步錯步步錯的選擇感到焦慮與徬徨。我覺得現在，我就是那個守門員，我因為會考失利而事後懊悔，我為了考大學失利而事後懊悔，現在我為了退學而事後懊悔，永遠活在選擇錯誤的陰影下，為了那顆漏接的球而焦慮自責。</p><p>如果每天都在拒絕思考，整天懊悔，要怎麼單純的思考問題呢？</p><p>無法單純的思考問題，我又怎麼能說我喜歡思考問題呢？</p><p>該如何踏出莊園呢？</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近因為匆匆的退學，步入職場，而在職場上又因為遇到新的挫折，這讓我三不五時想著回學校的畫面。這樣的場景，讓我想到了一年前讀的&lt;a href=&quot;https://hey-series.com/the-remains-of-the-day/&quot; title=&quot;長日將盡&quot;&gt;長日將盡&lt;/a&gt;裡的史蒂文斯。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    
+    
+    <category term="日記" scheme="http://huawiz.github.io/tags/%E6%97%A5%E8%A8%98/"/>
+    
+    <category term="焦慮" scheme="http://huawiz.github.io/tags/%E7%84%A6%E6%85%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>控管好自己的時間，才有辦法好好保有自我</title>
+    <link href="http://huawiz.github.io/Diary/202203190diary/"/>
+    <id>http://huawiz.github.io/Diary/202203190diary/</id>
+    <published>2022-03-19T14:13:56.000Z</published>
+    <updated>2022-12-26T05:39:18.528Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近除了開始上CS50x外，也答應自己要來每週看一部宮崎駿的動畫電影，說來很妙，我怎麼小時候會沒看過呢？大概以前的靈魂都被關在召喚峽谷了吧。</p><span id="more"></span><p>見幾天在和某保經學長交流兼認識保險的過程，被他推薦了貓的報恩這部剛好也是吉卜力的動畫，所以今天空閑時間就來看了這部。</p><p><img src="https://i.imgur.com/cTFIx1s.png" alt="file"></p><p>胖胖太可愛了XD</p><p>這部動畫雖然短短的，但是內容蠻奇幻的。而貫穿整部的核心，就是男爵一直提醒女主的「管好自己的時間，並保有自我」。雖然這部想傳達的觀念都是老生常談，但是還是想紀錄一下，在自己的小blog耕耘一下自己的品味。</p><p>要按照心意去生活，不要為了計算得失而失去活著的樂趣。</p><p>否則可能會因為蹉跎光陰，被抓進貓王國當貓。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近除了開始上CS50x外，也答應自己要來每週看一部宮崎駿的動畫電影，說來很妙，我怎麼小時候會沒看過呢？大概以前的靈魂都被關在召喚峽谷了吧。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    
+    
+    <category term="動畫" scheme="http://huawiz.github.io/tags/%E5%8B%95%E7%95%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CS50x W1 作業</title>
+    <link href="http://huawiz.github.io/Note/cs50x-w1-note-2022/"/>
+    <id>http://huawiz.github.io/Note/cs50x-w1-note-2022/</id>
+    <published>2022-03-18T16:41:34.000Z</published>
+    <updated>2022-12-26T05:39:18.527Z</updated>
+    
+    <content type="html"><![CDATA[<p>這篇想來趁作業寫完記憶猶新，來記錄一下寫作業的痛點。</p><span id="more"></span><h1 id="筆記"><a href="#筆記" class="headerlink" title="筆記"></a>筆記</h1><p>詳細筆記，我沒有寫，官方的筆記<a href="https://cs50.harvard.edu/x/2022/notes/1/" title="在這">在這</a></p><hr><h1 id="W1大綱"><a href="#W1大綱" class="headerlink" title="Ｗ1大綱"></a>Ｗ1大綱</h1><ul><li>基礎Command Line 使用</li><li>C語言基礎<ul><li>程式架構、基礎參數、條件、函數、迴圈</li></ul></li><li>overflow -&gt; 電腦資源有限，如果沒有好好處理資料，有可能造成災難</li></ul><hr><h1 id="cs50x-環境設定問題"><a href="#cs50x-環境設定問題" class="headerlink" title="cs50x 環境設定問題"></a>cs50x 環境設定問題</h1><p>在剛開始寫作業的時候，照著指示把github連到cs50x的時候，發現我個人網頁連不上，如圖</p><p><img src="https://i.imgur.com/tDmvE2G.png" alt="file"></p><p>我翻了一堆文章和官方dc，最後是直接寄信去就被秒解了，如果你也有一樣的困擾，就別浪費時間了，直接寄信吧。</p><p><a href="mailto:&#x73;&#x79;&#115;&#97;&#x64;&#109;&#105;&#110;&#x73;&#64;&#99;&#115;&#53;&#48;&#46;&#104;&#97;&#114;&#x76;&#97;&#x72;&#100;&#x2e;&#101;&#100;&#117;">&#x73;&#x79;&#115;&#97;&#x64;&#109;&#105;&#110;&#x73;&#64;&#99;&#115;&#53;&#48;&#46;&#104;&#97;&#114;&#x76;&#97;&#x72;&#100;&#x2e;&#101;&#100;&#117;</a></p><p>（哈佛的處理效率超快，我搞這個環境就搞了一個晚上…）</p><hr><h1 id="pset1-Credit-個人詳解"><a href="#pset1-Credit-個人詳解" class="headerlink" title="pset1 : Credit 個人詳解"></a>pset1 : Credit 個人詳解</h1><p>其他題目寫得很順利，就這題開始有點卡，所以來特別詳解一下這題，但因為不想讓程式碼片段搞得文章很雜亂，所以完整程式碼連結放這，我只針對Concept與痛點做說明。</p><p><a href="https://github.com/huawiz/CS-note/blob/master/CS50x/pset1/credit/credit.c" title="程式碼傳送門">程式碼傳送門</a> 建議自行寫完再參考以下暴雷內容</p><h2 id="題目說了啥？"><a href="#題目說了啥？" class="headerlink" title="題目說了啥？"></a>題目說了啥？</h2><p><a href="https://cs50.harvard.edu/x/2022/psets/1/credit/" title="題目傳送門">題目傳送門</a></p><p>這題在說信用卡卡號有很多種，根據不同公司有不同的信用卡卡號的產生邏輯，但是這些不同的卡號間，有一演算法可以確認卡號是否有效。</p><p><a href="https://zh.wikipedia.org/wiki/%E5%8D%A2%E6%81%A9%E7%AE%97%E6%B3%95" title="Luhn’s Algorithm">Luhn’s Algorithm</a>，邏輯如下：</p><ol><li>從個位數開始，由右而左，把偶位數數字乘上2後，再把數字加起來。如果乘上2後超過10，就把十位數和個位數分開加總。</li><li>再把這個數字與其他信用卡奇數位的數字加總。</li><li>最後再把這個加總數，對10取模數，最後判斷</li></ol><p>舉例來說:假設號碼是12345678</p><ol><li>取偶數位數得到10305070，乘上2後得到20610140，再把各個位數取和得到2+6+1+1+4&#x3D;14</li><li>再把14與奇數位的數字相加，得到14+2+4+6+8&#x3D;34</li><li><code>34\equiv4\mod 10</code>，也就是34餘10得到4，非0所以12345678不符合規則</li></ol><h2 id="程式骨幹"><a href="#程式骨幹" class="headerlink" title="程式骨幹"></a>程式骨幹</h2><p><img src="https://i.imgur.com/l1Ke0Zu.png" alt="file"></p><h2 id="辨別ID是否有效"><a href="#辨別ID是否有效" class="headerlink" title="辨別ID是否有效"></a>辨別ID是否有效</h2><p>這裡是我覺得最難寫，也最值得做筆記的地方。</p><h3 id="如何針對奇位數與偶位數做動作呢？"><a href="#如何針對奇位數與偶位數做動作呢？" class="headerlink" title="如何針對奇位數與偶位數做動作呢？"></a>如何針對奇位數與偶位數做動作呢？</h3><p>我在寫這題的時候，卡在這問題卡了很久。我一直在想如何把ID的奇位數與偶位數分離。</p><p><img src="https://i.imgur.com/6WqOZ3w.png" alt="file"></p><p>為什麼要這樣分離？因為我注意到上面那個演算法的第二步，<strong>如果</strong>乘上2後加總大於10，則要在把個位數與十位數加起來。所以我想說分離後，只要把每個數都加起來就好了。</p><p>這個概念很直覺，也是因為Python可以針對String直接剪剪貼貼，但是我試了很久才發現，<strong>C語言不能這麼做</strong>。</p><p>不能 <code>str num1 = 11;str num2 = 22;</code>，然後<code>num1+num2 = 1122</code>這樣。</p><p>參考影片：</p><p>理解到這個限制之後，我對於如何做就換到了正確的方向：<strong>設一個參數紀錄奇位數和偶位數</strong>。當我找到這個方法後，這個程式就變得十分好寫，硬要用圖表示會很複雜，但是原理其實相當簡單。</p><p>(也是因為不太會用字元陣列…查到用法也<a href="http://tw.gitbook.net/c_standard_library/c_function_strncat.html" title="要引用string.h">要引用string.h</a>，還不卻定能用…)</p><p><img src="https://i.imgur.com/UnsMfL4.png" alt="file"></p><p>用一句話一張圖來說：對每個位置用0101做標記。</p><p><img src="https://i.imgur.com/cCgpE5E.png" alt="file"></p><p>然後再把要做的事情，在迴圈裡面寫if-else就能達到題目要求了～</p><h2 id="辨別卡種"><a href="#辨別卡種" class="headerlink" title="辨別卡種"></a>辨別卡種</h2><p>確定卡的ID有效之後，接下來就是要確認信用卡的卡種。在if-else這邊我想不用特別多做說明，但是<code>1e13</code>的用法我是在書上看到的，有了這個用法基本上就不用特別引入<code>math.h</code>來使用<code>pow()</code>函數。</p><p>用法: <code>1e13</code> 是指科學記號 <code>1\times 10 ^ &#123;13&#125;</code>，資料type為<code>float</code>，所以要轉成辨別開頭號碼的數字使用時，要把它轉成<code>long</code>，例如<code>(long)1e13</code>。</p><hr><h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>寫到這裡也差不多了，上次認真學C語言是高中的事情，現在重新拾起有不同的樂趣…</p><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>我有搞一個dc群來學習cs50x，有興趣的朋友可以進來看看。</p><p><a href="https://discord.gg/4vfDf5aXC6">https://discord.gg/4vfDf5aXC6</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;這篇想來趁作業寫完記憶猶新，來記錄一下寫作業的痛點。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="電腦科學" scheme="http://huawiz.github.io/categories/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/"/>
+    
+    
+    <category term="CS50x" scheme="http://huawiz.github.io/tags/CS50x/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>考證照的HelloWorld:AI900心得</title>
+    <link href="http://huawiz.github.io/Diary/ai900/"/>
+    <id>http://huawiz.github.io/Diary/ai900/</id>
+    <published>2022-03-16T08:13:00.000Z</published>
+    <updated>2022-12-26T05:39:18.564Z</updated>
+    
+    <content type="html"><![CDATA[<p>上班有點閒（？ 來用這篇整理一下考這張證照的日記，來幫助也想考這張證照的人</p><span id="more"></span><h2 id="動機"><a href="#動機" class="headerlink" title="動機"></a>動機</h2><p>最近開始了工作生涯，而公司的服務大多與微軟相關，剛入職時聽到一堆有關於微軟的名詞感到心生恐懼，因此才計畫要來考幾張微軟證照。</p><h2 id="準備時間與教材"><a href="#準備時間與教材" class="headerlink" title="準備時間與教材"></a>準備時間與教材</h2><p>約3天</p><ul><li>1天看<a href="https://docs.microsoft.com/zh-tw/learn/certifications/exams/ai-900" title="微軟的網頁教材">微軟的網頁教材</a></li><li>1天看<a href="https://www.udemy.com/course/ai900-azure/" title="Udemy的課程">Udemy的課程</a></li><li>1天和考試前看<a href="https://www.examtopics.com/exams/microsoft/ai-900/" title="考古題">考古題</a></li></ul><p>我準備的時間很短，所以分數也是普普，8xx&#x2F;1000</p><h2 id="如何獲取免費考試資格"><a href="#如何獲取免費考試資格" class="headerlink" title="如何獲取免費考試資格?"></a>如何獲取免費考試資格?</h2><p>這篇文章寫得非常詳細，推薦~ <a href="https://vocus.cc/article/60160d39fd8978000132e3e5" title="如何免費拿張微軟雲端證照">如何免費拿張微軟雲端證照</a> 基本上有兩個管道，差別只在時差，我當初AI900是在Training Day拿的，當天半夜開啟官方的課程後就跑去睡覺了xd</p><ul><li><a href="https://www.microsoft.com/taiwan/citizenship/microsoft-skilling.aspx/?wt.mc_id=AID3017211#course" title="台灣微軟企業公民">台灣微軟企業公民</a></li><li><a href="https://www.microsoft.com/en-us/trainingdays" title="Microsoft Azure Virtual Training Day">Microsoft Azure Virtual Training Day</a></li></ul><h2 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h2><ul><li>一定要寫考古題，尤其是考試前兩天</li><li>在準備的時候，如果覺得服務內容很亂很雜，建議用紙筆或是Coggle把甚麼功能對應甚麼名詞，用心智圖整理一下</li><li>要準備護照，報名時的英文姓名要與護照相同</li></ul><h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>這是我人生第一次考證照（如果小時候珠算不算的話），我覺得微軟的考照環境作得還不錯，準備和考試過程都很舒服。 我覺得AI900應該算是推廣大於專業用途的一張初階證照，實際用途不大，不過對於認識人工智慧有不錯的幫助。就像我同事說的：「考身體健康的！」，也謝謝他的爬蟲幫我抓考古題xD</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;上班有點閒（？ 來用這篇整理一下考這張證照的日記，來幫助也想考這張證照的人&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    
+    
+    <category term="微軟" scheme="http://huawiz.github.io/tags/%E5%BE%AE%E8%BB%9F/"/>
+    
+    <category term="證照" scheme="http://huawiz.github.io/tags/%E8%AD%89%E7%85%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Quod vitae sectabor iter?</title>
+    <link href="http://huawiz.github.io/Diary/quod-vitae-sectabor-iter/"/>
+    <id>http://huawiz.github.io/Diary/quod-vitae-sectabor-iter/</id>
+    <published>2022-03-09T06:34:17.000Z</published>
+    <updated>2022-12-26T05:39:18.563Z</updated>
+    
+    <content type="html"><![CDATA[<p>就如同人的行為所言：任何科學都不可能告訴任何人該追求什麼，頂多只是能指出<strong>如何行動</strong>，好來達成<strong>選定的目的</strong>。</p><p>那我的究竟要選擇什麼？Quod vitae sectabor iter?</p><p>這句話是我從笛卡爾的書抄寫下來的，意思就是指”which path of life do i pursue”。</p><p>浪費了四年的時光，如今被推到職場上也是做得心不甘情不願，我究竟是想要選擇什麼呢？</p><p>學習如何學習，也只是在討論學習的方式而已，但核心問題『要學什麼』你無法從中得到。</p><p>上Udemy,CS50…三心二意的課程管道，但是核心問題還是：你想要學什麼？你有在執行嗎？你真的想要嗎？還是你只是覺得別人說不錯就隨口答應了？</p><p>赫曼赫賽說人生無趣的就是走在人家所講的道路上，那最令人唾棄的應該就是原地踏步了吧？</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;就如同人的行為所言：任何科學都不可能告訴任何人該追求什麼，頂多只是能指出&lt;strong&gt;如何行動&lt;/strong&gt;，好來達成&lt;strong&gt;選定的目的&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;那我的究竟要選擇什麼？Quod vitae sectabor iter?&lt;/p&gt;
+&lt;p&gt;</summary>
+      
+    
+    
+    
+    <category term="數學" scheme="http://huawiz.github.io/categories/%E6%95%B8%E5%AD%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一年的前的今天：瘋狗環島（一）</title>
+    <link href="http://huawiz.github.io/Diary/21traveltw-1/"/>
+    <id>http://huawiz.github.io/Diary/21traveltw-1/</id>
+    <published>2022-02-15T16:00:48.000Z</published>
+    <updated>2022-12-26T05:39:18.517Z</updated>
+    
+    <content type="html"><![CDATA[<p>會想特別在一年後的今天發這篇文，也沒什麼特別的原因，就只是因為當時沒有寫一篇精美的文章來記錄，看著手機相簿與當時的手寫日記，心有點癢，所以就想說來寫個一週年回顧好了。</p><span id="more"></span><p>現在來看，旅行真的還是有個規劃或許比較好，不然很容易遇到到點，卻不知道要去哪裡的窘境。</p><p>不過，人生那麼長，那些沒去過的遺珠之憾就留給之後吧～</p><h2 id="出發前"><a href="#出發前" class="headerlink" title="出發前"></a>出發前</h2><p>某天和朋友打球完聊天，被嗆了一句：「只敢講不敢出發，孬種。」</p><p>一氣之下，隔天早上蹲馬桶的時候下載airbnb，註冊帳號，訂房，確定晚上不會露宿街頭後，就隨便抓著幾件衣服進旅行袋出發了。</p><p><img src="https://i.imgur.com/ros6cN4.jpg"></p><h2 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h2><p>因為當時是過年，原本有一個要去桃園親戚家拜年的行程，而我就順便把他們家附近的尊爵大飯店當成了旅行的第一站。</p><p><img src="https://i.imgur.com/ZPXoVBm.jpg"></p><p>吃完飯後往南部騎，跟著導航來到了大溪老街 <img src="https://i.imgur.com/H07e77v.jpg"></p><p>在大溪老街順手買了個風車，只是騎沒多久就被吹不見了 <img src="https://i.imgur.com/kI6cRdE.jpg"></p><p>來到新竹火車站，台北俗第一次來，體驗一下火車站前的悠閒氣氛 <img src="https://i.imgur.com/BSzLV9Z.jpg"> <img src="https://i.imgur.com/nqdRFIL.jpg"> <img src="https://i.imgur.com/QJGX5IP.jpg"></p><p>苗栗路上，這是哪 <img src="https://i.imgur.com/5b4NDBP.jpg"></p><p>趕路趕路趕路，終於平安到達了台中的青年旅館 <img src="https://i.imgur.com/WU3qqpe.jpg"></p><p>一中商圈附近的某間小火鍋店套餐 <img src="https://i.imgur.com/SZDhsIi.jpg"></p><h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;會想特別在一年後的今天發這篇文，也沒什麼特別的原因，就只是因為當時沒有寫一篇精美的文章來記錄，看著手機相簿與當時的手寫日記，心有點癢，所以就想說來寫個一週年回顧好了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    
+    
+    <category term="環島" scheme="http://huawiz.github.io/tags/%E7%92%B0%E5%B3%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>退學</title>
+    <link href="http://huawiz.github.io/Diary/%E9%80%80%E5%AD%B8/"/>
+    <id>http://huawiz.github.io/Diary/%E9%80%80%E5%AD%B8/</id>
+    <published>2022-02-15T14:37:27.000Z</published>
+    <updated>2022-12-26T05:39:18.521Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天從公司請假一天，去淡江辦了退學。</p><span id="more"></span><p><img src="https://i.imgur.com/XEQsDpk.jpg"></p><h1 id="永無止境的焦慮"><a href="#永無止境的焦慮" class="headerlink" title="永無止境的焦慮"></a>永無止境的焦慮</h1><p>剛來騎車來學校的時候，原本還蠻輕鬆的想著：「內心的大石頭終於要放下了」、「我要去念夜間部了」、「我要出社會了」，然而這些想法終究藏不住我內心的焦慮：「我夠格嗎？」</p><p>過去的日子我做了什麼？草草的考大學唸數學系、接二連三的重要親人過世、接了社團幹部卻沒做完、切斷所有人際關係、轉學考失敗、到現在大學退學。</p><p>我的人生似乎一直、一直在失敗著。</p><p>處境就像是個沒守住球門的球員，因為一次的失敗，造成永久的精神挫敗。</p><p>現在突然地又被丟到職場上，雖然這份工作我覺得還不賴，至少有個努力方向。但，現在的我每次遇到問題，都會去想：「我是不是什麼沒學好？」、「這個我應該不會嗎？」，即使我職場的同事告訴我不要急，但是我卻還是無法停止。</p><p>最糟糕的是，無法控制。</p><h1 id="來不及了嗎？"><a href="#來不及了嗎？" class="headerlink" title="來不及了嗎？"></a>來不及了嗎？</h1><p>過去兩年，一年自學轉學考與一年跑外送，對於我的人生而言，似乎一點營養都沒有，甚至翻了過去兩年看的書單，就覺得對我沒有幫助，但是為何沒有幫助？我想不是，我只是在逃避真正重要的事情。</p><p>最近在看的一本教導人如何談戀愛的書，倒也不是很想約砲幹嘛的，不過沒交過女朋友的確是一個課題，或許也值得我這個退學仔去試，不過這不是重點啦…作者是一位行為科學學者，而他把他的病患分成三類，其中一類就是猶豫型人格，這類的人對於愛情，總希望把自己準備到100%，然而任何人都知道，從來沒有完全準備好這種事情。</p><p>現在被匆匆丟到職場上，也不代表我的學習結束了，而是正要開始。</p><h1 id="我要怎麼修正自己的態度呢？"><a href="#我要怎麼修正自己的態度呢？" class="headerlink" title="我要怎麼修正自己的態度呢？"></a>我要怎麼修正自己的態度呢？</h1><p>今天看著歷年成績單，看著老師施捨的60分高微，只有去期中考就過的高微，我笑了，也哭了。</p><p>我和朋友說：欸，我高微過了，但還是去辦退學了。</p><p>我哭了，因為我沒有走完，我很自責、很憤怒，我討厭這樣的自己，我討厭這樣的放縱，我無法接受這樣的結果，我擺爛了還過？蛤？你要我如何放過那個習慣求過的那個自己？</p><p>當初會放棄，就是因為我盡了一部分努力後，發覺我根本力不從心，不過當時我應該沒想那麼多，就單純只是因為期中考炸掉而已，我就放棄學習了。</p><p>那放棄了，還有什麼好生氣的呢？不甘心嗎？</p><p>對，有太多不甘心的事情了，剛剛講的每一件事情，都應該可以做得更好才對。</p><p>不過，一直砍掉重練似乎不是個好的解決方案…</p><p>看來我還是很需要心理師。</p><p>最糟糕的是：<strong>我還是始終在考慮著，要不要走別人講的路。</strong></p><p>原本以為能當outlier，結果我只是被out而已。</p><p>明天就是機車環島的一週年了，一年前的我有想到：我什麼都沒變嗎？</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;今天從公司請假一天，去淡江辦了退學。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>你長得像憤青</title>
+    <link href="http://huawiz.github.io/Diary/angry-shit/"/>
+    <id>http://huawiz.github.io/Diary/angry-shit/</id>
+    <published>2022-02-01T08:52:21.000Z</published>
+    <updated>2022-12-26T05:39:18.519Z</updated>
+    
+    <content type="html"><![CDATA[<p>「感覺你很像憤青欸。」和朋友閒晃的路上，他這樣和我說。</p><p>欸不是，我看你是搞錯了吧？我比較像廢青，而不是憤青。我沒有在搞什麼民族主義，我只是在家當廢物找人生意義。</p><p>「為什麼？」我邊問，邊在心裡吐槽。</p><p>「感覺你對生活有很多的抱怨。」</p><p>好吧，從字面上解釋，就給你過吧。</p><span id="more"></span><hr><p><strong>原來我一直給人抱怨、不滿的印象。</strong></p><p><strong>這幾天</strong>，或者說這三年，我很難過，也很氣憤。憤怒自己什麼事都做得糟糕：學業顧不好、社團玩不好、社交顧不好、長相長不好。</p><p>從現在回頭看，每天都步履薄冰，不過其實我已經掉下去了，所以我是在冰下而非冰上，在冰下的世界伸手不見五指，每隻指頭都被鹹澀的海水給泡皺泡爛，這裡的一切糟透了。明知道上面的世界可能比較好一點，但是中間隔著冰層無法上去，我只能靠著浮力用微薄的透光來窺探冰層上的生活，用泡爛的手指敲敲冰，期望能得到一些答覆。</p><p>每天除了看著大奶女優打手槍、漫無目的的追著實況主，窺探著根本就不感興趣的別人生活，而我自己的生活是什麼？我卻不怎麼清楚。</p><p>我有在好好生活嗎？每一天都是好改變的<strong>開始</strong>，投入了非常多得資源尋找好的開局，就像在刷手遊首抽一樣，非得要抽到一張大家公認好的卡，才要開始玩遊戲，遊戲內容什麼根本不重要吧其實，反正劇情我都Skip掉，我只要抽到好卡能炫耀就好了。</p><p><strong>這陣子開始</strong>了公司生活，又買了書，好多好多的書。又借了書，以前沒看完的，根本不會看的都預約借來了，Udemy上的課程也是買了好多好多，Leetcode什麼的剛辦帳號就直接升級會員，想都不用想。</p><p>最近<strong>又開始了</strong>固定去騎腳踏車了，還去迪卡儂買了燈座、換了打氣筒，原本家裡那個放到壞掉了。</p><p>知道這一切都是過程，但是我通常等不到過程，就砍掉重練了，因為太無聊了。</p><hr><blockquote><p>I used to think that my life was a tragedy, but now I realize, it’s a comedy.﹙我一直以為我的人生是一個悲劇，但現在我明白，原來是一齣喜劇。﹚ 《Joker》</p></blockquote><p>我不太明白，為什麼明明是寫日記，我卻有種慾望，想把他們寫在部落格上，這樣不是在獻醜嗎？</p><p>大年初一我走在路上，想有的沒的幹嘛。</p><p>想想小學時期在舞台上表演過相聲、扯鈴，什麼感覺？很亮，非常亮，日光燈照過來，根本就看不到台下發生什麼事情。在表演的過程中，跟彩排很不一樣，會很緊張。但也只能屏氣，再屏氣，要把表演撐完才行，不管呈現的是好還是壞。</p><p>或許我還是蠻渴望有個地方能抒發的，就像在這裡，沒什麼人的公開場合，不知道誰在看，但是沒差，我就寫我的東西這樣，有錯字什麼的，都能是一種笑果。</p><p>希望在這裡寫的牢騷，可以成為某人的玩笑話。</p><hr><p>今天在看《也許你該找人聊聊》，看到約翰的故事之後，我默默在咖啡廳掉下了眼淚。我很意外，我竟然有情緒，阿人怎麼可能沒有情緒呢？我覺得自己不是人嗎？</p><p>我不知道什麼時候開始收斂情緒，源頭我不清楚，應該不可考了。</p><p>不過我有印象的:</p><ol><li>就是小時候因為不喜歡英文，說了句沒興趣，而被狠狠教訓了一頓。</li><li>在臉書上PO廢文，被講了句沒人想看之後，我就把連夜把所有文章都刪除。</li><li>高中國文課因為太鬧，被老師叫起來念課文，結果因為太緊張，直接卡在原地，從那次之後我就不曾在上課吵鬧過了。</li><li>求學階段的任何手寫作文，沒有一次寫完過，每次第一行都被塗滿厚厚的立可帶。</li></ol><p>或許這就是社會化的過程吧？從有點出眾到與眾不同，又或者，刻意藏匿？不知道從什麼時候開始，我很害怕別人給我的評價，因為只要有評價，就代表我bad，不管好的壞的都bad。因此，大概除了心理師和自我寫作外，大概沒有地方容得下我的情緒了吧？</p><p>對了，絕對不能在社群軟體上寫，那是在自殺。</p><hr><p>真是矛盾。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;「感覺你很像憤青欸。」和朋友閒晃的路上，他這樣和我說。&lt;/p&gt;
+&lt;p&gt;欸不是，我看你是搞錯了吧？我比較像廢青，而不是憤青。我沒有在搞什麼民族主義，我只是在家當廢物找人生意義。&lt;/p&gt;
+&lt;p&gt;「為什麼？」我邊問，邊在心裡吐槽。&lt;/p&gt;
+&lt;p&gt;「感覺你對生活有很多的抱怨。」&lt;/p&gt;
+&lt;p&gt;好吧，從字面上解釋，就給你過吧。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    
+    
+    <category term="憤青" scheme="http://huawiz.github.io/tags/%E6%86%A4%E9%9D%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>做十年?</title>
+    <link href="http://huawiz.github.io/Diary/20220116d/"/>
+    <id>http://huawiz.github.io/Diary/20220116d/</id>
+    <published>2022-01-16T15:21:13.000Z</published>
+    <updated>2022-12-26T05:39:18.515Z</updated>
+    
+    <content type="html"><![CDATA[<p>做好眼前的事情是個老生常談，卻似乎不是件容易的事情。</p><p>前天去了公司的尾牙，雖然才到職一個禮拜，但也是蹭到了一頓飯，並且參與了活動（雖然沒法抽獎），其中有個環節在感謝到職十年的員工。</p><p>想想十年前的我，也才剛從國小畢業，也就是說這些叔叔在我國小還是小屁孩的時候，就開始在這間公司職涯，並且持續堅持了十年。</p><span id="more"></span><p>十年的時間可以幹什麼？</p><p>讓一個人，從小孩長大成人。</p><p>讓陌生人交往，然後再變回陌生人。</p><p>讓風光一時的冠軍，步入黑暗。</p><p>也可以讓人徬徨，什麼事也沒做，就只是年紀+10</p><p>然而，站在台上笑容靦腆的這些人，讓我感到疑惑，究竟要怎麼做一份工作做十年？</p><p>前幾天回顧五年前還是高中生時的日記，看起來和現在相差無幾，讓我不經感慨，自己到頭來一點成長都沒有，一點能說嘴的事蹟都沒有，做事任性而無韌性，就這樣虛度這些日子。</p><p>我很難過、很沮喪。</p><p>這樣的我，怎麼能有信心，能過好接下來的十年，好幾個十年？</p><p>先過好接下來十天吧。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;做好眼前的事情是個老生常談，卻似乎不是件容易的事情。&lt;/p&gt;
+&lt;p&gt;前天去了公司的尾牙，雖然才到職一個禮拜，但也是蹭到了一頓飯，並且參與了活動（雖然沒法抽獎），其中有個環節在感謝到職十年的員工。&lt;/p&gt;
+&lt;p&gt;想想十年前的我，也才剛從國小畢業，也就是說這些叔叔在我國小還是小屁孩的時候，就開始在這間公司職涯，並且持續堅持了十年。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    
+    
+    <category term="牢騷" scheme="http://huawiz.github.io/tags/%E7%89%A2%E9%A8%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第一份實習</title>
+    <link href="http://huawiz.github.io/Diary/20220109intern/"/>
+    <id>http://huawiz.github.io/Diary/20220109intern/</id>
+    <published>2022-01-09T14:09:30.000Z</published>
+    <updated>2022-12-26T05:39:18.513Z</updated>
+    
+    <content type="html"><![CDATA[<p>上週開始了人生第一份實習。</p><span id="more"></span><p>進到辦公室後發現的第一件事，就是自己的白目。草草的決定，造成了在人家年底最忙的時候，還要顧一個莫名殺出的老屁孩。不過還是心存感激，很謝謝親戚願意給這個機會，在我徬徨之時，給我有個地方能去，而不至於只是在家混吃等死。</p><p>公司分派了一位到職不久的學長，來與我一對一教學，學習一些工作技術，過程也十分愉快。唯一美中不足的，就是我那扭曲的個性與價值觀，讓我在教學外的放鬆閒聊環節，讓空氣變得黯淡、沈默，莫名喜歡拿著自己的徬徨出來說嘴，好像試圖要把他人都牽扯進來。</p><p>要搞清楚，還要繼續當一個暴風眼嗎？我是去實習的，不是去諮商的，沒有人理所當然聽任何人抱怨。</p><p>放鬆點，多微笑，不必要的溫良恭儉讓請收起來。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;上週開始了人生第一份實習。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    
+    
+    <category term="實習" scheme="http://huawiz.github.io/tags/%E5%AF%A6%E7%BF%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>習得無助的現在</title>
+    <link href="http://huawiz.github.io/Diary/20220108-diary/"/>
+    <id>http://huawiz.github.io/Diary/20220108-diary/</id>
+    <published>2022-01-08T11:28:34.000Z</published>
+    <updated>2022-12-26T05:39:18.511Z</updated>
+    
+    <content type="html"><![CDATA[<p>去年閱讀了30本書（ig紀錄），卻覺得自己的人生越活越狹窄……想紀錄的現在的無助感，讓我又學到了習得無助這個詞，或許也不是沒有收穫吧（？</p><span id="more"></span><p>習得無助，指的是面對挑戰時的一種消極感，也就是說既使問題很好解決，自己卻裹足不前，缺乏嘗試的勇氣。以前的心理學家曾經做過一個虐狗的實驗，一直重複地把一條狗放在一個充滿電擊的箱子，一直電一直電電到狗放棄掙扎，直到後來既使開門了，狗一聽到電擊的聲音反而仍倒地不起，心理學家把這種現象歸因於狗對於電擊的認知產生變化：就算行動也躲不了被電的命運，那乾脆放棄吧。</p><p>現在的我就像條狗吧。</p><p>不過想想，我努力的方向似乎也對念數學沒什麼幫助，反而可能是摩擦力。例如：試圖用電腦把數學筆記全部記錄下來，我想這可能就不是一個切實際的夢想，至少在一學期短短幾週而言，不太可能做到，至少對我這種程度與環境下的人來說，這個目標可能過於困難。再來，證明過程似乎寫下來也對學習沒什麼意義，因為這著重於每一次的理解與理解後的寫作，而非只是把它寫下來一直看，所以這方面我可以說是完全搞錯重點了。</p><p>不過學習方向搞錯還不是大問題，最嚴重的問題是，<strong>我放推了</strong>。而且不是第一次，而是第三次，第三次意味著什麼？三年欸幹。三年的時間可以做什麼？國高中讀完一輪、拜師學藝到出師、打工仔存到第一桶金、人類可以學會與病毒共存、股市從黑天鵝到股神輩出…哇靠，而我卻仍在這裡無限迴圈？</p><hr><p>這樣的處境，或許更適合坐下來，好好的來寫些東西抒發一下，好好和自己談談吧？不然這個部落格放在這也是挺可惜的。以前總覺得，寫部落格這種事情好像有某種使命感，一定要非得要寫點什麼有營養的內容才行，但綜觀過去，照著這樣的規則限制自己，好像也沒寫什麼東西，每次都是虎頭蛇尾，一開始寫得很勤，寫個幾篇，後來生活一忙，或是懶惰的毛病一發不可收拾，就又把這裡放到下次收帳單的時候才想到。好啦其實沒那麼誇張。</p><p>想想小學的時候，家裡沒啥人能陪我，只有阿公照顧著我，但因為每天放學後的時間沒啥地方能去，所以耗在電腦上的時間很多，打楓之谷是我對這段時間僅存的記憶。而我又是一個喜歡投機的人，光20等要練一整天，實在太久了，所以與其傻傻手工練等練得要死，我更傾向使用外掛幫忙練功，這樣就可以邊睡覺邊練功，只要隔天起床驗收成果就好了，但這樣做有風險：你有花錢投資的角色，很有可能這樣一搞隔天早上看的時候就在監獄（被鎖）了，不過現在手遊大多都內建這樣的功能，這算是一種時代進步嗎？大家都這樣搞，乾脆我遊戲公司做給你？</p><p>不過我後來找到更投機的方法，直接玩私服，這樣打怪的經驗值倍率都可以由我自己調整，我就是這遊戲的GM，是神。</p><p>那時候的日子，大概就是每天去學校和朋友打哈哈之後，回家就開始經營我的副業-我的私服。我記得那時候還有很多相關的技術論壇，有人會在那裡提供架設私服器的教學、工具、現成的註冊網站，並且有自我宣傳經營的專區，給人在那招人或選擇想去的私服，逛這裡的感覺就和每次開學逛社團街一樣，每個學長姊都無所不用其極地想把人騙進來，只為了湊那一點點的人數，和現在臉書&#x2F;ig&#x2F;yt隨便一個網紅追蹤人數比起來，真的是一點點，少到很可憐廠商看不上的那種。</p><p>這個時期，單憑著「好想玩高等角色」的慾望，就開始研究什麼是wamp、SQL匯入匯出修改、架註冊網站架論壇、Javascript修改人物的說話內容功能顏色，想想這段經歷就覺得自己那時候真的很狂，直到現在我偶爾還是很喜歡和別人炫耀這段經歷。還記得也在這時候接觸ＷＰ，學著自己做LOGO、爬文解決問題，尋找願意和自己連播的網站等等，很可惜的是當時沒有學會和人家社交、技術交流，以及檔案紀錄備份，所以這些都只剩下言語而非實體。</p><p>當時也因為這樣，在學校某次電腦作業做自由主題的ppt報告，而我就選擇「如何使用免費網站空間架設wp」作為主題，當時用的空間還活著，<a href="https://www.000webhost.com/">000webhost</a>。除了和同學分享這些「宅砲知識」，也因此曾經讓我當過一代神童，讓老師嘖嘖稱奇。</p><p>後來也在國中的時候，拼拼湊湊寫出人生第幾個WP佈景，其中一個是下面這個TheNightmare，當時很迷狂三，所以用了狂三配色，還很自以為的用同名搖滾音樂寫入介紹當中，把動漫肥宅的彩蛋藏在配色當中。</p><p><img src="https://i.imgur.com/cUcklm6.jpg" alt="file"></p><p>就如前面講的，雖然一直有「持有部落格」的習慣，卻始終沒在經營，所以這張截圖是三次開啟部落格時留下的…</p><p>後來這些興趣沒持續下去，因為開始面臨升學考試，備感壓力下國二開始每天去補習班，在數理方面唸得還行，進入普高，然後…我沒留下什麼，沒參加社團、活動，也什麼值得提得成就，只記得為了提升國英分數，每天晚上都買學校前的便當店，就去學校自習室自修了，當時因為聽說老爸轉職，我就想說省點錢不去補習了。結果早已經習慣補習的讀書方式，失去了地基，直接崩塌，高中第三年暑假得知老媽癌症，更是直接成為我放推考大學這回事的藉口，高中第三年最慘的時候好像有倒數，畢業的暑假補修補得很嗨，還記得領畢業證書那天下豪大雨，回到家畢業證書都濕掉了。高三放推時的我，想得是國中為何不好好考高中？為何不考前三志願？為何當初不好好爭取自己的學習環境？一定<strong>是環境害我變成這樣的</strong>。</p><p>我想正也就是這種「是XX害我的」的心態，把我推到了現在這步田地，也讓我變得不堪一擊，經不起挫折，玩不起遊戲，而這些心態對於數學而言，更是會被狠狠地教訓一番，就如同那句老話：幾何學沒有王者之路。對於被習慣於推著走的我，就算找到王者之路，我想我也會走不動吧。</p><hr><p>想想也蠻弔詭的，當初沒機會學習其他才藝的我，擁有了電腦，自然而然也學了一些和電腦有關的技能，而且不亦樂乎。然而，活到理應能自由自在找方向的大學階段，我卻因為唸不下去、找不到目標而休學跑外送、逃避生活，既不去進修、也不去從事任何活動，只有幹那種把老媽的遺產揮霍完，其他錢歐印股市虛擬貨幣賠光的蠢事。</p><p>去年剛開學前時，因為焦慮買了很多的東西：Udemy的課程、一堆書，試了各種東西，好讓自己的生活好像不是「黑白的」，一下買腳踏車、一下買編曲課程等等。到現在，這些東西到現在沒幾樣還有在玩，甚至原本有練出一點東西的健身，都不願意去了，只因為天氣冷。</p><hr><p>回到習來無助，22歲大學肄業的我，還有什麼選擇？能不能不選擇？不就是因為太多的選擇，才讓我產生太多的猶豫、太多的懷疑？</p><p>不曉得，先好好做好實習，多找幾份簡單的工作存點零用錢，並且當完兵吧。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;去年閱讀了30本書（ig紀錄），卻覺得自己的人生越活越狹窄……想紀錄的現在的無助感，讓我又學到了習得無助這個詞，或許也不是沒有收穫吧（？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    
+    
+    <category term="牢騷" scheme="http://huawiz.github.io/tags/%E7%89%A2%E9%A8%B7/"/>
+    
+    <category term="習得無助" scheme="http://huawiz.github.io/tags/%E7%BF%92%E5%BE%97%E7%84%A1%E5%8A%A9/"/>
     
   </entry>
   

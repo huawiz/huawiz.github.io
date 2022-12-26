@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+<meta name="google-site-verification" content="Zd6LFa8qTJ2lQCuhaHcO94jGjBsmTllPx6NAcMn394A" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="description" content="CS50x W2作業"/><meta name="keywords" content="CS50x, Hey,Series" /><link rel="alternate" href="/atom.xml" title="Hey,Series" type="application/atom+xml"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.1" />
+<link rel="canonical" href="http://huawiz.github.io/Note/cs50x-w2-note-2022/"/>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.1" />
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":false,"pjax":"","latex":true};
+</script>
+
+    <title>CS50x W2作業 - Hey,Series</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Hey,Series</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/">
+        <li class="mobile-menu-item">Home
+          </li>
+      </a><a href="/archives/">
+        <li class="mobile-menu-item">Archives
+          </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags
+          </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Hey,Series</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/">
+            Home
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            Archives
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/tags/">
+            Tags
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/categories/">
+            Categories
+            </a>
+        </li>
+      </ul></nav>
+</header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">CS50x W2作業
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2022-03-28
+        </span><span class="post-category">
+            <a href="/categories/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/">電腦科學</a>
+            </span>
+        </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#W2-%E7%AD%86%E8%A8%98"><span class="toc-text">W2 筆記</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#W2-%E5%A4%A7%E7%B6%B1"><span class="toc-text">W2 大綱</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%9C%E6%A5%AD-pset2"><span class="toc-text">作業 : pset2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#caesar%E8%88%87rotate%E5%88%86%E9%96%8B%E5%AF%AB"><span class="toc-text">caesar與rotate分開寫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#caesar%E5%87%BD%E6%95%B8"><span class="toc-text">caesar函數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rotate%E5%87%BD%E6%95%B8"><span class="toc-text">rotate函數</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%94%B6%E7%A9%AB"><span class="toc-text">其他收穫</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%83%E5%BE%97"><span class="toc-text">心得</span></a></li></ol>
+    </div>
+  </div><div class="post-content"><p>這篇紀錄一下Ｗ2的作業思路。</p>
+<span id="more"></span>
+<h1 id="W2-筆記"><a href="#W2-筆記" class="headerlink" title="W2 筆記"></a>W2 筆記</h1><p><a target="_blank" rel="noopener" href="https://cs50.harvard.edu/x/2022/notes/2/">官方的筆記傳送門</a></p>
+<hr>
+<h1 id="W2-大綱"><a href="#W2-大綱" class="headerlink" title="W2 大綱"></a>W2 大綱</h1><ul>
+<li>Compiling -&gt; 講解程式碼是如何被電腦編譯機器語言的</li>
+<li>Dubug -&gt; 教你使用VSCODE的Debug工具</li>
+<li>Memory&#x2F;Data type -&gt; C語言如何存資料<ul>
+<li>為何要分這麼多種?<ul>
+<li>因為以前的記憶體成本很高，為了有效率的分配資源，所以C語言的資料類別設計十分嚴謹，為的就是能用最少記憶體存取最多的資料。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>arrays -&gt; 可以用一個參數儲存多筆資料</li>
+<li>字元Characters與字串String -&gt; 講解C語言如何存取一串字</li>
+<li>Command-line arguments -&gt; 如何在CLI用指令+參數去run你的程式碼</li>
+</ul>
+<hr>
+<p><img src="https://i.imgur.com/tZ7jmSt.png" alt="file"></p>
+<h1 id="作業-pset2"><a href="#作業-pset2" class="headerlink" title="作業 : pset2"></a>作業 : pset2</h1><p>建議自己寫完後再看以下內容</p>
+<p>參考答案連結 : <a target="_blank" rel="noopener" href="https://github.com/huawiz/CS-note/tree/master/CS50x/pset2">Link</a></p>
+<p>這禮拜的作業，大致上在練習使用command-line arguments以及陣列的使用。第一題(readability)還蠻簡單的，只要照著作業指示就能輕鬆完成。第二題(Caesar)很有趣，用到了<a target="_blank" rel="noopener" href="https://www.asciitable.com/" title="ASCII">ASCII表</a>，抓到作業指示的公式與思考大寫與小寫的判別之後，就能Rotate的函數並且完成這題。而第三題(Substitution)則是這題的衍伸題，不是字元號碼的轉換，而是要請使用者自行輸入加密字元，為了能和<a target="_blank" rel="noopener" href="https://sandbox.cs50.io/e6e69576-1719-4c83-a292-24d54690a699">課程範例</a>相同，要寫很多的條件句，如果沒想清楚的話就會花很久的時間。</p>
+<h3 id="caesar與rotate分開寫"><a href="#caesar與rotate分開寫" class="headerlink" title="caesar與rotate分開寫"></a>caesar與rotate分開寫</h3><p>我的做法是按照作業指示，把加密與rotate函數分開寫，後來也成功用幾乎完全一致的函數完成了第二和三題，差別只在第二題有使用<a target="_blank" rel="noopener" href="https://manual.cs50.io/3/atoi"><code>atoi()</code></a>來把字串轉成數字。為什麼是字串呢？因為command-line arguments是把值存成字串形式，所以還需要再使用這個函數，才能把string轉換成int。</p>
+<hr>
+<h3 id="caesar函數"><a href="#caesar函數" class="headerlink" title="caesar函數"></a>caesar函數</h3><p>簡單來說就是把每個輸入進來的字元用迴圈跑過，並且用自己寫的rotate函數，把它轉換成加密後的密碼，最後再printf到CLI上。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">caesar</span><span class="params">(string key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string text = <span class="built_in">get_string</span>(<span class="string">&quot;plaintext: &quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">strlen</span>(text); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        text[i] = <span class="built_in">rotate</span>(text[i], key);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ciphertext: %s\n&quot;</span>, text);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="rotate函數"><a href="#rotate函數" class="headerlink" title="rotate函數"></a>rotate函數</h3><p>caesar 與 substitution 的差異，只在於加密的key不同，所以一個是字串，一個是int。其他判斷大小寫、回傳非字母字元的條件句一模一樣。</p>
+<p>caesar：考慮到加超過Z的狀況，因此原本想要用條件硬幹的我打消了念頭，轉而專注回題目的意思，最後得到一個漂亮的回傳式。大致上的做法是：先幫A-Z標號，先找到字母的號碼，然後往後數數字，走到尾巴再從字母A的號碼開始走，直到走完指定數字，即是加密後的字母。 <img src="https://i.imgur.com/GFyRE8m.png" alt="file"></p>
+<p>例如A開始往後數到G，那就是移動了6、32或是58步。 <img src="https://i.imgur.com/WlWeFqv.png" alt="file"></p>
+<p>substitution：這個比Caesar簡單，就是直接把A-Z與你的加密字母做1-1對應，因此只要直接回傳加密字母串的位置就行了，位置號碼就是A-Z的標號。</p>
+<p><img src="https://i.imgur.com/PiVRuZO.png" alt="file"></p>
+<p>65-90是大寫字母的ASCII號碼，所以要減掉A的字碼，這樣就能對到0-25(26個字母)，如此一來就能拿來對應加密字串。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">char</span> <span class="title">rotate</span><span class="params">(<span class="type">char</span> letter, string key)</span> <span class="comment">// caesar是int key</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">isupper</span>(letter))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//return (((int)letter - 64) + key) % 26 + 64; caesar的</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">toupper</span>(key[((<span class="type">int</span>)letter) - <span class="number">65</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">islower</span>(letter))</span><br><span class="line">    &#123;</span><br><span class="line">    －<span class="comment">//return (((int)letter - 97) + key) % 26 + 97; caesar的</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">tolower</span>(key[((<span class="type">int</span>)letter) - <span class="number">97</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> letter;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="其他收穫"><a href="#其他收穫" class="headerlink" title="其他收穫"></a>其他收穫</h2><p>在寫作業的時候試字串，一直不知道為啥輸入’!’後的指令會被截斷。 <img src="https://i.imgur.com/oCqOQRT.png"></p>
+<p>後來去CS50x群組問，得到了解答：bash會被!打斷</p>
+<p><img src="https://i.imgur.com/CS57kYm.png"></p>
+<h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>這週寫得比上週輕鬆，不過也是因為以前學過，之後Sort的部分對我來說則是完全新的東西，希望能好好學習，繼續週更筆記。</p>
+
+      </div>
+      <div class="post-copyright">
+    <p class="copyright-item">
+      <span>Author: </span>
+      <a href="http://huawiz.github.io">Justin Wu</a>
+    </p>
+    <p class="copyright-item">
+      <span>Link: </span>
+      <a href="http://huawiz.github.io/Note/cs50x-w2-note-2022/">http://huawiz.github.io/Note/cs50x-w2-note-2022/</a>
+    </p>
+    <p class="copyright-item">
+      <span>License: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知識共享署名-非商業性使用 4.0 國際許可協議</a>
+    </p>
+  </div>
+      <footer class="post-footer">
+        <div class="post-tags">
+            <a href="/tags/CS50x/">CS50x</a>
+            </div>
+        
+        <nav class="post-nav"><a class="prev" href="/Diary/wr-grandmaster-202205/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">激鬥峽谷S5打野宗師心得</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    <a class="next" href="/Diary/220322diary/">
+        <span class="next-text nav-default">走不出莊園的史蒂文斯</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    </nav></footer>
+    </article></div><div class="comments" id="comments"><div id="utterances-container"></div>
+    </div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:huawiz@outlook.com" class="iconfont icon-email" title="email"></a>
+        <a target="_blank" rel="noopener" href="https://github.com/huawiz" class="iconfont icon-github" title="github"></a>
+        <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    </div><div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">&copy;2015 - 2022<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Justin Wu</span>
+  </span>
+</div>
+</footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script>
+    var container = document.getElementById('utterances-container')
+    var script = document.createElement('script')
+    script.src = 'https://utteranc.es/client.js'
+    script.setAttribute('repo', 'huawiz/huawiz.github.io')
+    script.setAttribute('issue-term', 'title')
+    script.setAttribute('theme', 'github-light')
+    script.setAttribute('label', 'utterances')
+    script.crossorigin = 'anonymous'
+    script.async = true
+
+    container.appendChild(script)
+  </script><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/js/src/even.js?v=2.11.1"></script>
+</body>
+</html>

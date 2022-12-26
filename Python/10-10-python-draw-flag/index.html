@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+<meta name="google-site-verification" content="Zd6LFa8qTJ2lQCuhaHcO94jGjBsmTllPx6NAcMn394A" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="description" content="雙十連假來用Python畫個國旗吧"/><meta name="keywords" content="python, 作業, 國旗, 程式, 雙十, Hey,Series" /><link rel="alternate" href="/atom.xml" title="Hey,Series" type="application/atom+xml"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.1" />
+<link rel="canonical" href="http://huawiz.github.io/Python/10-10-python-draw-flag/"/>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.1" />
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":false,"pjax":"","latex":true};
+</script>
+
+    <title>雙十連假來用Python畫個國旗吧 - Hey,Series</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Hey,Series</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/">
+        <li class="mobile-menu-item">Home
+          </li>
+      </a><a href="/archives/">
+        <li class="mobile-menu-item">Archives
+          </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags
+          </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Hey,Series</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/">
+            Home
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            Archives
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/tags/">
+            Tags
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/categories/">
+            Categories
+            </a>
+        </li>
+      </ul></nav>
+</header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">雙十連假來用Python畫個國旗吧
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2021-10-10
+        </span><span class="post-category">
+            <a href="/categories/Python/">Python</a>
+            </span>
+        </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%88%E6%9E%9C%E5%9C%96"><span class="toc-text">效果圖</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B0%A1%E5%96%AE%E8%AA%AA%E6%98%8E"><span class="toc-text">簡單說明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%B0%E9%9B%A3%E7%9A%84%E5%9C%B0%E6%96%B9"><span class="toc-text">困難的地方</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B0%A1%E5%96%AE%E8%AA%AA%E6%98%8E-1"><span class="toc-text">簡單說明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C%E5%85%89%E8%8A%92"><span class="toc-text">十二光芒</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E5%87%BD%E6%95%B8"><span class="toc-text">建立函數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E8%87%AA%E8%A3%BD%E5%87%BD%E6%95%B8%E5%92%8C%E8%BF%B4%E5%9C%88%E7%AA%AE%E8%88%89%EF%BC%8C%E4%B8%A6%E4%B8%94%E7%94%A8numpy-array%E5%81%9A%E9%81%8B%E7%AE%97"><span class="toc-text">用自製函數和迴圈窮舉，並且用numpy array做運算</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="toc-text">完整程式碼</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="toc-text">參考資料</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Python"><span class="toc-text">Python</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%8B%E8%BD%89%E7%9F%A9%E9%99%A3"><span class="toc-text">旋轉矩陣</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%8B%E6%97%97%E8%A6%8F%E6%A0%BC"><span class="toc-text">國旗規格</span></a></li></ol></li></ol>
+    </div>
+  </div><div class="post-content"><p>連假前上電腦課，老師出了一份作業要我們使用tkinter視窗的canvas來畫一張圖，並且要以雙十國慶為主題作為回家作業，於是我研究了下網路上的國旗畫法，以及numpy的array的用法，畫了一張國旗。先不討論到底是國旗還黨旗，反正這篇就只是分享一下如何畫國旗。</p>
+<span id="more"></span>
+<h1 id="效果圖"><a href="#效果圖" class="headerlink" title="效果圖"></a>效果圖</h1><p><img src="https://i.imgur.com/Kmg9V76.png" alt="file"></p>
+<h1 id="簡單說明"><a href="#簡單說明" class="headerlink" title="簡單說明"></a>簡單說明</h1><p>只要更改初始設定unit的值，就可以按照比例改變國旗的大小。</p>
+<h1 id="困難的地方"><a href="#困難的地方" class="headerlink" title="困難的地方"></a>困難的地方</h1><ol>
+<li>不熟悉numpy函數用法，邊做邊惡補</li>
+<li>圖型對應畫布座標的轉換，需要一些數學運算</li>
+<li>幾何圖形要用可行（自己會做）的做，要想怎麼拼接成自己要的圖案</li>
+</ol>
+<hr>
+<h1 id="簡單說明-1"><a href="#簡單說明-1" class="headerlink" title="簡單說明"></a>簡單說明</h1><p>畫面藍紅區塊1:4，整體大小3:2。</p>
+<h2 id="十二光芒"><a href="#十二光芒" class="headerlink" title="十二光芒"></a>十二光芒</h2><p><a target="_blank" rel="noopener" href="https://www.globalflag.idv.tw/wg/hzgq.htm" title="參考連結">參考連結</a> <img src="https://i.imgur.com/rwYnFBg.png" alt="file"> 這邊是我覺得比較難的部分，因為想要在tkinter上畫多點的幾何圖形，需要給每個點的座標，然而這種按照特定比例繪製的圖形，要怎麼畫圖呢？我一開始是想要直接連結子、未、巳三點，並且與內圈做一個導航形狀的圖型，這樣只需要旋轉4次，就能完成了，但是困難的點是我的數學太爛，我不知道怎麼算裡面凹進去那點的座標。</p>
+<h3 id="建立函數"><a href="#建立函數" class="headerlink" title="建立函數"></a>建立函數</h3><p><img src="https://i.imgur.com/ykOiCAX.png" alt="file"></p>
+<p>我研究了一陣子後換了作法，改成畫內圈兩端與外圈頂點的圖型，因為我注意到內圈的直徑等於未巳相連的一半，也剛好等於藍色區塊寬的1&#x2F;4，這樣只需要轉<code>30\degree</code>共12次，就可以轉完圖形。於是我先寫了這樣：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag.create_polygon(x_0, y_0-<span class="number">75</span>, x_0-<span class="number">18.75</span>, y_0, x_0+<span class="number">18.75</span>, y_0, fill=<span class="string">&quot;white&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>但現在頭大的是，我要怎麼求其他點的具體座標？我想到的是使用旋轉矩陣，但是要怎麼做呢？其實就是按照定義刻出來，然後我另外寫了一個函數來找旋轉<code>\frac&#123;\pi&#125;&#123;6&#125;</code>共12次的點。抓到點後，再對每一項進行座標平移就好了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -- 工具</span></span><br><span class="line"><span class="comment"># 取得12點座標</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_point</span>(<span class="params">x, y</span>):</span><br><span class="line">    point_list = <span class="built_in">list</span>()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">12</span>):</span><br><span class="line">        point_list.append(coodinate_tp(x, y, (np.pi/<span class="number">6</span>)*i))</span><br><span class="line">    <span class="keyword">return</span> point_list</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">coodinate_tp</span>(<span class="params">x=<span class="number">1</span>, y=<span class="number">0</span>, theta=np.pi/<span class="number">6</span></span>):</span><br><span class="line">    new_x = <span class="built_in">round</span>(x*np.cos(theta) - y*np.sin(theta), <span class="number">2</span>)</span><br><span class="line">    new_y = <span class="built_in">round</span>(x*np.sin(theta) + y*np.cos(theta), <span class="number">2</span>)</span><br><span class="line">    <span class="keyword">return</span> [new_x, new_y]</span><br></pre></td></tr></table></figure>
+
+<p>輸出效果</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt;get_point(0,-(w/8))</span><br><span class="line">---</span><br><span class="line">[[0.0, -75.0],</span><br><span class="line"> [37.5, -64.95],</span><br><span class="line"> [64.95, -37.5],</span><br><span class="line"> [75.0, -0.0],</span><br><span class="line"> [64.95, 37.5],</span><br><span class="line"> [37.5, 64.95],</span><br><span class="line"> [0.0, 75.0],</span><br><span class="line"> [-37.5, 64.95],</span><br><span class="line"> [-64.95, 37.5],</span><br><span class="line"> [-75.0, 0.0],</span><br><span class="line"> [-64.95, -37.5],</span><br><span class="line"> [-37.5, -64.95]]</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="用自製函數和迴圈窮舉，並且用numpy-array做運算"><a href="#用自製函數和迴圈窮舉，並且用numpy-array做運算" class="headerlink" title="用自製函數和迴圈窮舉，並且用numpy array做運算"></a>用自製函數和迴圈窮舉，並且用numpy array做運算</h3><p>接下來我只需要抓到三個點，並且一起繞著圓心轉12次，就可以了！</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 畫12個三角型</span></span><br><span class="line">a_point = np.array(get_point(<span class="number">0</span>, -<span class="number">1</span>*(w/<span class="number">8</span>)))</span><br><span class="line">b_point = np.array(get_point(-<span class="number">1</span>*(w/<span class="number">32</span>), <span class="number">0</span>))</span><br><span class="line">c_point = np.array(get_point(w/<span class="number">32</span>, <span class="number">0</span>))</span><br><span class="line">arr = np.append(a_point, b_point, axis=<span class="number">1</span>)</span><br><span class="line">arr2 = np.append(arr, c_point, axis=<span class="number">1</span>)</span><br><span class="line">arr2[:, <span class="number">0</span>::<span class="number">2</span>] = arr2[:, <span class="number">0</span>::<span class="number">2</span>]+x_0</span><br><span class="line">arr2[:, <span class="number">1</span>::<span class="number">2</span>] = arr2[:, <span class="number">1</span>::<span class="number">2</span>]+y_0</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(arr2)):</span><br><span class="line">    flag.create_polygon(arr2[i].tolist(), fill=<span class="string">&quot;white&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>其中比較囉唆的部分，大概就是np.append必須分開加，如果點一多，可能還是要寫個迴圈來處理。因為是要描點，所以這個list的結構大概是兩個為單位，奇數項(1,3,5…)都是代表縱軸，偶數則代表橫軸。所以需要用到slice來處理陣列，這樣才能讓加入對的原點。原點指的是藍色部分的圓心。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt; arr2[:,0::2] = arr2[:,0::2]+x_0</span><br><span class="line">arr2[:,1::2] = arr2[:,1::2]+y_0</span><br><span class="line">arr2</span><br><span class="line">---</span><br><span class="line">array([[150.  ,  25.  , 131.25, 100.  , 168.75, 100.  ],</span><br><span class="line">       [187.5 ,  35.05, 133.76,  90.63, 166.24, 109.37],</span><br><span class="line">       [214.95,  62.5 , 140.62,  83.76, 159.38, 116.24],</span><br><span class="line">       [225.  , 100.  , 150.  ,  81.25, 150.  , 118.75],</span><br><span class="line">       [214.95, 137.5 , 159.37,  83.76, 140.63, 116.24],</span><br><span class="line">       [187.5 , 164.95, 166.24,  90.62, 133.76, 109.38],</span><br><span class="line">       [150.  , 175.  , 168.75, 100.  , 131.25, 100.  ],</span><br><span class="line">       [112.5 , 164.95, 166.24, 109.37, 133.76,  90.63],</span><br><span class="line">       [ 85.05, 137.5 , 159.38, 116.24, 140.62,  83.76],</span><br><span class="line">       [ 75.  , 100.  , 150.  , 118.75, 150.  ,  81.25],</span><br><span class="line">       [ 85.05,  62.5 , 140.63, 116.24, 159.37,  83.76],</span><br><span class="line">       [112.5 ,  35.05, 133.76, 109.38, 166.24,  90.62]])</span><br></pre></td></tr></table></figure>
+
+<p>然後，因為Canvas的create_polygon函數，認得是list，所以還是要把資料從array轉換回list。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt; arr2.tolist()</span><br><span class="line">---</span><br><span class="line">[[150.0, 25.0, 131.25, 100.0, 168.75, 100.0],</span><br><span class="line"> [187.5, 35.05, 133.76, 90.63, 166.24, 109.37],</span><br><span class="line"> [214.95, 62.5, 140.62, 83.76, 159.38, 116.24],</span><br><span class="line"> [225.0, 100.0, 150.0, 81.25, 150.0, 118.75],</span><br><span class="line"> [214.95, 137.5, 159.37, 83.76, 140.63, 116.24],</span><br><span class="line"> [187.5, 164.95, 166.24, 90.62, 133.76, 109.38],</span><br><span class="line"> [150.0, 175.0, 168.75, 100.0, 131.25, 100.0],</span><br><span class="line"> [112.5, 164.95, 166.24, 109.37, 133.76, 90.63],</span><br><span class="line"> [85.05, 137.5, 159.38, 116.24, 140.62, 83.76],</span><br><span class="line"> [75.0, 100.0, 150.0, 118.75, 150.0, 81.25],</span><br><span class="line"> [85.05, 62.5, 140.63, 116.24, 159.37, 83.76],</span><br><span class="line"> [112.5, 35.05, 133.76, 109.38, 166.24, 90.62]]</span><br></pre></td></tr></table></figure>
+
+<p>大概寫到這裡，後面剩下的步驟就只是畫兩個圓，其實像是有些設定的變數有點多餘，例如我一開始設定的值radius完全沒用到，若把w&#x2F;8換成radius，應該可以讓程式碼更好讀，吧？</p>
+<hr>
+<h1 id="完整程式碼"><a href="#完整程式碼" class="headerlink" title="完整程式碼"></a>完整程式碼</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tkinter <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始設定</span></span><br><span class="line">unit = <span class="number">20</span></span><br><span class="line">w, h = <span class="number">30</span>*unit, <span class="number">20</span>*unit</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定義重要位置</span></span><br><span class="line">x_0, y_0 = w/<span class="number">4</span>, h/<span class="number">4</span>  <span class="comment"># 藍色區塊中心點</span></span><br><span class="line">radius = w/<span class="number">8</span>  <span class="comment"># 半徑：外圈(w/2)*(1/8)* 6 - (w/2)*(1/8)*2 ，再除二， 剛好是w的1/8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># --- 函數</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># -- 工具</span></span><br><span class="line"><span class="comment"># 取得12點座標</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_point</span>(<span class="params">x, y</span>):</span><br><span class="line">    point_list = <span class="built_in">list</span>()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">12</span>):</span><br><span class="line">        point_list.append(coodinate_tp(x, y, (np.pi/<span class="number">6</span>)*i))</span><br><span class="line">    <span class="keyword">return</span> point_list</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">coodinate_tp</span>(<span class="params">x=<span class="number">1</span>, y=<span class="number">0</span>, theta=np.pi/<span class="number">6</span></span>):</span><br><span class="line">    new_x = <span class="built_in">round</span>(x*np.cos(theta) - y*np.sin(theta), <span class="number">2</span>)</span><br><span class="line">    new_y = <span class="built_in">round</span>(x*np.sin(theta) + y*np.cos(theta), <span class="number">2</span>)</span><br><span class="line">    <span class="keyword">return</span> [new_x, new_y]</span><br><span class="line"></span><br><span class="line"><span class="comment"># build tkinter</span></span><br><span class="line">double_ten = Tk()</span><br><span class="line">double_ten.title(<span class="string">&#x27;中華民國國旗&#x27;</span>)</span><br><span class="line">flag = Canvas(double_ten, width=w, height=h, bg=<span class="string">&#x27;#FE0000&#x27;</span>)  <span class="comment"># 比例3:2</span></span><br><span class="line">flag.pack()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 藍天十二光芒</span></span><br><span class="line">flag.create_rectangle(<span class="number">0</span>, <span class="number">0</span>, w/<span class="number">2</span>, h/<span class="number">2</span>, fill=<span class="string">&quot;#000095&quot;</span>)  <span class="comment"># 藍色底佔國旗的1/4</span></span><br><span class="line"><span class="comment"># 畫12個三角型</span></span><br><span class="line">a_point = np.array(get_point(<span class="number">0</span>, -<span class="number">1</span>*(w/<span class="number">8</span>)))</span><br><span class="line">b_point = np.array(get_point(-<span class="number">1</span>*(w/<span class="number">32</span>), <span class="number">0</span>))</span><br><span class="line">c_point = np.array(get_point(w/<span class="number">32</span>, <span class="number">0</span>))</span><br><span class="line">arr = np.append(a_point, b_point, axis=<span class="number">1</span>)</span><br><span class="line">arr2 = np.append(arr, c_point, axis=<span class="number">1</span>)</span><br><span class="line">arr2[:, <span class="number">0</span>::<span class="number">2</span>] = arr2[:, <span class="number">0</span>::<span class="number">2</span>]+x_0</span><br><span class="line">arr2[:, <span class="number">1</span>::<span class="number">2</span>] = arr2[:, <span class="number">1</span>::<span class="number">2</span>]+y_0</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(arr2)):</span><br><span class="line">    flag.create_polygon(arr2[i].tolist(), fill=<span class="string">&quot;white&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 內部小圈圈</span></span><br><span class="line">flag.create_oval((w/<span class="number">2</span>)*(<span class="number">1</span>/<span class="number">8</span>)*<span class="number">3</span>, (h/<span class="number">4</span>)-((w/<span class="number">2</span>)*(<span class="number">1</span>/<span class="number">8</span>)), (w/<span class="number">2</span>)*(<span class="number">1</span>/<span class="number">8</span>)</span><br><span class="line">                 * <span class="number">5</span>, (h/<span class="number">4</span>)+((w/<span class="number">2</span>)*(<span class="number">1</span>/<span class="number">8</span>)), fill=<span class="string">&quot;#000095&quot;</span>, outline=<span class="string">&quot;#000095&quot;</span>)</span><br><span class="line">flag.create_oval((w/<span class="number">2</span>)*(<span class="number">1</span>/<span class="number">8</span>)*<span class="number">3</span>+w/<span class="number">120</span>, (h/<span class="number">4</span>)-((w/<span class="number">2</span>)*(<span class="number">1</span>/<span class="number">8</span>))+w/<span class="number">120</span>, (w/<span class="number">2</span>)*(<span class="number">1</span>/<span class="number">8</span>)</span><br><span class="line">                 * <span class="number">5</span>-w/<span class="number">120</span>, (h/<span class="number">4</span>)+((w/<span class="number">2</span>)*(<span class="number">1</span>/<span class="number">8</span>))-w/<span class="number">120</span>, fill=<span class="string">&quot;#fff&quot;</span>, outline=<span class="string">&quot;#fff&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># flag.create_oval((w/2)*(1/8)*2, (h/4)-((w/2)*(2/8)), (w/2)*(1/8)</span></span><br><span class="line"><span class="comment">#                 * 6, (h/4)+((w/2)*(2/8)), outline=&#x27;white&#x27;)  # 外圈（確認三角位置用）</span></span><br><span class="line"></span><br><span class="line">double_ten.mainloop()</span><br></pre></td></tr></table></figure>
+
+<h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html" title="numpy.array _ numpy doc">numpy.array _ numpy doc</a></li>
+<li><a target="_blank" rel="noopener" href="http://hk.uwenku.com/question/p-xlgtnygg-tk.html">Python - Numpy：我怎樣才能同時選擇一個數組的所有奇數行和所有偶數列</a></li>
+<li>上課範例</li>
+</ul>
+<h2 id="旋轉矩陣"><a href="#旋轉矩陣" class="headerlink" title="旋轉矩陣"></a>旋轉矩陣</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://silverwind1982.pixnet.net/blog/post/165223625http://" title="旋轉矩陣">旋轉矩陣 - 拾人牙慧</a></li>
+</ul>
+<h2 id="國旗規格"><a href="#國旗規格" class="headerlink" title="國旗規格"></a>國旗規格</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.globalflag.idv.tw/wg/hzgq.htm" title="中華民國國旗繪製 - 旗海圖幟">中華民國國旗繪製 - 旗海圖幟</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%9C%8B%E6%97%97" title="中華民國國旗">中華民國國旗</a></li>
+</ul>
+
+      </div>
+      <div class="post-copyright">
+    <p class="copyright-item">
+      <span>Author: </span>
+      <a href="http://huawiz.github.io">Justin Wu</a>
+    </p>
+    <p class="copyright-item">
+      <span>Link: </span>
+      <a href="http://huawiz.github.io/Python/10-10-python-draw-flag/">http://huawiz.github.io/Python/10-10-python-draw-flag/</a>
+    </p>
+    <p class="copyright-item">
+      <span>License: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知識共享署名-非商業性使用 4.0 國際許可協議</a>
+    </p>
+  </div>
+      <footer class="post-footer">
+        <div class="post-tags">
+            <a href="/tags/python/">python</a>
+            <a href="/tags/%E4%BD%9C%E6%A5%AD/">作業</a>
+            <a href="/tags/%E5%9C%8B%E6%97%97/">國旗</a>
+            <a href="/tags/%E7%A8%8B%E5%BC%8F/">程式</a>
+            <a href="/tags/%E9%9B%99%E5%8D%81/">雙十</a>
+            </div>
+        
+        <nav class="post-nav"><a class="prev" href="/Diary/20211128-%E8%87%AA%E6%88%91%E6%85%8B%E5%BA%A6%E7%9F%AF%E6%AD%A3/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">自我態度矯正</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    <a class="next" href="/Diary/aw-half-year/">
+        <span class="next-text nav-default">肥宅戴Apple Watch Series 6 半年的使用心得</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    </nav></footer>
+    </article></div><div class="comments" id="comments"><div id="utterances-container"></div>
+    </div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:huawiz@outlook.com" class="iconfont icon-email" title="email"></a>
+        <a target="_blank" rel="noopener" href="https://github.com/huawiz" class="iconfont icon-github" title="github"></a>
+        <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    </div><div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">&copy;2015 - 2022<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Justin Wu</span>
+  </span>
+</div>
+</footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script>
+    var container = document.getElementById('utterances-container')
+    var script = document.createElement('script')
+    script.src = 'https://utteranc.es/client.js'
+    script.setAttribute('repo', 'huawiz/huawiz.github.io')
+    script.setAttribute('issue-term', 'title')
+    script.setAttribute('theme', 'github-light')
+    script.setAttribute('label', 'utterances')
+    script.crossorigin = 'anonymous'
+    script.async = true
+
+    container.appendChild(script)
+  </script><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/js/src/even.js?v=2.11.1"></script>
+</body>
+</html>

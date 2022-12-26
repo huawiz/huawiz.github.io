@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+<meta name="google-site-verification" content="Zd6LFa8qTJ2lQCuhaHcO94jGjBsmTllPx6NAcMn394A" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="description" content="如何在mac上建立一個捷徑執行終端機指令"/><meta name="keywords" content="applescript, automator, macos, Hey,Series" /><link rel="alternate" href="/atom.xml" title="Hey,Series" type="application/atom+xml"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.1" />
+<link rel="canonical" href="http://huawiz.github.io/Note/如何在mac上建立一個捷徑執行終端機指令/"/>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.11.1" />
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":false,"pjax":"","latex":true};
+</script>
+
+    <title>如何在mac上建立一個捷徑執行終端機指令 - Hey,Series</title>
+  <meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Hey,Series</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list"><a href="/">
+        <li class="mobile-menu-item">Home
+          </li>
+      </a><a href="/archives/">
+        <li class="mobile-menu-item">Archives
+          </li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags
+          </li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories
+          </li>
+      </a></ul>
+</nav>
+<div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Hey,Series</a>
+</div>
+
+<nav class="site-navbar"><ul id="menu" class="menu"><li class="menu-item">
+          <a class="menu-item-link" href="/">
+            Home
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            Archives
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/tags/">
+            Tags
+            </a>
+        </li>
+      <li class="menu-item">
+          <a class="menu-item-link" href="/categories/">
+            Categories
+            </a>
+        </li>
+      </ul></nav>
+</header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content"><article class="post">
+    <header class="post-header">
+      <h1 class="post-title">如何在mac上建立一個捷徑執行終端機指令
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2021-09-09
+        </span><span class="post-category">
+            <a href="/categories/%E9%9B%BB%E8%85%A6%E4%BD%BF%E7%94%A8/">電腦使用</a>
+            </span>
+        </div>
+    </header>
+
+    <div class="post-content"><p>前陣子有在使用anki，為了建立單字庫而常使用記事本來紀錄單字。</p>
+<p>但是一個一個字key很麻煩，於是寫了一個簡單的python來輸入單字。</p>
+<span id="more"></span>
+<p>但是又但是，每次要執行一樣的py檔案，都要打開termial，然後輸入python3 vocabulary.py來執行，實在是有點麻煩…</p>
+<p>於是研究了一下，中途一直不知道要找什麼關鍵字，研究了一陣子才知道要用applescript來做這件事，為了避免忘記，特別寫這篇紀錄一下，如果能幫助到路人也是功德遠滿~</p>
+<p>首先打開Automator，建立一個應用程式</p>
+<p><img src="https://i.imgur.com/KsLX620.png" alt="file"></p>
+<p>並且找到applescript</p>
+<p><img src="https://i.imgur.com/3f2lWZT.png" alt="file"></p>
+<p>接下來輸入指令</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">&quot;Terminal&quot;</span></span><br><span class="line">reopen</span><br><span class="line"><span class="built_in">activate</span></span><br><span class="line">do <span class="keyword">script</span> <span class="string">&quot;cd ~/desktop/vocabulary&quot;</span> <span class="keyword">in</span> window <span class="number">1</span></span><br><span class="line">do <span class="keyword">script</span> <span class="string">&quot;python3 vocabulary.py&quot;</span> <span class="keyword">in</span> window <span class="number">1</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">tell</span></span><br></pre></td></tr></table></figure>
+
+<p>最後儲存就能享受極度懶人的使用體驗</p>
+<p>如此一來，就能直接在dock完成打開終端機+輸入指令的動作~</p>
+<p><img src="https://i.imgur.com/8vEpOiC.png" alt="file"></p>
+<p>指令詳細可以參考蘋果的<a target="_blank" rel="noopener" href="https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html">guide</a></p>
+<p>END</p>
+<p>By <a target="_blank" rel="noopener" href="https://medium.com/@huawiz">Huawiz</a> on <a target="_blank" rel="noopener" href="https://medium.com/p/e5ded213a113">August 26, 2021</a>.</p>
+<p><a target="_blank" rel="noopener" href="https://medium.com/@huawiz/%E7%84%A1%E7%94%A8-%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E6%8D%B7%E5%BE%91%E5%9F%B7%E8%A1%8C%E7%B5%82%E7%AB%AF%E6%A9%9F%E6%8C%87%E4%BB%A4-e5ded213a113">Canonical link</a></p>
+<p>Exported from <a target="_blank" rel="noopener" href="https://medium.com/">Medium</a> on September 9, 2021.</p>
+
+      </div>
+      <div class="post-copyright">
+    <p class="copyright-item">
+      <span>Author: </span>
+      <a href="http://huawiz.github.io">Justin Wu</a>
+    </p>
+    <p class="copyright-item">
+      <span>Link: </span>
+      <a href="http://huawiz.github.io/Note/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E6%8D%B7%E5%BE%91%E5%9F%B7%E8%A1%8C%E7%B5%82%E7%AB%AF%E6%A9%9F%E6%8C%87%E4%BB%A4/">http://huawiz.github.io/Note/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E6%8D%B7%E5%BE%91%E5%9F%B7%E8%A1%8C%E7%B5%82%E7%AB%AF%E6%A9%9F%E6%8C%87%E4%BB%A4/</a>
+    </p>
+    <p class="copyright-item">
+      <span>License: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知識共享署名-非商業性使用 4.0 國際許可協議</a>
+    </p>
+  </div>
+      <footer class="post-footer">
+        <div class="post-tags">
+            <a href="/tags/applescript/">applescript</a>
+            <a href="/tags/automator/">automator</a>
+            <a href="/tags/macos/">macos</a>
+            </div>
+        
+        <nav class="post-nav"><a class="prev" href="/Diary/the-nth-build-blog/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">第n次架設網站寫文章</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    <a class="next" href="/Book/how-an-economy-grows/">
+        <span class="next-text nav-default">《小島經濟學》: 用有趣的小島故事來了解經濟學</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    </nav></footer>
+    </article></div><div class="comments" id="comments"><div id="utterances-container"></div>
+    </div></div>
+      </main>
+
+      <footer id="footer" class="footer"><div class="social-links"><a href="mailto:huawiz@outlook.com" class="iconfont icon-email" title="email"></a>
+        <a target="_blank" rel="noopener" href="https://github.com/huawiz" class="iconfont icon-github" title="github"></a>
+        <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    </div><div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">&copy;2015 - 2022<span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Justin Wu</span>
+  </span>
+</div>
+</footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div><script>
+    var container = document.getElementById('utterances-container')
+    var script = document.createElement('script')
+    script.src = 'https://utteranc.es/client.js'
+    script.setAttribute('repo', 'huawiz/huawiz.github.io')
+    script.setAttribute('issue-term', 'title')
+    script.setAttribute('theme', 'github-light')
+    script.setAttribute('label', 'utterances')
+    script.crossorigin = 'anonymous'
+    script.async = true
+
+    container.appendChild(script)
+  </script><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  <script type="text/javascript" src="/js/src/even.js?v=2.11.1"></script>
+</body>
+</html>
