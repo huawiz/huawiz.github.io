@@ -2,16 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://huawiz.github.com/Powershell/from-get-help-to-use-powershell/</loc>
+    <loc>http://huawiz.github.io/Diary/%E6%90%AC%E4%BE%86%E5%A4%A7%E5%AE%89%E4%BD%8F%E7%9A%84%E4%B8%89%E5%80%8B%E6%9C%88/</loc>
     
-    <lastmod>2022-12-19</lastmod>
+    <lastmod>2022-12-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://huawiz.github.com/Powershell/control-word-with-pwsh/</loc>
+    <loc>http://huawiz.github.io/search/index.html</loc>
+    
+    <lastmod>2022-12-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://huawiz.github.io/Powershell/use-ps-sendemail/</loc>
+    
+    <lastmod>2022-12-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://huawiz.github.io/Powershell/from-get-help-to-use-powershell/</loc>
+    
+    <lastmod>2022-12-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://huawiz.github.io/Powershell/control-word-with-pwsh/</loc>
+    
+    <lastmod>2022-12-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://huawiz.github.io/Powershell/control-VM-with-pwsh/</loc>
+    
+    <lastmod>2022-12-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://huawiz.github.io/tags/index.html</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -20,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://huawiz.github.com/Powershell/control-VM-with-pwsh/</loc>
+    <loc>http://huawiz.github.io/categories/index.html</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -29,25 +74,7 @@
   </url>
   
   <url>
-    <loc>http://huawiz.github.com/tags/index.html</loc>
-    
-    <lastmod>2022-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://huawiz.github.com/categories/index.html</loc>
-    
-    <lastmod>2022-12-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://huawiz.github.com/abouts/index.html</loc>
+    <loc>http://huawiz.github.io/abouts/index.html</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -57,23 +84,30 @@
   
 
   <url>
-    <loc>http://huawiz.github.com/</loc>
-    <lastmod>2022-12-19</lastmod>
+    <loc>http://huawiz.github.io/</loc>
+    <lastmod>2022-12-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://huawiz.github.com/tags/Powershell/</loc>
-    <lastmod>2022-12-19</lastmod>
+    <loc>http://huawiz.github.io/tags/Powershell/</loc>
+    <lastmod>2022-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://huawiz.github.com/tags/%E6%87%B6%E4%BA%BA/</loc>
-    <lastmod>2022-12-19</lastmod>
+    <loc>http://huawiz.github.io/tags/%E6%87%B6%E4%BA%BA/</loc>
+    <lastmod>2022-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://huawiz.github.io/tags/Powershell/</loc>
+    <lastmod>2022-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -81,8 +115,15 @@
 
   
   <url>
-    <loc>http://huawiz.github.com/categories/Powershell/</loc>
-    <lastmod>2022-12-19</lastmod>
+    <loc>http://huawiz.github.io/categories/Powershell/</loc>
+    <lastmod>2022-12-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://huawiz.github.io/categories/Powershell/</loc>
+    <lastmod>2022-12-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
