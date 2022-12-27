@@ -146,7 +146,12 @@
         <i class="iconfont icon-right"></i>
       </a>
     </nav></footer>
-    </article></div><div class="comments" id="comments"><div id="utterances-container"></div>
+    </article></div><div class="comments" id="comments"><div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     </div></div>
       </main>
 
@@ -175,18 +180,20 @@
       <div class="back-to-top" id="back-to-top">
         <i class="iconfont icon-up"></i>
       </div>
-    </div><script>
-    var container = document.getElementById('utterances-container')
-    var script = document.createElement('script')
-    script.src = 'https://utteranc.es/client.js'
-    script.setAttribute('repo', 'huawiz/huawiz.github.io')
-    script.setAttribute('issue-term', 'title')
-    script.setAttribute('theme', 'github-light')
-    script.setAttribute('label', 'utterances')
-    script.crossorigin = 'anonymous'
-    script.async = true
+    </div><script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://hey-series.com/Diary/%E7%82%BA%E6%96%B0%E7%9A%84%E4%B8%80%E5%B9%B4%E9%BB%9E%E6%A0%B9%E7%81%AB%E6%9F%B4%E5%90%A7/';
+        this.page.identifier = 'Diary/為新的一年點根火柴吧/';
+        this.page.title = '為新的一年點根火柴吧';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
 
-    container.appendChild(script)
+    s.src = '//hey-series.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
   </script><script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
   <script type="text/javascript" src="/js/src/even.js?v=2.11.1"></script>
