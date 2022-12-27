@@ -3,11 +3,11 @@
   <title>Hey,Series</title>
   
   
-  <link href="http://huawiz.github.io/atom.xml" rel="self"/>
+  <link href="http://hey-series.com/atom.xml" rel="self"/>
   
-  <link href="http://huawiz.github.io/"/>
+  <link href="http://hey-series.com/"/>
   <updated>2022-12-26T05:29:15.683Z</updated>
-  <id>http://huawiz.github.io/</id>
+  <id>http://hey-series.com/</id>
   
   <author>
     <name>Justin Wu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Powershell入門筆記</title>
-    <link href="http://huawiz.github.io/Powershell/from-get-help-to-use-powershell/"/>
-    <id>http://huawiz.github.io/Powershell/from-get-help-to-use-powershell/</id>
+    <link href="http://hey-series.com/Powershell/from-get-help-to-use-powershell/"/>
+    <id>http://hey-series.com/Powershell/from-get-help-to-use-powershell/</id>
     <published>2022-08-30T16:00:00.000Z</published>
     <updated>2022-12-26T05:29:15.683Z</updated>
     
@@ -30,17 +30,17 @@
     
     
     
-    <category term="Powershell" scheme="http://huawiz.github.io/categories/Powershell/"/>
+    <category term="Powershell" scheme="http://hey-series.com/categories/Powershell/"/>
     
     
-    <category term="Powershell" scheme="http://huawiz.github.io/tags/Powershell/"/>
+    <category term="Powershell" scheme="http://hey-series.com/tags/Powershell/"/>
     
   </entry>
   
   <entry>
     <title>使用Powershell控制Word文件</title>
-    <link href="http://huawiz.github.io/Powershell/control-word-with-pwsh/"/>
-    <id>http://huawiz.github.io/Powershell/control-word-with-pwsh/</id>
+    <link href="http://hey-series.com/Powershell/control-word-with-pwsh/"/>
+    <id>http://hey-series.com/Powershell/control-word-with-pwsh/</id>
     <published>2022-08-15T16:00:00.000Z</published>
     <updated>2022-12-23T07:29:16.912Z</updated>
     
@@ -51,19 +51,19 @@
     
     
     
-    <category term="Powershell" scheme="http://huawiz.github.io/categories/Powershell/"/>
+    <category term="Powershell" scheme="http://hey-series.com/categories/Powershell/"/>
     
     
-    <category term="Powershell" scheme="http://huawiz.github.io/tags/Powershell/"/>
+    <category term="Powershell" scheme="http://hey-series.com/tags/Powershell/"/>
     
-    <category term="懶人" scheme="http://huawiz.github.io/tags/%E6%87%B6%E4%BA%BA/"/>
+    <category term="懶人" scheme="http://hey-series.com/tags/%E6%87%B6%E4%BA%BA/"/>
     
   </entry>
   
   <entry>
     <title>使用Powershell快速建立Hyper-V的差異硬碟</title>
-    <link href="http://huawiz.github.io/Powershell/build-vhdx-diff-quick-pwsh/"/>
-    <id>http://huawiz.github.io/Powershell/build-vhdx-diff-quick-pwsh/</id>
+    <link href="http://hey-series.com/Powershell/build-vhdx-diff-quick-pwsh/"/>
+    <id>http://hey-series.com/Powershell/build-vhdx-diff-quick-pwsh/</id>
     <published>2022-07-29T18:02:16.000Z</published>
     <updated>2022-12-26T05:39:18.553Z</updated>
     
@@ -74,21 +74,21 @@
     
     
     
-    <category term="Powershell" scheme="http://huawiz.github.io/categories/Powershell/"/>
+    <category term="Powershell" scheme="http://hey-series.com/categories/Powershell/"/>
     
     
-    <category term="Powershell" scheme="http://huawiz.github.io/tags/Powershell/"/>
+    <category term="Powershell" scheme="http://hey-series.com/tags/Powershell/"/>
     
-    <category term="小工具" scheme="http://huawiz.github.io/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
+    <category term="小工具" scheme="http://hey-series.com/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="懶人" scheme="http://huawiz.github.io/tags/%E6%87%B6%E4%BA%BA/"/>
+    <category term="懶人" scheme="http://hey-series.com/tags/%E6%87%B6%E4%BA%BA/"/>
     
   </entry>
   
   <entry>
     <title>怎樣才算有實力的人呢？</title>
-    <link href="http://huawiz.github.io/Diary/how-to-define-strength-20220729/"/>
-    <id>http://huawiz.github.io/Diary/how-to-define-strength-20220729/</id>
+    <link href="http://hey-series.com/Diary/how-to-define-strength-20220729/"/>
+    <id>http://hey-series.com/Diary/how-to-define-strength-20220729/</id>
     <published>2022-07-28T17:00:21.000Z</published>
     <updated>2022-12-26T05:39:18.552Z</updated>
     
@@ -99,17 +99,17 @@
     
     
     
-    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    <category term="自療" scheme="http://hey-series.com/categories/%E8%87%AA%E7%99%82/"/>
     
     
-    <category term="廢文" scheme="http://huawiz.github.io/tags/%E5%BB%A2%E6%96%87/"/>
+    <category term="廢文" scheme="http://hey-series.com/tags/%E5%BB%A2%E6%96%87/"/>
     
   </entry>
   
   <entry>
     <title>於是我的問題，就是被我的狗吃掉了。</title>
-    <link href="http://huawiz.github.io/Diary/dog220728/"/>
-    <id>http://huawiz.github.io/Diary/dog220728/</id>
+    <link href="http://hey-series.com/Diary/dog220728/"/>
+    <id>http://hey-series.com/Diary/dog220728/</id>
     <published>2022-07-28T16:40:38.000Z</published>
     <updated>2022-12-26T05:39:18.551Z</updated>
     
@@ -121,17 +121,17 @@
     
     
     
-    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    <category term="自療" scheme="http://hey-series.com/categories/%E8%87%AA%E7%99%82/"/>
     
     
-    <category term="廢文" scheme="http://huawiz.github.io/tags/%E5%BB%A2%E6%96%87/"/>
+    <category term="廢文" scheme="http://hey-series.com/tags/%E5%BB%A2%E6%96%87/"/>
     
   </entry>
   
   <entry>
     <title>用Powershell快速建立Hyper-V的差異硬碟</title>
-    <link href="http://huawiz.github.io/Powershell/control-VM-with-pwsh/"/>
-    <id>http://huawiz.github.io/Powershell/control-VM-with-pwsh/</id>
+    <link href="http://hey-series.com/Powershell/control-VM-with-pwsh/"/>
+    <id>http://hey-series.com/Powershell/control-VM-with-pwsh/</id>
     <published>2022-07-26T16:00:00.000Z</published>
     <updated>2022-12-23T07:29:15.932Z</updated>
     
@@ -142,19 +142,19 @@
     
     
     
-    <category term="Powershell" scheme="http://huawiz.github.io/categories/Powershell/"/>
+    <category term="Powershell" scheme="http://hey-series.com/categories/Powershell/"/>
     
     
-    <category term="Powershell" scheme="http://huawiz.github.io/tags/Powershell/"/>
+    <category term="Powershell" scheme="http://hey-series.com/tags/Powershell/"/>
     
-    <category term="懶人" scheme="http://huawiz.github.io/tags/%E6%87%B6%E4%BA%BA/"/>
+    <category term="懶人" scheme="http://hey-series.com/tags/%E6%87%B6%E4%BA%BA/"/>
     
   </entry>
   
   <entry>
     <title>激鬥峽谷S5打野宗師心得</title>
-    <link href="http://huawiz.github.io/Diary/wr-grandmaster-202205/"/>
-    <id>http://huawiz.github.io/Diary/wr-grandmaster-202205/</id>
+    <link href="http://hey-series.com/Diary/wr-grandmaster-202205/"/>
+    <id>http://hey-series.com/Diary/wr-grandmaster-202205/</id>
     <published>2022-05-30T11:27:23.000Z</published>
     <updated>2022-12-26T05:39:18.549Z</updated>
     
@@ -165,21 +165,21 @@
     
     
     
-    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    <category term="自療" scheme="http://hey-series.com/categories/%E8%87%AA%E7%99%82/"/>
     
     
-    <category term="日記" scheme="http://huawiz.github.io/tags/%E6%97%A5%E8%A8%98/"/>
+    <category term="日記" scheme="http://hey-series.com/tags/%E6%97%A5%E8%A8%98/"/>
     
-    <category term="激鬥峽谷" scheme="http://huawiz.github.io/tags/%E6%BF%80%E9%AC%A5%E5%B3%BD%E8%B0%B7/"/>
+    <category term="激鬥峽谷" scheme="http://hey-series.com/tags/%E6%BF%80%E9%AC%A5%E5%B3%BD%E8%B0%B7/"/>
     
-    <category term="遊戲" scheme="http://huawiz.github.io/tags/%E9%81%8A%E6%88%B2/"/>
+    <category term="遊戲" scheme="http://hey-series.com/tags/%E9%81%8A%E6%88%B2/"/>
     
   </entry>
   
   <entry>
     <title>CS50x W2作業</title>
-    <link href="http://huawiz.github.io/Note/cs50x-w2-note-2022/"/>
-    <id>http://huawiz.github.io/Note/cs50x-w2-note-2022/</id>
+    <link href="http://hey-series.com/Note/cs50x-w2-note-2022/"/>
+    <id>http://hey-series.com/Note/cs50x-w2-note-2022/</id>
     <published>2022-03-28T13:49:15.000Z</published>
     <updated>2022-12-26T05:39:18.548Z</updated>
     
@@ -190,17 +190,17 @@
     
     
     
-    <category term="電腦科學" scheme="http://huawiz.github.io/categories/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/"/>
+    <category term="電腦科學" scheme="http://hey-series.com/categories/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/"/>
     
     
-    <category term="CS50x" scheme="http://huawiz.github.io/tags/CS50x/"/>
+    <category term="CS50x" scheme="http://hey-series.com/tags/CS50x/"/>
     
   </entry>
   
   <entry>
     <title>走不出莊園的史蒂文斯</title>
-    <link href="http://huawiz.github.io/Diary/220322diary/"/>
-    <id>http://huawiz.github.io/Diary/220322diary/</id>
+    <link href="http://hey-series.com/Diary/220322diary/"/>
+    <id>http://hey-series.com/Diary/220322diary/</id>
     <published>2022-03-22T14:22:49.000Z</published>
     <updated>2022-12-26T05:39:18.529Z</updated>
     
@@ -211,19 +211,19 @@
     
     
     
-    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    <category term="自療" scheme="http://hey-series.com/categories/%E8%87%AA%E7%99%82/"/>
     
     
-    <category term="日記" scheme="http://huawiz.github.io/tags/%E6%97%A5%E8%A8%98/"/>
+    <category term="日記" scheme="http://hey-series.com/tags/%E6%97%A5%E8%A8%98/"/>
     
-    <category term="焦慮" scheme="http://huawiz.github.io/tags/%E7%84%A6%E6%85%AE/"/>
+    <category term="焦慮" scheme="http://hey-series.com/tags/%E7%84%A6%E6%85%AE/"/>
     
   </entry>
   
   <entry>
     <title>控管好自己的時間，才有辦法好好保有自我</title>
-    <link href="http://huawiz.github.io/Diary/202203190diary/"/>
-    <id>http://huawiz.github.io/Diary/202203190diary/</id>
+    <link href="http://hey-series.com/Diary/202203190diary/"/>
+    <id>http://hey-series.com/Diary/202203190diary/</id>
     <published>2022-03-19T14:13:56.000Z</published>
     <updated>2022-12-26T05:39:18.528Z</updated>
     
@@ -234,38 +234,38 @@
     
     
     
-    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    <category term="自療" scheme="http://hey-series.com/categories/%E8%87%AA%E7%99%82/"/>
     
     
-    <category term="動畫" scheme="http://huawiz.github.io/tags/%E5%8B%95%E7%95%AB/"/>
+    <category term="動畫" scheme="http://hey-series.com/tags/%E5%8B%95%E7%95%AB/"/>
     
   </entry>
   
   <entry>
     <title>CS50x W1 作業</title>
-    <link href="http://huawiz.github.io/Note/cs50x-w1-note-2022/"/>
-    <id>http://huawiz.github.io/Note/cs50x-w1-note-2022/</id>
+    <link href="http://hey-series.com/Note/cs50x-w1-note-2022/"/>
+    <id>http://hey-series.com/Note/cs50x-w1-note-2022/</id>
     <published>2022-03-18T16:41:34.000Z</published>
     <updated>2022-12-26T05:39:18.527Z</updated>
     
-    <content type="html"><![CDATA[<p>這篇想來趁作業寫完記憶猶新，來記錄一下寫作業的痛點。</p><span id="more"></span><h1 id="筆記"><a href="#筆記" class="headerlink" title="筆記"></a>筆記</h1><p>詳細筆記，我沒有寫，官方的筆記<a href="https://cs50.harvard.edu/x/2022/notes/1/" title="在這">在這</a></p><hr><h1 id="W1大綱"><a href="#W1大綱" class="headerlink" title="Ｗ1大綱"></a>Ｗ1大綱</h1><ul><li>基礎Command Line 使用</li><li>C語言基礎<ul><li>程式架構、基礎參數、條件、函數、迴圈</li></ul></li><li>overflow -&gt; 電腦資源有限，如果沒有好好處理資料，有可能造成災難</li></ul><hr><h1 id="cs50x-環境設定問題"><a href="#cs50x-環境設定問題" class="headerlink" title="cs50x 環境設定問題"></a>cs50x 環境設定問題</h1><p>在剛開始寫作業的時候，照著指示把github連到cs50x的時候，發現我個人網頁連不上，如圖</p><p><img src="https://i.imgur.com/tDmvE2G.png" alt="file"></p><p>我翻了一堆文章和官方dc，最後是直接寄信去就被秒解了，如果你也有一樣的困擾，就別浪費時間了，直接寄信吧。</p><p><a href="mailto:&#x73;&#x79;&#115;&#97;&#100;&#109;&#105;&#110;&#115;&#x40;&#x63;&#115;&#x35;&#48;&#46;&#104;&#x61;&#114;&#118;&#x61;&#114;&#100;&#x2e;&#101;&#100;&#x75;">&#x73;&#x79;&#115;&#97;&#100;&#109;&#105;&#110;&#115;&#x40;&#x63;&#115;&#x35;&#48;&#46;&#104;&#x61;&#114;&#118;&#x61;&#114;&#100;&#x2e;&#101;&#100;&#x75;</a></p><p>（哈佛的處理效率超快，我搞這個環境就搞了一個晚上…）</p><hr><h1 id="pset1-Credit-個人詳解"><a href="#pset1-Credit-個人詳解" class="headerlink" title="pset1 : Credit 個人詳解"></a>pset1 : Credit 個人詳解</h1><p>其他題目寫得很順利，就這題開始有點卡，所以來特別詳解一下這題，但因為不想讓程式碼片段搞得文章很雜亂，所以完整程式碼連結放這，我只針對Concept與痛點做說明。</p><p><a href="https://github.com/huawiz/CS-note/blob/master/CS50x/pset1/credit/credit.c" title="程式碼傳送門">程式碼傳送門</a> 建議自行寫完再參考以下暴雷內容</p><h2 id="題目說了啥？"><a href="#題目說了啥？" class="headerlink" title="題目說了啥？"></a>題目說了啥？</h2><p><a href="https://cs50.harvard.edu/x/2022/psets/1/credit/" title="題目傳送門">題目傳送門</a></p><p>這題在說信用卡卡號有很多種，根據不同公司有不同的信用卡卡號的產生邏輯，但是這些不同的卡號間，有一演算法可以確認卡號是否有效。</p><p><a href="https://zh.wikipedia.org/wiki/%E5%8D%A2%E6%81%A9%E7%AE%97%E6%B3%95" title="Luhn’s Algorithm">Luhn’s Algorithm</a>，邏輯如下：</p><ol><li>從個位數開始，由右而左，把偶位數數字乘上2後，再把數字加起來。如果乘上2後超過10，就把十位數和個位數分開加總。</li><li>再把這個數字與其他信用卡奇數位的數字加總。</li><li>最後再把這個加總數，對10取模數，最後判斷</li></ol><p>舉例來說:假設號碼是12345678</p><ol><li>取偶數位數得到10305070，乘上2後得到20610140，再把各個位數取和得到2+6+1+1+4&#x3D;14</li><li>再把14與奇數位的數字相加，得到14+2+4+6+8&#x3D;34</li><li><code>34\equiv4\mod 10</code>，也就是34餘10得到4，非0所以12345678不符合規則</li></ol><h2 id="程式骨幹"><a href="#程式骨幹" class="headerlink" title="程式骨幹"></a>程式骨幹</h2><p><img src="https://i.imgur.com/l1Ke0Zu.png" alt="file"></p><h2 id="辨別ID是否有效"><a href="#辨別ID是否有效" class="headerlink" title="辨別ID是否有效"></a>辨別ID是否有效</h2><p>這裡是我覺得最難寫，也最值得做筆記的地方。</p><h3 id="如何針對奇位數與偶位數做動作呢？"><a href="#如何針對奇位數與偶位數做動作呢？" class="headerlink" title="如何針對奇位數與偶位數做動作呢？"></a>如何針對奇位數與偶位數做動作呢？</h3><p>我在寫這題的時候，卡在這問題卡了很久。我一直在想如何把ID的奇位數與偶位數分離。</p><p><img src="https://i.imgur.com/6WqOZ3w.png" alt="file"></p><p>為什麼要這樣分離？因為我注意到上面那個演算法的第二步，<strong>如果</strong>乘上2後加總大於10，則要在把個位數與十位數加起來。所以我想說分離後，只要把每個數都加起來就好了。</p><p>這個概念很直覺，也是因為Python可以針對String直接剪剪貼貼，但是我試了很久才發現，<strong>C語言不能這麼做</strong>。</p><p>不能 <code>str num1 = 11;str num2 = 22;</code>，然後<code>num1+num2 = 1122</code>這樣。</p><p>參考影片：</p><p>理解到這個限制之後，我對於如何做就換到了正確的方向：<strong>設一個參數紀錄奇位數和偶位數</strong>。當我找到這個方法後，這個程式就變得十分好寫，硬要用圖表示會很複雜，但是原理其實相當簡單。</p><p>(也是因為不太會用字元陣列…查到用法也<a href="http://tw.gitbook.net/c_standard_library/c_function_strncat.html" title="要引用string.h">要引用string.h</a>，還不卻定能用…)</p><p><img src="https://i.imgur.com/UnsMfL4.png" alt="file"></p><p>用一句話一張圖來說：對每個位置用0101做標記。</p><p><img src="https://i.imgur.com/cCgpE5E.png" alt="file"></p><p>然後再把要做的事情，在迴圈裡面寫if-else就能達到題目要求了～</p><h2 id="辨別卡種"><a href="#辨別卡種" class="headerlink" title="辨別卡種"></a>辨別卡種</h2><p>確定卡的ID有效之後，接下來就是要確認信用卡的卡種。在if-else這邊我想不用特別多做說明，但是<code>1e13</code>的用法我是在書上看到的，有了這個用法基本上就不用特別引入<code>math.h</code>來使用<code>pow()</code>函數。</p><p>用法: <code>1e13</code> 是指科學記號 <code>1\times 10 ^ &#123;13&#125;</code>，資料type為<code>float</code>，所以要轉成辨別開頭號碼的數字使用時，要把它轉成<code>long</code>，例如<code>(long)1e13</code>。</p><hr><h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>寫到這裡也差不多了，上次認真學C語言是高中的事情，現在重新拾起有不同的樂趣…</p><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>我有搞一個dc群來學習cs50x，有興趣的朋友可以進來看看。</p><p><a href="https://discord.gg/4vfDf5aXC6">https://discord.gg/4vfDf5aXC6</a></p>]]></content>
+    <content type="html"><![CDATA[<p>這篇想來趁作業寫完記憶猶新，來記錄一下寫作業的痛點。</p><span id="more"></span><h1 id="筆記"><a href="#筆記" class="headerlink" title="筆記"></a>筆記</h1><p>詳細筆記，我沒有寫，官方的筆記<a href="https://cs50.harvard.edu/x/2022/notes/1/" title="在這">在這</a></p><hr><h1 id="W1大綱"><a href="#W1大綱" class="headerlink" title="Ｗ1大綱"></a>Ｗ1大綱</h1><ul><li>基礎Command Line 使用</li><li>C語言基礎<ul><li>程式架構、基礎參數、條件、函數、迴圈</li></ul></li><li>overflow -&gt; 電腦資源有限，如果沒有好好處理資料，有可能造成災難</li></ul><hr><h1 id="cs50x-環境設定問題"><a href="#cs50x-環境設定問題" class="headerlink" title="cs50x 環境設定問題"></a>cs50x 環境設定問題</h1><p>在剛開始寫作業的時候，照著指示把github連到cs50x的時候，發現我個人網頁連不上，如圖</p><p><img src="https://i.imgur.com/tDmvE2G.png" alt="file"></p><p>我翻了一堆文章和官方dc，最後是直接寄信去就被秒解了，如果你也有一樣的困擾，就別浪費時間了，直接寄信吧。</p><p><a href="mailto:&#x73;&#121;&#x73;&#x61;&#x64;&#109;&#105;&#110;&#x73;&#64;&#x63;&#115;&#x35;&#x30;&#x2e;&#x68;&#x61;&#x72;&#118;&#x61;&#x72;&#100;&#x2e;&#101;&#100;&#x75;">&#x73;&#121;&#x73;&#x61;&#x64;&#109;&#105;&#110;&#x73;&#64;&#x63;&#115;&#x35;&#x30;&#x2e;&#x68;&#x61;&#x72;&#118;&#x61;&#x72;&#100;&#x2e;&#101;&#100;&#x75;</a></p><p>（哈佛的處理效率超快，我搞這個環境就搞了一個晚上…）</p><hr><h1 id="pset1-Credit-個人詳解"><a href="#pset1-Credit-個人詳解" class="headerlink" title="pset1 : Credit 個人詳解"></a>pset1 : Credit 個人詳解</h1><p>其他題目寫得很順利，就這題開始有點卡，所以來特別詳解一下這題，但因為不想讓程式碼片段搞得文章很雜亂，所以完整程式碼連結放這，我只針對Concept與痛點做說明。</p><p><a href="https://github.com/huawiz/CS-note/blob/master/CS50x/pset1/credit/credit.c" title="程式碼傳送門">程式碼傳送門</a> 建議自行寫完再參考以下暴雷內容</p><h2 id="題目說了啥？"><a href="#題目說了啥？" class="headerlink" title="題目說了啥？"></a>題目說了啥？</h2><p><a href="https://cs50.harvard.edu/x/2022/psets/1/credit/" title="題目傳送門">題目傳送門</a></p><p>這題在說信用卡卡號有很多種，根據不同公司有不同的信用卡卡號的產生邏輯，但是這些不同的卡號間，有一演算法可以確認卡號是否有效。</p><p><a href="https://zh.wikipedia.org/wiki/%E5%8D%A2%E6%81%A9%E7%AE%97%E6%B3%95" title="Luhn’s Algorithm">Luhn’s Algorithm</a>，邏輯如下：</p><ol><li>從個位數開始，由右而左，把偶位數數字乘上2後，再把數字加起來。如果乘上2後超過10，就把十位數和個位數分開加總。</li><li>再把這個數字與其他信用卡奇數位的數字加總。</li><li>最後再把這個加總數，對10取模數，最後判斷</li></ol><p>舉例來說:假設號碼是12345678</p><ol><li>取偶數位數得到10305070，乘上2後得到20610140，再把各個位數取和得到2+6+1+1+4&#x3D;14</li><li>再把14與奇數位的數字相加，得到14+2+4+6+8&#x3D;34</li><li><code>34\equiv4\mod 10</code>，也就是34餘10得到4，非0所以12345678不符合規則</li></ol><h2 id="程式骨幹"><a href="#程式骨幹" class="headerlink" title="程式骨幹"></a>程式骨幹</h2><p><img src="https://i.imgur.com/l1Ke0Zu.png" alt="file"></p><h2 id="辨別ID是否有效"><a href="#辨別ID是否有效" class="headerlink" title="辨別ID是否有效"></a>辨別ID是否有效</h2><p>這裡是我覺得最難寫，也最值得做筆記的地方。</p><h3 id="如何針對奇位數與偶位數做動作呢？"><a href="#如何針對奇位數與偶位數做動作呢？" class="headerlink" title="如何針對奇位數與偶位數做動作呢？"></a>如何針對奇位數與偶位數做動作呢？</h3><p>我在寫這題的時候，卡在這問題卡了很久。我一直在想如何把ID的奇位數與偶位數分離。</p><p><img src="https://i.imgur.com/6WqOZ3w.png" alt="file"></p><p>為什麼要這樣分離？因為我注意到上面那個演算法的第二步，<strong>如果</strong>乘上2後加總大於10，則要在把個位數與十位數加起來。所以我想說分離後，只要把每個數都加起來就好了。</p><p>這個概念很直覺，也是因為Python可以針對String直接剪剪貼貼，但是我試了很久才發現，<strong>C語言不能這麼做</strong>。</p><p>不能 <code>str num1 = 11;str num2 = 22;</code>，然後<code>num1+num2 = 1122</code>這樣。</p><p>參考影片：</p><p>理解到這個限制之後，我對於如何做就換到了正確的方向：<strong>設一個參數紀錄奇位數和偶位數</strong>。當我找到這個方法後，這個程式就變得十分好寫，硬要用圖表示會很複雜，但是原理其實相當簡單。</p><p>(也是因為不太會用字元陣列…查到用法也<a href="http://tw.gitbook.net/c_standard_library/c_function_strncat.html" title="要引用string.h">要引用string.h</a>，還不卻定能用…)</p><p><img src="https://i.imgur.com/UnsMfL4.png" alt="file"></p><p>用一句話一張圖來說：對每個位置用0101做標記。</p><p><img src="https://i.imgur.com/cCgpE5E.png" alt="file"></p><p>然後再把要做的事情，在迴圈裡面寫if-else就能達到題目要求了～</p><h2 id="辨別卡種"><a href="#辨別卡種" class="headerlink" title="辨別卡種"></a>辨別卡種</h2><p>確定卡的ID有效之後，接下來就是要確認信用卡的卡種。在if-else這邊我想不用特別多做說明，但是<code>1e13</code>的用法我是在書上看到的，有了這個用法基本上就不用特別引入<code>math.h</code>來使用<code>pow()</code>函數。</p><p>用法: <code>1e13</code> 是指科學記號 <code>1\times 10 ^ &#123;13&#125;</code>，資料type為<code>float</code>，所以要轉成辨別開頭號碼的數字使用時，要把它轉成<code>long</code>，例如<code>(long)1e13</code>。</p><hr><h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>寫到這裡也差不多了，上次認真學C語言是高中的事情，現在重新拾起有不同的樂趣…</p><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>我有搞一個dc群來學習cs50x，有興趣的朋友可以進來看看。</p><p><a href="https://discord.gg/4vfDf5aXC6">https://discord.gg/4vfDf5aXC6</a></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;這篇想來趁作業寫完記憶猶新，來記錄一下寫作業的痛點。&lt;/p&gt;</summary>
     
     
     
-    <category term="電腦科學" scheme="http://huawiz.github.io/categories/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/"/>
+    <category term="電腦科學" scheme="http://hey-series.com/categories/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/"/>
     
     
-    <category term="CS50x" scheme="http://huawiz.github.io/tags/CS50x/"/>
+    <category term="CS50x" scheme="http://hey-series.com/tags/CS50x/"/>
     
   </entry>
   
   <entry>
     <title>考證照的HelloWorld:AI900心得</title>
-    <link href="http://huawiz.github.io/Diary/ai900/"/>
-    <id>http://huawiz.github.io/Diary/ai900/</id>
+    <link href="http://hey-series.com/Diary/ai900/"/>
+    <id>http://hey-series.com/Diary/ai900/</id>
     <published>2022-03-16T08:13:00.000Z</published>
     <updated>2022-12-26T05:39:18.564Z</updated>
     
@@ -276,19 +276,19 @@
     
     
     
-    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    <category term="自療" scheme="http://hey-series.com/categories/%E8%87%AA%E7%99%82/"/>
     
     
-    <category term="微軟" scheme="http://huawiz.github.io/tags/%E5%BE%AE%E8%BB%9F/"/>
+    <category term="微軟" scheme="http://hey-series.com/tags/%E5%BE%AE%E8%BB%9F/"/>
     
-    <category term="證照" scheme="http://huawiz.github.io/tags/%E8%AD%89%E7%85%A7/"/>
+    <category term="證照" scheme="http://hey-series.com/tags/%E8%AD%89%E7%85%A7/"/>
     
   </entry>
   
   <entry>
     <title>Quod vitae sectabor iter?</title>
-    <link href="http://huawiz.github.io/Diary/quod-vitae-sectabor-iter/"/>
-    <id>http://huawiz.github.io/Diary/quod-vitae-sectabor-iter/</id>
+    <link href="http://hey-series.com/Diary/quod-vitae-sectabor-iter/"/>
+    <id>http://hey-series.com/Diary/quod-vitae-sectabor-iter/</id>
     <published>2022-03-09T06:34:17.000Z</published>
     <updated>2022-12-26T05:53:30.349Z</updated>
     
@@ -304,15 +304,15 @@
     
     
     
-    <category term="Diary" scheme="http://huawiz.github.io/categories/Diary/"/>
+    <category term="Diary" scheme="http://hey-series.com/categories/Diary/"/>
     
     
   </entry>
   
   <entry>
     <title>一年的前的今天：瘋狗環島（一）</title>
-    <link href="http://huawiz.github.io/Diary/21traveltw-1/"/>
-    <id>http://huawiz.github.io/Diary/21traveltw-1/</id>
+    <link href="http://hey-series.com/Diary/21traveltw-1/"/>
+    <id>http://hey-series.com/Diary/21traveltw-1/</id>
     <published>2022-02-15T16:00:48.000Z</published>
     <updated>2022-12-26T05:39:18.517Z</updated>
     
@@ -323,17 +323,17 @@
     
     
     
-    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    <category term="自療" scheme="http://hey-series.com/categories/%E8%87%AA%E7%99%82/"/>
     
     
-    <category term="環島" scheme="http://huawiz.github.io/tags/%E7%92%B0%E5%B3%B6/"/>
+    <category term="環島" scheme="http://hey-series.com/tags/%E7%92%B0%E5%B3%B6/"/>
     
   </entry>
   
   <entry>
     <title>退學</title>
-    <link href="http://huawiz.github.io/Diary/%E9%80%80%E5%AD%B8/"/>
-    <id>http://huawiz.github.io/Diary/%E9%80%80%E5%AD%B8/</id>
+    <link href="http://hey-series.com/Diary/%E9%80%80%E5%AD%B8/"/>
+    <id>http://hey-series.com/Diary/%E9%80%80%E5%AD%B8/</id>
     <published>2022-02-15T14:37:27.000Z</published>
     <updated>2022-12-26T05:39:18.521Z</updated>
     
@@ -344,15 +344,15 @@
     
     
     
-    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    <category term="自療" scheme="http://hey-series.com/categories/%E8%87%AA%E7%99%82/"/>
     
     
   </entry>
   
   <entry>
     <title>你長得像憤青</title>
-    <link href="http://huawiz.github.io/Diary/angry-shit/"/>
-    <id>http://huawiz.github.io/Diary/angry-shit/</id>
+    <link href="http://hey-series.com/Diary/angry-shit/"/>
+    <id>http://hey-series.com/Diary/angry-shit/</id>
     <published>2022-02-01T08:52:21.000Z</published>
     <updated>2022-12-26T05:39:18.519Z</updated>
     
@@ -367,17 +367,17 @@
     
     
     
-    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    <category term="自療" scheme="http://hey-series.com/categories/%E8%87%AA%E7%99%82/"/>
     
     
-    <category term="憤青" scheme="http://huawiz.github.io/tags/%E6%86%A4%E9%9D%92/"/>
+    <category term="憤青" scheme="http://hey-series.com/tags/%E6%86%A4%E9%9D%92/"/>
     
   </entry>
   
   <entry>
     <title>做十年?</title>
-    <link href="http://huawiz.github.io/Diary/20220116d/"/>
-    <id>http://huawiz.github.io/Diary/20220116d/</id>
+    <link href="http://hey-series.com/Diary/20220116d/"/>
+    <id>http://hey-series.com/Diary/20220116d/</id>
     <published>2022-01-16T15:21:13.000Z</published>
     <updated>2022-12-26T05:39:18.515Z</updated>
     
@@ -390,17 +390,17 @@
     
     
     
-    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    <category term="自療" scheme="http://hey-series.com/categories/%E8%87%AA%E7%99%82/"/>
     
     
-    <category term="牢騷" scheme="http://huawiz.github.io/tags/%E7%89%A2%E9%A8%B7/"/>
+    <category term="牢騷" scheme="http://hey-series.com/tags/%E7%89%A2%E9%A8%B7/"/>
     
   </entry>
   
   <entry>
     <title>第一份實習</title>
-    <link href="http://huawiz.github.io/Diary/20220109intern/"/>
-    <id>http://huawiz.github.io/Diary/20220109intern/</id>
+    <link href="http://hey-series.com/Diary/20220109intern/"/>
+    <id>http://hey-series.com/Diary/20220109intern/</id>
     <published>2022-01-09T14:09:30.000Z</published>
     <updated>2022-12-26T05:39:18.513Z</updated>
     
@@ -411,17 +411,17 @@
     
     
     
-    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    <category term="自療" scheme="http://hey-series.com/categories/%E8%87%AA%E7%99%82/"/>
     
     
-    <category term="實習" scheme="http://huawiz.github.io/tags/%E5%AF%A6%E7%BF%92/"/>
+    <category term="實習" scheme="http://hey-series.com/tags/%E5%AF%A6%E7%BF%92/"/>
     
   </entry>
   
   <entry>
     <title>習得無助的現在</title>
-    <link href="http://huawiz.github.io/Diary/20220108-diary/"/>
-    <id>http://huawiz.github.io/Diary/20220108-diary/</id>
+    <link href="http://hey-series.com/Diary/20220108-diary/"/>
+    <id>http://hey-series.com/Diary/20220108-diary/</id>
     <published>2022-01-08T11:28:34.000Z</published>
     <updated>2022-12-26T05:39:18.511Z</updated>
     
@@ -432,19 +432,19 @@
     
     
     
-    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    <category term="自療" scheme="http://hey-series.com/categories/%E8%87%AA%E7%99%82/"/>
     
     
-    <category term="牢騷" scheme="http://huawiz.github.io/tags/%E7%89%A2%E9%A8%B7/"/>
+    <category term="牢騷" scheme="http://hey-series.com/tags/%E7%89%A2%E9%A8%B7/"/>
     
-    <category term="習得無助" scheme="http://huawiz.github.io/tags/%E7%BF%92%E5%BE%97%E7%84%A1%E5%8A%A9/"/>
+    <category term="習得無助" scheme="http://hey-series.com/tags/%E7%BF%92%E5%BE%97%E7%84%A1%E5%8A%A9/"/>
     
   </entry>
   
   <entry>
     <title>為新的一年點根火柴吧</title>
-    <link href="http://huawiz.github.io/Diary/%E7%82%BA%E6%96%B0%E7%9A%84%E4%B8%80%E5%B9%B4%E9%BB%9E%E6%A0%B9%E7%81%AB%E6%9F%B4%E5%90%A7/"/>
-    <id>http://huawiz.github.io/Diary/%E7%82%BA%E6%96%B0%E7%9A%84%E4%B8%80%E5%B9%B4%E9%BB%9E%E6%A0%B9%E7%81%AB%E6%9F%B4%E5%90%A7/</id>
+    <link href="http://hey-series.com/Diary/%E7%82%BA%E6%96%B0%E7%9A%84%E4%B8%80%E5%B9%B4%E9%BB%9E%E6%A0%B9%E7%81%AB%E6%9F%B4%E5%90%A7/"/>
+    <id>http://hey-series.com/Diary/%E7%82%BA%E6%96%B0%E7%9A%84%E4%B8%80%E5%B9%B4%E9%BB%9E%E6%A0%B9%E7%81%AB%E6%9F%B4%E5%90%A7/</id>
     <published>2021-12-26T15:58:59.000Z</published>
     <updated>2022-12-26T05:39:18.510Z</updated>
     
@@ -455,12 +455,12 @@
     
     
     
-    <category term="自療" scheme="http://huawiz.github.io/categories/%E8%87%AA%E7%99%82/"/>
+    <category term="自療" scheme="http://hey-series.com/categories/%E8%87%AA%E7%99%82/"/>
     
     
-    <category term="牢騷" scheme="http://huawiz.github.io/tags/%E7%89%A2%E9%A8%B7/"/>
+    <category term="牢騷" scheme="http://hey-series.com/tags/%E7%89%A2%E9%A8%B7/"/>
     
-    <category term="新希望" scheme="http://huawiz.github.io/tags/%E6%96%B0%E5%B8%8C%E6%9C%9B/"/>
+    <category term="新希望" scheme="http://hey-series.com/tags/%E6%96%B0%E5%B8%8C%E6%9C%9B/"/>
     
   </entry>
   
