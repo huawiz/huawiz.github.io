@@ -88,48 +88,6 @@
   </entry>
   
   <entry>
-    <title>CS50x W2作業</title>
-    <link href="http://hey-series.com/cs50x-w2-note-2022/"/>
-    <id>http://hey-series.com/cs50x-w2-note-2022/</id>
-    <published>2022-03-28T13:49:15.000Z</published>
-    <updated>2022-12-26T05:39:18.548Z</updated>
-    
-    <content type="html"><![CDATA[<p>這篇紀錄一下Ｗ2的作業思路。</p><span id="more"></span><h1 id="W2-筆記"><a href="#W2-筆記" class="headerlink" title="W2 筆記"></a>W2 筆記</h1><p><a href="https://cs50.harvard.edu/x/2022/notes/2/">官方的筆記傳送門</a></p><hr><h1 id="W2-大綱"><a href="#W2-大綱" class="headerlink" title="W2 大綱"></a>W2 大綱</h1><ul><li>Compiling -&gt; 講解程式碼是如何被電腦編譯機器語言的</li><li>Dubug -&gt; 教你使用VSCODE的Debug工具</li><li>Memory&#x2F;Data type -&gt; C語言如何存資料<ul><li>為何要分這麼多種?<ul><li>因為以前的記憶體成本很高，為了有效率的分配資源，所以C語言的資料類別設計十分嚴謹，為的就是能用最少記憶體存取最多的資料。</li></ul></li></ul></li><li>arrays -&gt; 可以用一個參數儲存多筆資料</li><li>字元Characters與字串String -&gt; 講解C語言如何存取一串字</li><li>Command-line arguments -&gt; 如何在CLI用指令+參數去run你的程式碼</li></ul><hr><p><img src="https://i.imgur.com/tZ7jmSt.png" alt="file"></p><h1 id="作業-pset2"><a href="#作業-pset2" class="headerlink" title="作業 : pset2"></a>作業 : pset2</h1><p>建議自己寫完後再看以下內容</p><p>參考答案連結 : <a href="https://github.com/huawiz/CS-note/tree/master/CS50x/pset2">Link</a></p><p>這禮拜的作業，大致上在練習使用command-line arguments以及陣列的使用。第一題(readability)還蠻簡單的，只要照著作業指示就能輕鬆完成。第二題(Caesar)很有趣，用到了<a href="https://www.asciitable.com/" title="ASCII">ASCII表</a>，抓到作業指示的公式與思考大寫與小寫的判別之後，就能Rotate的函數並且完成這題。而第三題(Substitution)則是這題的衍伸題，不是字元號碼的轉換，而是要請使用者自行輸入加密字元，為了能和<a href="https://sandbox.cs50.io/e6e69576-1719-4c83-a292-24d54690a699">課程範例</a>相同，要寫很多的條件句，如果沒想清楚的話就會花很久的時間。</p><h3 id="caesar與rotate分開寫"><a href="#caesar與rotate分開寫" class="headerlink" title="caesar與rotate分開寫"></a>caesar與rotate分開寫</h3><p>我的做法是按照作業指示，把加密與rotate函數分開寫，後來也成功用幾乎完全一致的函數完成了第二和三題，差別只在第二題有使用<a href="https://manual.cs50.io/3/atoi"><code>atoi()</code></a>來把字串轉成數字。為什麼是字串呢？因為command-line arguments是把值存成字串形式，所以還需要再使用這個函數，才能把string轉換成int。</p><hr><h3 id="caesar函數"><a href="#caesar函數" class="headerlink" title="caesar函數"></a>caesar函數</h3><p>簡單來說就是把每個輸入進來的字元用迴圈跑過，並且用自己寫的rotate函數，把它轉換成加密後的密碼，最後再printf到CLI上。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">caesar</span><span class="params">(string key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string text = <span class="built_in">get_string</span>(<span class="string">&quot;plaintext: &quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="built_in">strlen</span>(text); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        text[i] = <span class="built_in">rotate</span>(text[i], key);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;ciphertext: %s\n&quot;</span>, text);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h3 id="rotate函數"><a href="#rotate函數" class="headerlink" title="rotate函數"></a>rotate函數</h3><p>caesar 與 substitution 的差異，只在於加密的key不同，所以一個是字串，一個是int。其他判斷大小寫、回傳非字母字元的條件句一模一樣。</p><p>caesar：考慮到加超過Z的狀況，因此原本想要用條件硬幹的我打消了念頭，轉而專注回題目的意思，最後得到一個漂亮的回傳式。大致上的做法是：先幫A-Z標號，先找到字母的號碼，然後往後數數字，走到尾巴再從字母A的號碼開始走，直到走完指定數字，即是加密後的字母。 <img src="https://i.imgur.com/GFyRE8m.png" alt="file"></p><p>例如A開始往後數到G，那就是移動了6、32或是58步。 <img src="https://i.imgur.com/WlWeFqv.png" alt="file"></p><p>substitution：這個比Caesar簡單，就是直接把A-Z與你的加密字母做1-1對應，因此只要直接回傳加密字母串的位置就行了，位置號碼就是A-Z的標號。</p><p><img src="https://i.imgur.com/PiVRuZO.png" alt="file"></p><p>65-90是大寫字母的ASCII號碼，所以要減掉A的字碼，這樣就能對到0-25(26個字母)，如此一來就能拿來對應加密字串。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">char</span> <span class="title">rotate</span><span class="params">(<span class="type">char</span> letter, string key)</span> <span class="comment">// caesar是int key</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">isupper</span>(letter))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//return (((int)letter - 64) + key) % 26 + 64; caesar的</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">toupper</span>(key[((<span class="type">int</span>)letter) - <span class="number">65</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">islower</span>(letter))</span><br><span class="line">    &#123;</span><br><span class="line">    －<span class="comment">//return (((int)letter - 97) + key) % 26 + 97; caesar的</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">tolower</span>(key[((<span class="type">int</span>)letter) - <span class="number">97</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> letter;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="其他收穫"><a href="#其他收穫" class="headerlink" title="其他收穫"></a>其他收穫</h2><p>在寫作業的時候試字串，一直不知道為啥輸入’!’後的指令會被截斷。 <img src="https://i.imgur.com/oCqOQRT.png"></p><p>後來去CS50x群組問，得到了解答：bash會被!打斷</p><p><img src="https://i.imgur.com/CS57kYm.png"></p><h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>這週寫得比上週輕鬆，不過也是因為以前學過，之後Sort的部分對我來說則是完全新的東西，希望能好好學習，繼續週更筆記。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;這篇紀錄一下Ｗ2的作業思路。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="電腦科學" scheme="http://hey-series.com/categories/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/"/>
-    
-    
-    <category term="CS50x" scheme="http://hey-series.com/tags/CS50x/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CS50x W1 作業</title>
-    <link href="http://hey-series.com/cs50x-w1-note-2022/"/>
-    <id>http://hey-series.com/cs50x-w1-note-2022/</id>
-    <published>2022-03-18T16:41:34.000Z</published>
-    <updated>2022-12-26T05:39:18.527Z</updated>
-    
-    <content type="html"><![CDATA[<p>這篇想來趁作業寫完記憶猶新，來記錄一下寫作業的痛點。</p><span id="more"></span><h1 id="筆記"><a href="#筆記" class="headerlink" title="筆記"></a>筆記</h1><p>詳細筆記，我沒有寫，官方的筆記<a href="https://cs50.harvard.edu/x/2022/notes/1/" title="在這">在這</a></p><hr><h1 id="W1大綱"><a href="#W1大綱" class="headerlink" title="Ｗ1大綱"></a>Ｗ1大綱</h1><ul><li>基礎Command Line 使用</li><li>C語言基礎<ul><li>程式架構、基礎參數、條件、函數、迴圈</li></ul></li><li>overflow -&gt; 電腦資源有限，如果沒有好好處理資料，有可能造成災難</li></ul><hr><h1 id="cs50x-環境設定問題"><a href="#cs50x-環境設定問題" class="headerlink" title="cs50x 環境設定問題"></a>cs50x 環境設定問題</h1><p>在剛開始寫作業的時候，照著指示把github連到cs50x的時候，發現我個人網頁連不上，如圖</p><p><img src="https://i.imgur.com/tDmvE2G.png" alt="file"></p><p>我翻了一堆文章和官方dc，最後是直接寄信去就被秒解了，如果你也有一樣的困擾，就別浪費時間了，直接寄信吧。</p><p><a href="mailto:&#115;&#x79;&#x73;&#x61;&#x64;&#109;&#105;&#x6e;&#x73;&#64;&#x63;&#115;&#x35;&#x30;&#x2e;&#104;&#97;&#114;&#x76;&#97;&#x72;&#x64;&#x2e;&#101;&#x64;&#x75;">&#115;&#x79;&#x73;&#x61;&#x64;&#109;&#105;&#x6e;&#x73;&#64;&#x63;&#115;&#x35;&#x30;&#x2e;&#104;&#97;&#114;&#x76;&#97;&#x72;&#x64;&#x2e;&#101;&#x64;&#x75;</a></p><p>（哈佛的處理效率超快，我搞這個環境就搞了一個晚上…）</p><hr><h1 id="pset1-Credit-個人詳解"><a href="#pset1-Credit-個人詳解" class="headerlink" title="pset1 : Credit 個人詳解"></a>pset1 : Credit 個人詳解</h1><p>其他題目寫得很順利，就這題開始有點卡，所以來特別詳解一下這題，但因為不想讓程式碼片段搞得文章很雜亂，所以完整程式碼連結放這，我只針對Concept與痛點做說明。</p><p><a href="https://github.com/huawiz/CS-note/blob/master/CS50x/pset1/credit/credit.c" title="程式碼傳送門">程式碼傳送門</a> 建議自行寫完再參考以下暴雷內容</p><h2 id="題目說了啥？"><a href="#題目說了啥？" class="headerlink" title="題目說了啥？"></a>題目說了啥？</h2><p><a href="https://cs50.harvard.edu/x/2022/psets/1/credit/" title="題目傳送門">題目傳送門</a></p><p>這題在說信用卡卡號有很多種，根據不同公司有不同的信用卡卡號的產生邏輯，但是這些不同的卡號間，有一演算法可以確認卡號是否有效。</p><p><a href="https://zh.wikipedia.org/wiki/%E5%8D%A2%E6%81%A9%E7%AE%97%E6%B3%95" title="Luhn’s Algorithm">Luhn’s Algorithm</a>，邏輯如下：</p><ol><li>從個位數開始，由右而左，把偶位數數字乘上2後，再把數字加起來。如果乘上2後超過10，就把十位數和個位數分開加總。</li><li>再把這個數字與其他信用卡奇數位的數字加總。</li><li>最後再把這個加總數，對10取模數，最後判斷</li></ol><p>舉例來說:假設號碼是12345678</p><ol><li>取偶數位數得到10305070，乘上2後得到20610140，再把各個位數取和得到2+6+1+1+4&#x3D;14</li><li>再把14與奇數位的數字相加，得到14+2+4+6+8&#x3D;34</li><li><code>34\equiv4\mod 10</code>，也就是34餘10得到4，非0所以12345678不符合規則</li></ol><h2 id="程式骨幹"><a href="#程式骨幹" class="headerlink" title="程式骨幹"></a>程式骨幹</h2><p><img src="https://i.imgur.com/l1Ke0Zu.png" alt="file"></p><h2 id="辨別ID是否有效"><a href="#辨別ID是否有效" class="headerlink" title="辨別ID是否有效"></a>辨別ID是否有效</h2><p>這裡是我覺得最難寫，也最值得做筆記的地方。</p><h3 id="如何針對奇位數與偶位數做動作呢？"><a href="#如何針對奇位數與偶位數做動作呢？" class="headerlink" title="如何針對奇位數與偶位數做動作呢？"></a>如何針對奇位數與偶位數做動作呢？</h3><p>我在寫這題的時候，卡在這問題卡了很久。我一直在想如何把ID的奇位數與偶位數分離。</p><p><img src="https://i.imgur.com/6WqOZ3w.png" alt="file"></p><p>為什麼要這樣分離？因為我注意到上面那個演算法的第二步，<strong>如果</strong>乘上2後加總大於10，則要在把個位數與十位數加起來。所以我想說分離後，只要把每個數都加起來就好了。</p><p>這個概念很直覺，也是因為Python可以針對String直接剪剪貼貼，但是我試了很久才發現，<strong>C語言不能這麼做</strong>。</p><p>不能 <code>str num1 = 11;str num2 = 22;</code>，然後<code>num1+num2 = 1122</code>這樣。</p><p>參考影片：</p><p>理解到這個限制之後，我對於如何做就換到了正確的方向：<strong>設一個參數紀錄奇位數和偶位數</strong>。當我找到這個方法後，這個程式就變得十分好寫，硬要用圖表示會很複雜，但是原理其實相當簡單。</p><p>(也是因為不太會用字元陣列…查到用法也<a href="http://tw.gitbook.net/c_standard_library/c_function_strncat.html" title="要引用string.h">要引用string.h</a>，還不卻定能用…)</p><p><img src="https://i.imgur.com/UnsMfL4.png" alt="file"></p><p>用一句話一張圖來說：對每個位置用0101做標記。</p><p><img src="https://i.imgur.com/cCgpE5E.png" alt="file"></p><p>然後再把要做的事情，在迴圈裡面寫if-else就能達到題目要求了～</p><h2 id="辨別卡種"><a href="#辨別卡種" class="headerlink" title="辨別卡種"></a>辨別卡種</h2><p>確定卡的ID有效之後，接下來就是要確認信用卡的卡種。在if-else這邊我想不用特別多做說明，但是<code>1e13</code>的用法我是在書上看到的，有了這個用法基本上就不用特別引入<code>math.h</code>來使用<code>pow()</code>函數。</p><p>用法: <code>1e13</code> 是指科學記號 <code>1\times 10 ^ &#123;13&#125;</code>，資料type為<code>float</code>，所以要轉成辨別開頭號碼的數字使用時，要把它轉成<code>long</code>，例如<code>(long)1e13</code>。</p><hr><h1 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h1><p>寫到這裡也差不多了，上次認真學C語言是高中的事情，現在重新拾起有不同的樂趣…</p><h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>我有搞一個dc群來學習cs50x，有興趣的朋友可以進來看看。</p><p><a href="https://discord.gg/4vfDf5aXC6">https://discord.gg/4vfDf5aXC6</a></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;這篇想來趁作業寫完記憶猶新，來記錄一下寫作業的痛點。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="電腦科學" scheme="http://hey-series.com/categories/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/"/>
-    
-    
-    <category term="CS50x" scheme="http://hey-series.com/tags/CS50x/"/>
-    
-  </entry>
-  
-  <entry>
     <title>考證照的HelloWorld:AI900心得</title>
     <link href="http://hey-series.com/Diary/ai900/"/>
     <id>http://hey-series.com/Diary/ai900/</id>
@@ -154,8 +112,8 @@
   
   <entry>
     <title>雙十連假來用Python畫個國旗吧</title>
-    <link href="http://hey-series.com/10-10-python-draw-flag/"/>
-    <id>http://hey-series.com/10-10-python-draw-flag/</id>
+    <link href="http://hey-series.com/Note/10-10-python-draw-flag/"/>
+    <id>http://hey-series.com/Note/10-10-python-draw-flag/</id>
     <published>2021-10-09T16:00:16.000Z</published>
     <updated>2022-12-26T05:39:18.561Z</updated>
     
@@ -212,8 +170,8 @@
   
   <entry>
     <title>如何在mac上建立一個捷徑執行終端機指令</title>
-    <link href="http://hey-series.com/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E6%8D%B7%E5%BE%91%E5%9F%B7%E8%A1%8C%E7%B5%82%E7%AB%AF%E6%A9%9F%E6%8C%87%E4%BB%A4/"/>
-    <id>http://hey-series.com/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E6%8D%B7%E5%BE%91%E5%9F%B7%E8%A1%8C%E7%B5%82%E7%AB%AF%E6%A9%9F%E6%8C%87%E4%BB%A4/</id>
+    <link href="http://hey-series.com/Note/make-shortcut-MacOS/"/>
+    <id>http://hey-series.com/Note/make-shortcut-MacOS/</id>
     <published>2021-09-09T14:40:36.000Z</published>
     <updated>2022-12-26T05:39:18.547Z</updated>
     
