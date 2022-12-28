@@ -11,15 +11,6 @@
   </url>
   
   <url>
-    <loc>http://hey-series.com/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-12-26%20180915.png.html</loc>
-    
-    <lastmod>2022-12-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://hey-series.com/Diary/ai900/</loc>
     
     <lastmod>2022-12-26</lastmod>
@@ -48,6 +39,33 @@
   
   <url>
     <loc>http://hey-series.com/Powershell/build-vhdx-diff-quick-pwsh/</loc>
+    
+    <lastmod>2022-12-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hey-series.com/cs50x-w2-note-2022/</loc>
+    
+    <lastmod>2022-12-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hey-series.com/%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E6%8D%B7%E5%BE%91%E5%9F%B7%E8%A1%8C%E7%B5%82%E7%AB%AF%E6%A9%9F%E6%8C%87%E4%BB%A4/</loc>
+    
+    <lastmod>2022-12-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://hey-series.com/cs50x-w1-note-2022/</loc>
     
     <lastmod>2022-12-26</lastmod>
     
@@ -110,6 +128,55 @@
 
   
   <url>
+    <loc>http://hey-series.com/tags/CS50x/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hey-series.com/tags/applescript/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hey-series.com/tags/automator/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hey-series.com/tags/macos/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hey-series.com/tags/Life/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hey-series.com/tags/Diary/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hey-series.com/tags/%E5%B9%B4%E5%BA%A6%E5%9B%9E%E9%A1%A7/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://hey-series.com/tags/Apple/</loc>
     <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -159,48 +226,6 @@
   </url>
   
   <url>
-    <loc>http://hey-series.com/tags/Life/</loc>
-    <lastmod>2022-12-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://hey-series.com/tags/Diary/</loc>
-    <lastmod>2022-12-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://hey-series.com/tags/%E5%B9%B4%E5%BA%A6%E5%9B%9E%E9%A1%A7/</loc>
-    <lastmod>2022-12-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://hey-series.com/tags/Powershell/</loc>
-    <lastmod>2022-12-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://hey-series.com/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2022-12-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://hey-series.com/tags/%E6%87%B6%E4%BA%BA/</loc>
-    <lastmod>2022-12-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://hey-series.com/tags/python/</loc>
     <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -235,10 +260,38 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>http://hey-series.com/tags/Powershell/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hey-series.com/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hey-series.com/tags/%E6%87%B6%E4%BA%BA/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>http://hey-series.com/categories/%E8%87%AA%E7%99%82/</loc>
+    <loc>http://hey-series.com/categories/%E9%9B%BB%E8%85%A6%E7%A7%91%E5%AD%B8/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hey-series.com/categories/%E9%9B%BB%E8%85%A6%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -252,7 +305,7 @@
   </url>
   
   <url>
-    <loc>http://hey-series.com/categories/Powershell/</loc>
+    <loc>http://hey-series.com/categories/%E8%87%AA%E7%99%82/</loc>
     <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -260,6 +313,13 @@
   
   <url>
     <loc>http://hey-series.com/categories/Python/</loc>
+    <lastmod>2022-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://hey-series.com/categories/Powershell/</loc>
     <lastmod>2022-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
