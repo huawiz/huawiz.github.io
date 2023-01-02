@@ -10,4 +10,4 @@ Allow: /tags/
 # Disallow: /css/
 # Disallow: /fancybox/
 
-Sitemap: https://huawiz.github.io/sitemap.xml
+Sitemap: https://hey-series.com/sitemap.xml
