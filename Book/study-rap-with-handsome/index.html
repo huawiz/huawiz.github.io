@@ -16,8 +16,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
-<meta name="description" content="如何在mac上建立一個捷徑執行終端機指令"/><meta name="keywords" content="applescript, automator, macos, Hey,Series" /><link rel="alternate" href="/atom.xml" title="Hey,Series" type="application/atom+xml"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.1" />
-<link rel="canonical" href="http://hey-series.com/Note/make-shortcut-MacOS/"/>
+<meta name="description" content="來韓老師這邊學饒舌"/><meta name="keywords" content="hip-hop, 流行, 饒舌, Hey,Series" /><link rel="alternate" href="/atom.xml" title="Hey,Series" type="application/atom+xml"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.11.1" />
+<link rel="canonical" href="http://hey-series.com/Book/study-rap-with-handsome/"/>
 
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
@@ -37,7 +37,7 @@
   window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":false,"pjax":"","latex":true};
 </script>
 
-    <title>如何在mac上建立一個捷徑執行終端機指令 - Hey,Series</title>
+    <title>來韓老師這邊學饒舌 - Hey,Series</title>
   <meta name="generator" content="Hexo 6.3.0"></head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -98,38 +98,33 @@
         <div class="content-wrapper">
           <div id="content" class="content"><article class="post">
     <header class="post-header">
-      <h1 class="post-title">如何在mac上建立一個捷徑執行終端機指令
+      <h1 class="post-title">來韓老師這邊學饒舌
         </h1>
 
       <div class="post-meta">
         <span class="post-time">
-          2021-09-09
+          2021-09-02
         </span><span class="post-category">
-            <a href="/categories/%E9%9B%BB%E8%85%A6%E4%BD%BF%E7%94%A8/">電腦使用</a>
+            <a href="/categories/%E8%AE%80%E6%9B%B8%E5%BF%83%E5%BE%97/">讀書心得</a>
             </span>
         </div>
     </header>
 
-    <div class="post-content"><p>前陣子有在使用anki，為了建立單字庫而常使用記事本來紀錄單字。</p>
-<p>但是一個一個字key很麻煩，於是寫了一個簡單的python來輸入單字。</p>
+    <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">Contents</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%B4%B9"><span class="toc-text">介紹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%83%E5%BE%97"><span class="toc-text">心得</span></a></li></ol>
+    </div>
+  </div><div class="post-content"><p>前陣子看到金曲獎，看到蛋堡拿到最佳國語男歌手獎，想到當初聽到過程讓我思考了很多東 西，因此又更進一步想了解一下什麼是饒舌，於是就在博客來買了這本書。</p>
 <span id="more"></span>
-<p>但是又但是，每次要執行一樣的py檔案，都要打開termial，然後輸入python3 vocabulary.py來執行，實在是有點麻煩…</p>
-<p>於是研究了一下，中途一直不知道要找什麼關鍵字，研究了一陣子才知道要用applescript來做這件事，為了避免忘記，特別寫這篇紀錄一下，如果能幫助到路人也是功德遠滿~</p>
-<p>首先打開Automator，建立一個應用程式</p>
-<p><img src="https://i.imgur.com/KsLX620.png" alt="file"></p>
-<p>並且找到applescript</p>
-<p><img src="https://i.imgur.com/3f2lWZT.png" alt="file"></p>
-<p>接下來輸入指令</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">&quot;Terminal&quot;</span></span><br><span class="line">reopen</span><br><span class="line"><span class="built_in">activate</span></span><br><span class="line">do <span class="keyword">script</span> <span class="string">&quot;cd ~/desktop/vocabulary&quot;</span> <span class="keyword">in</span> window <span class="number">1</span></span><br><span class="line">do <span class="keyword">script</span> <span class="string">&quot;python3 vocabulary.py&quot;</span> <span class="keyword">in</span> window <span class="number">1</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">tell</span></span><br></pre></td></tr></table></figure>
-
-<p>最後儲存就能享受極度懶人的使用體驗</p>
-<p>如此一來，就能直接在dock完成打開終端機+輸入指令的動作~</p>
-<p><img src="https://i.imgur.com/8vEpOiC.png" alt="file"></p>
-<p>指令詳細可以參考蘋果的<a target="_blank" rel="noopener" href="https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html">guide</a></p>
-<p>END</p>
-<p>By <a target="_blank" rel="noopener" href="https://medium.com/@huawiz">Huawiz</a> on <a target="_blank" rel="noopener" href="https://medium.com/p/e5ded213a113">August 26, 2021</a>.</p>
-<p><a target="_blank" rel="noopener" href="https://medium.com/@huawiz/%E7%84%A1%E7%94%A8-%E5%A6%82%E4%BD%95%E5%9C%A8mac%E4%B8%8A%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B%E6%8D%B7%E5%BE%91%E5%9F%B7%E8%A1%8C%E7%B5%82%E7%AB%AF%E6%A9%9F%E6%8C%87%E4%BB%A4-e5ded213a113">Canonical link</a></p>
-<p>Exported from <a target="_blank" rel="noopener" href="https://medium.com/">Medium</a> on September 9, 2021.</p>
+<p><img src="https://i.imgur.com/wzWUIEi.jpg" alt="file"></p>
+<h2 id="介紹"><a href="#介紹" class="headerlink" title="介紹"></a>介紹</h2><p>《來韓老師這裡學饒舌》是台灣的饒舌歌手韓森寫的，主要在講如何寫一首饒舌，從beats, 寫詞到表演包山包海，每章最後都還有其他歌手的訪談。</p>
+<h2 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h2><p>看完之後發現出版兩年都沒評價，是不是賣得不………所以才來貢獻一篇簡短的心得。</p>
+<p>我覺得這本真的是一本很親切的嘻哈入門書。</p>
+<p>（雖然封面有點沒誠意，貼紙看到一半一直掉下來）</p>
+<p>除了教你簡單製作一首饒舌歌曲和表演的準備外，更重要的是這本還能幫助你更了解一點 嘻哈文化的脈絡，例如為什麼饒舌歌手間時常有Beef(牛肉，指爭鬥、互相diss)？在看這本 書的過程中，常常會遇到沒看過沒聽過的作品，所以時常會岔開跑去聽歌（像是Nas），或 是看一些 沒看過的電影（例如衝出康普頓），即使是我這個遜砲肥宅，甚至根本沒想要寫一首歌，也 可以在看的過程，感受嘻哈的魅力。</p>
+<p>訪談的部分我覺得soso，有人很專心回答問題，有的卻會讓你覺得有點敷衍，不過我想就是 要有這種品質不一的感覺，才能符合核心價值「REAL」。</p>
+<p>看這本書的過程是有趣的，韓老師在講義裡面的每一頁每一行，幾乎都有押韻，使得你一行 一行讀得時候，就好像在唱饒舌，整本書就是一個精緻的藝術品。DOPE。</p>
 
       </div>
       <div class="post-copyright">
@@ -139,7 +134,7 @@
     </p>
     <p class="copyright-item">
       <span>Link: </span>
-      <a href="http://hey-series.com/Note/make-shortcut-MacOS/">http://hey-series.com/Note/make-shortcut-MacOS/</a>
+      <a href="http://hey-series.com/Book/study-rap-with-handsome/">http://hey-series.com/Book/study-rap-with-handsome/</a>
     </p>
     <p class="copyright-item">
       <span>License: </span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知識共享署名-非商業性使用 4.0 國際許可協議</a>
@@ -147,18 +142,18 @@
   </div>
       <footer class="post-footer">
         <div class="post-tags">
-            <a href="/tags/applescript/">applescript</a>
-            <a href="/tags/automator/">automator</a>
-            <a href="/tags/macos/">macos</a>
+            <a href="/tags/hip-hop/">hip-hop</a>
+            <a href="/tags/%E6%B5%81%E8%A1%8C/">流行</a>
+            <a href="/tags/%E9%A5%92%E8%88%8C/">饒舌</a>
             </div>
         
-        <nav class="post-nav"><a class="prev" href="/Diary/aw-half-year/">
+        <nav class="post-nav"><a class="prev" href="/Book/how-to-take-smart-note-2022/">
         <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">肥宅戴Apple Watch Series 6 半年的使用心得</span>
+        <span class="prev-text nav-default">\[book\]卡片和筆記</span>
         <span class="prev-text nav-mobile">Prev</span>
       </a>
-    <a class="next" href="/Book/how-an-economy-grows/">
-        <span class="next-text nav-default">《小島經濟學》: 用有趣的小島故事來了解經濟學</span>
+    <a class="next" href="/Book/how-to-read-a-book/">
+        <span class="next-text nav-default">《如何閱讀一本書》</span>
         <span class="prev-text nav-mobile">Next</span>
         <i class="iconfont icon-right"></i>
       </a>
@@ -199,9 +194,9 @@
       </div>
     </div><script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://hey-series.com/Note/make-shortcut-MacOS/';
-        this.page.identifier = 'Note/make-shortcut-MacOS/';
-        this.page.title = '如何在mac上建立一個捷徑執行終端機指令';
+        this.page.url = 'http://hey-series.com/Book/study-rap-with-handsome/';
+        this.page.identifier = 'Book/study-rap-with-handsome/';
+        this.page.title = '來韓老師這邊學饒舌';
     };
     (function() {
     var d = document, s = d.createElement('script');
