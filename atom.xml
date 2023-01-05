@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Hey,Series</title>
   
-  
+  <subtitle>寫一些臨時想要紀錄的事情</subtitle>
   <link href="http://hey-series.com/atom.xml" rel="self"/>
   
   <link href="http://hey-series.com/"/>
