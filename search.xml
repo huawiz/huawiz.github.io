@@ -35,35 +35,6 @@
     
     
     <entry>
-      <title>[Powershell]如何透過Powershell與Google Sheets大量寄送Gmail信件?</title>
-      <link href="/Powershell%E5%AF%84%E9%80%81email/"/>
-      <url>/Powershell%E5%AF%84%E9%80%81email/</url>
-      
-        <content type="html"><![CDATA[<p>前陣子在幫忙籌備活動時，傳承好幾屆的學長C#腳本，因為Google的安全性機制而失效了，然而我不會寫C#，自然而然當下沒啥能力去修改Code，但是想到同屬.NET架構PS理論上應該也能做到一樣的事情，於是當天就花了一個早上的時間研究了下如何用Powershell寫一個簡單的腳本寄Gmail。</p><span id="more"></span><h1 id="這篇文章"><a href="#這篇文章" class="headerlink" title="這篇文章"></a>這篇文章</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> Powershell </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Powershell </tag>
-            
-            <tag> 自動化 </tag>
-            
-            <tag> Gmail </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>2022年與23歲的人生</title>
       <link href="/Diary/2022-review/"/>
       <url>/Diary/2022-review/</url>
