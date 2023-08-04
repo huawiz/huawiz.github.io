@@ -98,6 +98,53 @@
         <div class="content-wrapper">
           <div id="content" class="content"><section id="posts" class="posts"><article class="post">
     <header class="post-header">
+      <h1 class="post-title"><a class="post-link" href="/Note/Note-MissingSemester-Lec01/">\[Note\]MissingSemester-Lec01</a>
+        </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2023-08-04
+        </span></div>
+    </header>
+
+    <div class="post-content"><h1 id="Lec-1-Overview-and-Shell"><a href="#Lec-1-Overview-and-Shell" class="headerlink" title="Lec 1 Overview and Shell"></a>Lec 1 Overview and Shell</h1><p>透過ls -l可以看linux的檔案系統權限</p>
+<p><img src="https://i.imgur.com/FODO0Cy.png" alt="Image"></p>
+<ol>
+<li><p>其中第一個字母為d表示此物件為資料夾</p>
+<p>r讀w寫x執行</p>
+</li>
+<li><p>習題無法執行.&#x2F;semester即因為沒給予上層資料夾missing x的權限</p>
+</li>
+<li><p>可透過chmod給檔案權限</p>
+<ol>
+<li><p>r&#x3D;4,w&#x3D;2,x&#x3D;1</p>
+</li>
+<li><p>還分為user,group,other和(all &#x3D; ugo)權限，可用三個bit表示，例如`<code>chmod 777 file.txt</code>即所有人都可以讀寫執行</p>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="https://i.imgur.com/vZfspnu.png" alt="Image"><br><img src="https://i.imgur.com/oZ2Scvg.png" alt="Image"></p>
+<ol start="4">
+<li><p><code>#!</code> 讀作shebang(蝦棒?)或hashbang，可以在檔案第一行使用此來告訴OS，此檔案該用甚麼執行，例如課程練習的code，第一行即宣告使用sh(直譯器)來執行此檔案</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">curl --<span class="built_in">head</span> --silent https://missing.csail.mit.edu</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可以使用<code>|</code>,<code>&lt;</code>,<code>&gt;</code>作為串接指令用的符號</p>
+</li>
+<li><p><code>grep</code>可以對資訊搜尋關鍵字，離如練習題的想要蒐集last-modified資訊</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./semester | grep last-modified</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如何獲取電腦的電量資訊</p>
+<p>存在<code>/sys/class/power_supply/BAT1/capacity</code>裡面</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /sys/class/power_supply/BAT1/capacity</span><br></pre></td></tr></table></figure>
+
+<p>透過此例可以知道Linux檔案除了文件外，硬體資訊也會用檔案系統存著，你也可以透過更改這類檔案調整硬體設定，例如螢幕亮度。</p>
+</li>
+</ol>
+
+        </div></article>
+      <article class="post">
+    <header class="post-header">
       <h1 class="post-title"><a class="post-link" href="/Diary/2022-review/">2022年與23歲的人生</a>
         </h1>
 
